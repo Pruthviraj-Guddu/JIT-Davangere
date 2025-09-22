@@ -8,6 +8,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 </head>
 <body>
 
@@ -23,18 +27,18 @@
     <div class="card">
       <h2>Part 1: Introduction & Context (20 mins)</h2>
       
-      <h3>Topic 1: What is a Programming Language? (ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆ ಎಂದರೇನು?)</h3>
-      <p>Computer languages are systems of communication used to instruct a computer to perform specific tasks. They consist of syntax (rules - ನಿಯಮಗಳು) and semantics (meaning - ಅರ್ಥ) that programmers use to write programs that the computer can execute. These languages bridge the gap (ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡುತ್ತವೆ) between human instructions and machine instructions.</p>
+      <h3>Topic 1: What is a Programming Language?</h3>
+      <p>Computer languages are systems of communication used to instruct a computer to perform specific tasks. They consist of syntax (rules) and semantics (meaning) that programmers use to write programs that the computer can execute. These languages bridge the gap between human instructions and machine instructions.</p>
       <p><strong>Definition:</strong> A formal language comprising a set of instructions that produce various kinds of output. It is used to communicate with a computer.</p>
       <p><strong>Analogy:</strong> Human languages (English, Spanish) vs. Computer languages (C, Python, Java).</p>
       
-      <h4>Levels of Languages (ಭಾಷೆಗಳ ಮಟ್ಟಗಳು):</h4>
+      <h4>Levels of Languages:</h4>
       
-      <h5>High-Level vs Low-Level Languages (ಹೈ-ಲೆವೆಲ್ ವರ್ಸಸ್ ಲೋ-ಲೆವೆಲ್ ಭಾಷೆಗಳು)</h5>
-      <p><strong>Low-Level Languages (ಲೋ-ಲೆವೆಲ್ ಭಾಷೆಗಳು):</strong></p>
-      <p><strong>Definition:</strong> These are languages that are closer to machine code (binary) (ಯಂತ್ರ ಕೋಡ್‌ಗೆ (ಬೈನರಿ) ಹತ್ತಿರವಾಗಿರುವ) and interact directly with the hardware (ಹಾರ್ಡ್‌ವೇರ್‌ನೊಂದಿಗೆ ನೇರವಾಗಿ ಸಂವಹನ ನಡೆಸುತ್ತವೆ).</p>
-      <p><strong>Example:</strong> Assembly Language (ಅಸೆಂಬ್ಲಿ ಭಾಷೆ), Machine Code (binary).</p>
-      <p>Assembly Language is a symbolic representation (ಸಾಂಕೇತಿಕ ಪ್ರಾತಿನಿಧ್ಯ) of machine code that makes it easier for humans to understand and write (ಮನುಷ್ಯರಿಗೆ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ಬರೆಯಲು ಸುಲಭ).</p>
+      <h5>High-Level vs Low-Level Languages</h5>
+      <p><strong>Low-Level Languages:</strong></p>
+      <p><strong>Definition:</strong> These are languages that are closer to machine code (binary) and interact directly with the hardware.</p>
+      <p><strong>Example:</strong> Assembly Language, Machine Code (binary).</p>
+      <p>Assembly Language is a symbolic representation of machine code that makes it easier for humans to understand and write.</p>
       <p>In Assembly, instructions map directly to machine-level operations (e.g., moving data between registers in the CPU).</p>
       <pre><code>MOV AX, 1   ; Load the value 1 into register AX
 ADD AX, 5   ; Add 5 to the value in AX
@@ -42,8 +46,8 @@ ADD AX, 5   ; Add 5 to the value in AX
       <p><strong>Pros:</strong> Faster execution, direct control over hardware.</p>
       <p><strong>Cons:</strong> Difficult to write, maintain, and debug. Hardware-specific.</p>
 
-      <p><strong>High-Level Languages (ಹೈ-ಲೆವೆಲ್ ಭಾಷೆಗಳು):</strong></p>
-      <p><strong>Definition:</strong> These are languages that are more abstract and closer to human languages (ಅಮೂರ್ತ ಮತ್ತು ಮಾನವ ಭಾಷೆಗಳಿಗೆ ಹತ್ತಿರ). They are portable across different hardware systems (ವಿವಿಧ ಹಾರ್ಡ್‌ವೇರ್ ಸಿಸ್ಟಮ್‌ಗಳಲ್ಲಿ ಪೋರ್ಟಬಲ್), meaning the same program can run on different machines with minimal modifications.</p>
+      <p><strong>High-Level Languages:</strong></p>
+      <p><strong>Definition:</strong> These are languages that are more abstract and closer to human languages. They are portable across different hardware systems, meaning the same program can run on different machines with minimal modifications.</p>
       <p><strong>Example:</strong> C, Python, Java, JavaScript.</p>
       <pre><code>int main() {
     int a = 1;
@@ -56,23 +60,23 @@ ADD AX, 5   ; Add 5 to the value in AX
       <p><strong>Cons:</strong> Slower execution compared to low-level languages, less control over hardware.</p>
       <p><strong>High-Level (Java, Python):</strong> Easier for humans, closer to English. "Write once, run anywhere."</p>
       <p><strong>Low-Level (Assembly, Machine Code):</strong> Direct instructions to the CPU. Hard for humans, easy for machines.</p>
-      <p>Introduce C as a "Middle-Level" Language ("ಮಧ್ಯಮ-ಹಂತದ" ಭಾಷೆ): It combines the best of both—power and efficiency of low-level with the readability and structure of high-level.</p>
+      <p>Introduce C as a "Middle-Level" Language: It combines the best of both—power and efficiency of low-level with the readability and structure of high-level.</p>
       
-      <h3>Topic 2: The Program Creation Process (ಪ್ರೋಗ್ರಾಂ ಸೃಷ್ಟಿ ಪ್ರಕ್ರಿಯೆ)</h3>
+      <h3>Topic 2: The Program Creation Process</h3>
       <p><strong>The Steps:</strong></p>
       <ul>
-        <li><strong>Writing (ಬರೆಯುವುದು):</strong> Creating the source code (hello.c).</li>
-        <li><strong>Compiling (ಕಂಪೈಲ್ ಮಾಡುವುದು):</strong> Using a compiler (ಕಂಪೈಲರ್) (e.g., GCC) to translate C code into object code (machine code).<br><strong>Key Point:</strong> Compilers translate the entire program at once (ಸಂಪೂರ್ಣ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಒಂದೇ ಬಾರಿಗೆ ಭಾಷಾಂತರಿಸುತ್ತವೆ). (Contrast with Interpreters, which translate and execute line-by-line).</li>
-        <li><strong>Linking (ಲಿಂಕ್ ಮಾಡುವುದು):</strong> The linker combines your object code with code from the C Standard Library (e.g., printf) to create a single executable file (ಎಕ್ಸಿಕ್ಯೂಟಬಲ್ ಫೈಲ್) (a.out or hello.exe).</li>
-        <li><strong>Executing (ಎಕ್ಸಿಕ್ಯೂಟ್ ಮಾಡುವುದು):</strong> Running the executable file.</li>
+        <li><strong>Writing:</strong> Creating the source code (hello.c).</li>
+        <li><strong>Compiling:</strong> Using a compiler (e.g., GCC) to translate C code into object code (machine code).<br><strong>Key Point:</strong> Compilers translate the entire program at once. (Contrast with Interpreters, which translate and execute line-by-line).</li>
+        <li><strong>Linking:</strong> The linker combines your object code with code from the C Standard Library (e.g., printf) to create a single executable file (a.out or hello.exe).</li>
+        <li><strong>Executing:</strong> Running the executable file.</li>
       </ul>
 
       <h2>Part 2: Overview of the C Language (30 mins)</h2>
-      <h3>Topic 3: Why Learn C? (C ಏಕೆ ಕಲಿಯಬೇಕು?)</h3>
+      <h3>Topic 3: Why Learn C? (The "Why")</h3>
       <p><strong>A Brief History:</strong> Developed at Bell Labs by Dennis Ritchie (1972). Created to write the UNIX operating system.</p>
       <p><strong>Characteristics:</strong></p>
       <ul>
-        <li><strong>Structured Language (ರಚನಾತ್ಮಕ ಭಾಷೆ):</strong> Code is broken into functions (blocks), making it organized and manageable.</li>
+        <li><strong>Structured Language:</strong> Code is broken into functions (blocks), making it organized and manageable.</li>
         <li><strong>Programmer's Language:</strong> Gives the programmer a lot of control over the hardware (memory, CPU). "It trusts the programmer."</li>
       </ul>
       <p><strong>Why It's Still Relevant Today:</strong></p>
@@ -82,12 +86,12 @@ ADD AX, 5   ; Add 5 to the value in AX
         <li>It's fast and efficient.</li>
       </ul>
 
-      <h3>Topic 4: The Anatomy of a Simple C Program (ಒಂದು ಸರಳ C ಪ್ರೋಗ್ರಾಂನ ರಚನೆ)</h3>
-      <pre><code>#include &lt;stdio.h&gt;    // Preprocessor Directive (ಪ್ರಿಪ್ರೊಸೆಸರ್ ನಿರ್ದೇಶನ)
+      <h3>Topic 4: The Anatomy of a Simple C Program (The "How")</h3>
+      <pre><code>#include &lt;stdio.h&gt;    // Preprocessor Directive
 
-int main() {         // Main Function (ಮುಖ್ಯ ಫಂಕ್ಷನ್) - program entry point
-    printf("Hello, World!"); // Library Function (ಲೈಬ್ರರಿ ಫಂಕ್ಷನ್)
-    return 0;        // Return Statement (ರಿಟರ್ನ್ ಸ್ಟೇಟ್‌ಮೆಂಟ್)
+int main() {         // Main Function - program entry point
+    printf("Hello, World!"); // Library Function
+    return 0;        // Return Statement
 }
       </code></pre>
       <p><strong>Breakdown of each line:</strong></p>
@@ -99,8 +103,8 @@ int main() {         // Main Function (ಮುಖ್ಯ ಫಂಕ್ಷನ್) - 
         <li><code>return 0;</code>: Indicates the program ended successfully.</li>
       </ul>
 
-      <h2>Part 3: The Building Blocks - Data & Expressions (ಡೇಟಾ ಮತ್ತು ಎಕ್ಸ್‌ಪ್ರೆಷನ್‌ಗಳು) (60 mins)</h2>
-      <h3>Topic 5: Basic Data Types (ಮೂಲಭೂತ ಡೇಟಾ ಪ್ರಕಾರಗಳು) - The "Containers" for Data (ಡೇಟಾಕ್ಕಾಗಿ "ಕಂಟೈನರ್‌ಗಳು")</h3>
+      <h2>Part 3: The Building Blocks - Data & Expressions (60 mins)</h2>
+      <h3>Topic 5: Basic Data Types - The "Containers" for Data</h3>
       <p><strong>Purpose:</strong> To define the type of data a variable can hold (e.g., number, character, decimal).</p>
       <p><strong>The Core Types:</strong></p>
       <ul>
@@ -121,8 +125,8 @@ int main() {         // Main Function (ಮುಖ್ಯ ಫಂಕ್ಷನ್) - 
         <li><code>const</code>: The value is constant and cannot be changed after initialization.</li>
       </ul>
 
-      <h3>Topic 7: Variables (ವೇರಿಯಬಲ್‌ಗಳು) - Naming and Creating Containers</h3>
-      <p>What is a variable? A named location in memory (ಮೆಮೊರಿಯಲ್ಲಿ ಹೆಸರಿಸಲಾದ ಸ್ಥಳ) that stores a value of a specific type.</p>
+      <h3>Topic 7: Variables - Naming and Creating Containers</h3>
+      <p>What is a variable? A named location in memory that stores a value of a specific type.</p>
       <p><strong>Identifier Names (Rules):</strong></p>
       <ul>
         <li>Can contain letters, digits, and underscores (_).</li>
@@ -132,17 +136,17 @@ int main() {         // Main Function (ಮುಖ್ಯ ಫಂಕ್ಷನ್) - 
       </ul>
       <p><strong>Good Practices:</strong> Use meaningful names (<code>student_count</code> instead of <code>x</code>).</p>
 
-      <h3>Topic 8: Declaring (ಘೋಷಿಸುವುದು), Initializing (ಇನಿಷಿಯಲೈಸ್ ಮಾಡುವುದು), and Constants (ಸ್ಥಿರಾಂಕಗಳು)</h3>
-      <p><strong>Declaration (ಘೋಷಿಸುವುದು):</strong> Telling the compiler about the variable (<code>int age;</code>).</p>
-      <p><strong>Initialization (ಇನಿಷಿಯಲೈಸ್ ಮಾಡುವುದು):</strong> Giving a variable its first value (<code>age = 21;</code> or <code>int score = 95;</code>).</p>
-      <p><strong>Constants (ಸ್ಥಿರಾಂಕಗಳು):</strong> Values that don't change.</p>
+      <h3>Topic 8: Declaring, Initializing, and Constants</h3>
+      <p><strong>Declaration:</strong> Telling the compiler about the variable (<code>int age;</code>).</p>
+      <p><strong>Initialization:</strong> Giving a variable its first value (<code>age = 21;</code> or <code>int score = 95;</code>).</p>
+      <p><strong>Constants:</strong> Values that don't change.</p>
       <ul>
         <li>Using <code>const</code> keyword: <code>const float PI = 3.14159;</code></li>
         <li>Using <code>#define</code> preprocessor: <code>#define PI 3.14159</code></li>
       </ul>
 
       <h4>Explanation</h4>
-      <h5>1. Declaring a Variable (ಒಂದು ವೇರಿಯಬಲ್ ಅನ್ನು ಘೋಷಿಸುವುದು)</h5>
+      <h5>1. Declaring a Variable</h5>
       <p>Declaration is the process of telling the compiler about the type and name of a variable. This is done so the compiler can allocate space in memory for that variable and understand how to use it during execution.</p>
       <p><strong>Syntax:</strong></p>
       <pre><code>type variable_name;
@@ -157,7 +161,7 @@ int main() {         // Main Function (ಮುಖ್ಯ ಫಂಕ್ಷನ್) - 
         <li><strong>Purpose:</strong> Just letting the compiler know about the variable.</li>
       </ul>
 
-      <h5>2. Initializing a Variable (ಒಂದು ವೇರಿಯಬಲ್ ಅನ್ನು ಇನಿಷಿಯಲೈಸ್ ಮಾಡುವುದು)</h5>
+      <h5>2. Initializing a Variable</h5>
       <p>Initialization means giving a variable its first value. This can happen at the time of declaration or later in the program.</p>
       <p><strong>Syntax:</strong></p>
       <pre><code>variable_name = value;
@@ -180,7 +184,7 @@ score = 95;  // Initialization
         <li>If you don’t initialize a variable, its value is garbage (unless it's a static or global variable).</li>
       </ul>
 
-      <h5>3. Constants (ಸ್ಥಿರಾಂಕಗಳು)</h5>
+      <h5>3. Constants</h5>
       <p>Constants are variables whose value cannot change after they are set. In C, constants are used when you need a fixed value throughout the program, such as the value of $π$ or the size of a buffer.</p>
       <p>There are two primary ways to define constants in C:</p>
       
@@ -275,9 +279,9 @@ int main() {
       <p>With <code>const</code>: <code>PI_CONST</code> is a typed constant (type is checked by the compiler) and uses memory to store the value.</p>
       <p><strong>In Summary:</strong></p>
       <ul>
-        <li><strong>Declaration (ಘೋಷಿಸುವುದು):</strong> Tells the compiler the type and name of a variable (but no value).</li>
-        <li><strong>Initialization (ಇನಿಷಿಯಲೈಸ್ ಮಾಡುವುದು):</strong> Assigns a first value to a declared variable.</li>
-        <li><strong>Constants (ಸ್ಥಿರಾಂಕಗಳು):</strong>
+        <li><strong>Declaration:</strong> Tells the compiler the type and name of a variable (but no value).</li>
+        <li><strong>Initialization:</strong> Assigns a first value to a declared variable.</li>
+        <li><strong>Constants:</strong>
           <ul>
             <li><code>const</code>: A constant variable with a type, value can't be changed after initialization.</li>
             <li><code>#define</code>: A preprocessor directive for defining a constant, no type is associated with it, and it just replaces the constant with its value before compilation.</li>
@@ -286,8 +290,8 @@ int main() {
       </ul>
       <p>Both <code>const</code> and <code>#define</code> are used to define constants, but <code>const</code> is better for type safety, while <code>#define</code> is useful for simple, type-independent constants.</p>
 
-      <h3>Topic 9: Introduction to Operators (ಆಪರೇಟರ್‌ಗಳು) & Expressions (ಎಕ್ಸ್‌ಪ್ರೆಷನ್‌ಗಳು)</h3>
-      <p><strong>What is an expression? (ಎಕ್ಸ್‌ಪ್ರೆಷನ್ ಎಂದರೇನು?)</strong> A combination of variables, constants, and operators that evaluates to a single value (ಒಂದೇ ಮೌಲ್ಯಕ್ಕೆ ಪರಿಗಣಿಸಲಾಗುತ್ತದೆ).</p>
+      <h3>Topic 9: Introduction to Operators & Expressions</h3>
+      <p><strong>What is an expression?</strong> A combination of variables, constants, and operators that evaluates to a single value.</p>
       <p><strong>Basic Arithmetic Operators:</strong></p>
       <p><code>+</code> (Addition), <code>-</code> (Subtraction), <code>*</code> (Multiplication), <code>/</code> (Division), <code>%</code> (Modulus - remainder).</p>
       <p><strong>Example:</strong> <code>int result = (10 + 5) * 2;</code> // result is 30</p>
@@ -304,11 +308,17 @@ int main() {
     </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Course Notes. All rights reserved.</p>
-    </div>
-  </footer>
+<footer class="footer text-white">
+      <div class="container d-flex justify-between">
+        <a href="https://pruthviraj-guddu.github.io/">
+          <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
+        </a>
+
+        <p>
+          Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
+        </p>
+      </div>
+    </footer>
 
 </body>
 </html>
