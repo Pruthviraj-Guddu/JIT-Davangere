@@ -1,266 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programming in C - Part 1</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <link
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C - Part 1</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
+        <h1>Programming in C - Part 1</h1>
+        <p>Introduction & Context</p>
+      </div>
+    </header>
 
-  <header>
-    <div class="container">
-      <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
-      <h1>Programming in C - Part 1</h1>
-      <p>Introduction & Context</p>
-    </div>
-  </header>
+    <main class="container">
+      <div class="card">
+        <h2>Part 1: Introduction & Context (20 mins)</h2>
 
-  <main class="container">
-    <div class="card">
-      <h2>Part 1: Introduction & Context (20 mins)</h2>
-      
-      <h3>Topic 1: What is a Programming Language?</h3>
-      <p>Computer languages are systems of communication used to instruct a computer to perform specific tasks. They consist of syntax (rules) and semantics (meaning) that programmers use to write programs that the computer can execute. These languages bridge the gap between human instructions and machine instructions.</p>
-      <p><strong>Definition:</strong> A formal language comprising a set of instructions that produce various kinds of output. It is used to communicate with a computer.</p>
-      <p><strong>Analogy:</strong> Human languages (English, Spanish) vs. Computer languages (C, Python, Java).</p>
-      
-      <h4>Levels of Languages:</h4>
-      
-      <h5>High-Level vs Low-Level Languages</h5>
-      <p><strong>Low-Level Languages:</strong></p>
-      <p><strong>Definition:</strong> These are languages that are closer to machine code (binary) and interact directly with the hardware.</p>
-      <p><strong>Example:</strong> Assembly Language, Machine Code (binary).</p>
-      <p>Assembly Language is a symbolic representation of machine code that makes it easier for humans to understand and write.</p>
-      <p>In Assembly, instructions map directly to machine-level operations (e.g., moving data between registers in the CPU).</p>
-      <pre><code>MOV AX, 1   ; Load the value 1 into register AX
+        <h3>Topic 1: What is a Programming Language?</h3>
+        <p>
+          Computer languages are systems of communication used to instruct a
+          computer to perform specific tasks. They consist of syntax (rules) and
+          semantics (meaning) that programmers use to write programs that the
+          computer can execute. These languages bridge the gap between human
+          instructions and machine instructions.
+        </p>
+        <p>
+          <strong>Definition:</strong> A formal language comprising a set of
+          instructions that produce various kinds of output. It is used to
+          communicate with a computer.
+        </p>
+        <p>
+          <strong>Analogy:</strong> Human languages (English, Spanish) vs.
+          Computer languages (C, Python, Java).
+        </p>
+
+        <h4>Levels of Languages:</h4>
+
+        <h5>High-Level vs Low-Level Languages</h5>
+        <p><strong>Low-Level Languages:</strong></p>
+        <p>
+          <strong>Definition:</strong> These are languages that are closer to
+          machine code (binary) and interact directly with the hardware.
+        </p>
+        <p>
+          <strong>Example:</strong> Assembly Language, Machine Code (binary).
+        </p>
+        <p>
+          Assembly Language is a symbolic representation of machine code that
+          makes it easier for humans to understand and write.
+        </p>
+        <p>
+          In Assembly, instructions map directly to machine-level operations
+          (e.g., moving data between registers in the CPU).
+        </p>
+        <pre><code>MOV AX, 1   ; Load the value 1 into register AX
 ADD AX, 5   ; Add 5 to the value in AX
       </code></pre>
-      <p><strong>Pros:</strong> Faster execution, direct control over hardware.</p>
-      <p><strong>Cons:</strong> Difficult to write, maintain, and debug. Hardware-specific.</p>
+        <p>
+          <strong>Pros:</strong> Faster execution, direct control over hardware.
+        </p>
+        <p>
+          <strong>Cons:</strong> Difficult to write, maintain, and debug.
+          Hardware-specific.
+        </p>
 
-      <p><strong>High-Level Languages:</strong></p>
-      <p><strong>Definition:</strong> These are languages that are more abstract and closer to human languages. They are portable across different hardware systems, meaning the same program can run on different machines with minimal modifications.</p>
-      <p><strong>Example:</strong> C, Python, Java, JavaScript.</p>
-      <pre><code>int main() {
+        <p><strong>High-Level Languages:</strong></p>
+        <p>
+          <strong>Definition:</strong> These are languages that are more
+          abstract and closer to human languages. They are portable across
+          different hardware systems, meaning the same program can run on
+          different machines with minimal modifications.
+        </p>
+        <p><strong>Example:</strong> C, Python, Java, JavaScript.</p>
+        <pre><code>int main() {
     int a = 1;
     int b = 5;
     int sum = a + b;
     return 0;
 }
       </code></pre>
-      <p><strong>Pros:</strong> Easier to learn and use, faster development, portable across different systems.</p>
-      <p><strong>Cons:</strong> Slower execution compared to low-level languages, less control over hardware.</p>
-      <p><strong>High-Level (Java, Python):</strong> Easier for humans, closer to English. "Write once, run anywhere."</p>
-      <p><strong>Low-Level (Assembly, Machine Code):</strong> Direct instructions to the CPU. Hard for humans, easy for machines.</p>
-      <p>Introduce C as a "Middle-Level" Language: It combines the best of both—power and efficiency of low-level with the readability and structure of high-level.</p>
-      
-      <h3>Topic 2: The Program Creation Process</h3>
-      <p><strong>The Steps:</strong></p>
-      <ul>
-        <li><strong>Writing:</strong> Creating the source code (hello.c).</li>
-        <li><strong>Compiling:</strong> Using a compiler (e.g., GCC) to translate C code into object code (machine code).<br><strong>Key Point:</strong> Compilers translate the entire program at once. (Contrast with Interpreters, which translate and execute line-by-line).</li>
-        <li><strong>Linking:</strong> The linker combines your object code with code from the C Standard Library (e.g., printf) to create a single executable file (a.out or hello.exe).</li>
-        <li><strong>Executing:</strong> Running the executable file.</li>
-      </ul>
+        <p>
+          <strong>Pros:</strong> Easier to learn and use, faster development,
+          portable across different systems.
+        </p>
+        <p>
+          <strong>Cons:</strong> Slower execution compared to low-level
+          languages, less control over hardware.
+        </p>
+        <p>
+          <strong>High-Level (Java, Python):</strong> Easier for humans, closer
+          to English. "Write once, run anywhere."
+        </p>
+        <p>
+          <strong>Low-Level (Assembly, Machine Code):</strong> Direct
+          instructions to the CPU. Hard for humans, easy for machines.
+        </p>
+        <p>
+          Introduce C as a "Middle-Level" Language: It combines the best of
+          both—power and efficiency of low-level with the readability and
+          structure of high-level.
+        </p>
 
-      <h2>Part 2: Overview of the C Language (30 mins)</h2>
-      <h3>Topic 3: Why Learn C? (The "Why")</h3>
-      <p><strong>A Brief History:</strong> Developed at Bell Labs by Dennis Ritchie (1972). Created to write the UNIX operating system.</p>
-      <p><strong>Characteristics:</strong></p>
-      <ul>
-        <li><strong>Structured Language:</strong> Code is broken into functions (blocks), making it organized and manageable.</li>
-        <li><strong>Programmer's Language:</strong> Gives the programmer a lot of control over the hardware (memory, CPU). "It trusts the programmer."</li>
-      </ul>
-      <p><strong>Why It's Still Relevant Today:</strong></p>
-      <ul>
-        <li>Foundation for modern languages (C++, C#, Java).</li>
-        <li>Used in Operating Systems, Embedded Systems, Game Development, Databases.</li>
-        <li>It's fast and efficient.</li>
-      </ul>
+        <h3>Topic 2: The Program Creation Process</h3>
+        <p><strong>The Steps:</strong></p>
+        <ul>
+          <li><strong>Writing:</strong> Creating the source code (hello.c).</li>
+          <li>
+            <strong>Compiling:</strong> Using a compiler (e.g., GCC) to
+            translate C code into object code (machine code).<br /><strong
+              >Key Point:</strong
+            >
+            Compilers translate the entire program at once. (Contrast with
+            Interpreters, which translate and execute line-by-line).
+          </li>
+          <li>
+            <strong>Linking:</strong> The linker combines your object code with
+            code from the C Standard Library (e.g., printf) to create a single
+            executable file (a.out or hello.exe).
+          </li>
+          <li><strong>Executing:</strong> Running the executable file.</li>
+        </ul>
 
-      <h3>Topic 4: The Anatomy of a Simple C Program (The "How")</h3>
-      <pre><code>#include &lt;stdio.h&gt;    // Preprocessor Directive
+        <h2>Part 2: Overview of the C Language (30 mins)</h2>
+        <h3>Topic 3: Why Learn C? (The "Why")</h3>
+        <p>
+          <strong>A Brief History:</strong> Developed at Bell Labs by Dennis
+          Ritchie (1972). Created to write the UNIX operating system.
+        </p>
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+          <li>
+            <strong>Structured Language:</strong> Code is broken into functions
+            (blocks), making it organized and manageable.
+          </li>
+          <li>
+            <strong>Programmer's Language:</strong> Gives the programmer a lot
+            of control over the hardware (memory, CPU). "It trusts the
+            programmer."
+          </li>
+        </ul>
+        <p><strong>Why It's Still Relevant Today:</strong></p>
+        <ul>
+          <li>Foundation for modern languages (C++, C#, Java).</li>
+          <li>
+            Used in Operating Systems, Embedded Systems, Game Development,
+            Databases.
+          </li>
+          <li>It's fast and efficient.</li>
+        </ul>
+
+        <h3>Topic 4: The Anatomy of a Simple C Program (The "How")</h3>
+        <pre><code>#include &lt;stdio.h&gt;    // Preprocessor Directive
 
 int main() {         // Main Function - program entry point
     printf("Hello, World!"); // Library Function
     return 0;        // Return Statement
 }
       </code></pre>
-      <p><strong>Breakdown of each line:</strong></p>
-      <ul>
-        <li><code>#include &lt;stdio.h&gt;</code>: Includes the Standard Input Output header file. Why? To use printf.</li>
-        <li><code>int main()</code>: The essential function where execution begins.</li>
-        <li><code>{ }</code>: Delineates the code block for the main function.</li>
-        <li><code>printf</code>: A function from the standard library to print text.</li>
-        <li><code>return 0;</code>: Indicates the program ended successfully.</li>
-      </ul>
+        <p><strong>Breakdown of each line:</strong></p>
+        <ul>
+          <li>
+            <code>#include &lt;stdio.h&gt;</code>: Includes the Standard Input
+            Output header file. Why? To use printf.
+          </li>
+          <li>
+            <code>int main()</code>: The essential function where execution
+            begins.
+          </li>
+          <li>
+            <code>{ }</code>: Delineates the code block for the main function.
+          </li>
+          <li>
+            <code>printf</code>: A function from the standard library to print
+            text.
+          </li>
+          <li>
+            <code>return 0;</code>: Indicates the program ended successfully.
+          </li>
+        </ul>
 
-      <h2>Part 3: The Building Blocks - Data & Expressions (60 mins)</h2>
-      <h3>Topic 5: Basic Data Types - The "Containers" for Data</h3>
-      <p><strong>Purpose:</strong> To define the type of data a variable can hold (e.g., number, character, decimal).</p>
-      <p><strong>The Core Types:</strong></p>
-      <ul>
-        <li><strong>int:</strong> For integers (e.g., 10, -5, 3000).</li>
-        <li><strong>char:</strong> For single characters (e.g., 'A', '$', '5').</li>
-        <li><strong>float:</strong> For single-precision floating-point numbers (e.g., 3.14, -0.001).</li>
-        <li><strong>double:</strong> For double-precision floating-point numbers (more decimal places).</li>
-      </ul>
+        <h2>Part 3: The Building Blocks - Data & Expressions (60 mins)</h2>
+        <h3>Topic 5: Basic Data Types - The "Containers" for Data</h3>
+        <p>
+          <strong>Purpose:</strong> To define the type of data a variable can
+          hold (e.g., number, character, decimal).
+        </p>
+        <p><strong>The Core Types:</strong></p>
+        <ul>
+          <li><strong>int:</strong> For integers (e.g., 10, -5, 3000).</li>
+          <li>
+            <strong>char:</strong> For single characters (e.g., 'A', '$', '5').
+          </li>
+          <li>
+            <strong>float:</strong> For single-precision floating-point numbers
+            (e.g., 3.14, -0.001).
+          </li>
+          <li>
+            <strong>double:</strong> For double-precision floating-point numbers
+            (more decimal places).
+          </li>
+        </ul>
 
-      <h3>Topic 6: Modifying the Basic Types & Type Qualifiers</h3>
-      <p><strong>Modifiers:</strong> Change the size/range of a basic type.</p>
-      <ul>
-        <li><code>short</code>, <code>long</code> (e.g., <code>short int</code>, <code>long double</code>)</li>
-        <li><code>signed</code> (can be + or -, default) vs. <code>unsigned</code> (only 0 and +).</li>
-      </ul>
-      <p><strong>Qualifiers:</strong> Add special properties.</p>
-      <ul>
-        <li><code>const</code>: The value is constant and cannot be changed after initialization.</li>
-      </ul>
+        <h3>Topic 6: Modifying the Basic Types & Type Qualifiers</h3>
+        <p>
+          <strong>Modifiers:</strong> Change the size/range of a basic type.
+        </p>
+        <ul>
+          <li>
+            <code>short</code>, <code>long</code> (e.g., <code>short int</code>,
+            <code>long double</code>)
+          </li>
+          <li>
+            <code>signed</code> (can be + or -, default) vs.
+            <code>unsigned</code> (only 0 and +).
+          </li>
+        </ul>
+        <p><strong>Qualifiers:</strong> Add special properties.</p>
+        <ul>
+          <li>
+            <code>const</code>: The value is constant and cannot be changed
+            after initialization.
+          </li>
+        </ul>
 
-      <h3>Topic 7: Variables - Naming and Creating Containers</h3>
-      <p>What is a variable? A named location in memory that stores a value of a specific type.</p>
-      <p><strong>Identifier Names (Rules):</strong></p>
-      <ul>
-        <li>Can contain letters, digits, and underscores (_).</li>
-        <li>Must begin with a letter or underscore.</li>
-        <li>Case-sensitive (<code>age</code> vs. <code>Age</code> are different).</li>
-        <li>Cannot be a keyword (e.g., <code>int</code>, <code>return</code>).</li>
-      </ul>
-      <p><strong>Good Practices:</strong> Use meaningful names (<code>student_count</code> instead of <code>x</code>).</p>
+        <h3>Topic 7: Variables - Naming and Creating Containers</h3>
+        <p>
+          What is a variable? A named location in memory that stores a value of
+          a specific type.
+        </p>
+        <p><strong>Identifier Names (Rules):</strong></p>
+        <ul>
+          <li>Can contain letters, digits, and underscores (_).</li>
+          <li>Must begin with a letter or underscore.</li>
+          <li>
+            Case-sensitive (<code>age</code> vs. <code>Age</code> are
+            different).
+          </li>
+          <li>
+            Cannot be a keyword (e.g., <code>int</code>, <code>return</code>).
+          </li>
+        </ul>
+        <p>
+          <strong>Good Practices:</strong> Use meaningful names (<code
+            >student_count</code
+          >
+          instead of <code>x</code>).
+        </p>
 
-      <h3>Topic 8: Declaring, Initializing, and Constants</h3>
-      <p><strong>Declaration:</strong> Telling the compiler about the variable (<code>int age;</code>).</p>
-      <p><strong>Initialization:</strong> Giving a variable its first value (<code>age = 21;</code> or <code>int score = 95;</code>).</p>
-      <p><strong>Constants:</strong> Values that don't change.</p>
-      <ul>
-        <li>Using <code>const</code> keyword: <code>const float PI = 3.14159;</code></li>
-        <li>Using <code>#define</code> preprocessor: <code>#define PI 3.14159</code></li>
-      </ul>
+        <h3>Topic 8: Declaring, Initializing, and Constants</h3>
+        <p>
+          <strong>Declaration:</strong> Telling the compiler about the variable
+          (<code>int age;</code>).
+        </p>
+        <p>
+          <strong>Initialization:</strong> Giving a variable its first value
+          (<code>age = 21;</code> or <code>int score = 95;</code>).
+        </p>
+        <p><strong>Constants:</strong> Values that don't change.</p>
+        <ul>
+          <li>
+            Using <code>const</code> keyword:
+            <code>const float PI = 3.14159;</code>
+          </li>
+          <li>
+            Using <code>#define</code> preprocessor:
+            <code>#define PI 3.14159</code>
+          </li>
+        </ul>
 
-      <h4>Explanation</h4>
-      <h5>1. Declaring a Variable</h5>
-      <p>Declaration is the process of telling the compiler about the type and name of a variable. This is done so the compiler can allocate space in memory for that variable and understand how to use it during execution.</p>
-      <p><strong>Syntax:</strong></p>
-      <pre><code>type variable_name;
+        <h4>Explanation</h4>
+        <h5>1. Declaring a Variable</h5>
+        <p>
+          Declaration is the process of telling the compiler about the type and
+          name of a variable. This is done so the compiler can allocate space in
+          memory for that variable and understand how to use it during
+          execution.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>type variable_name;
       </code></pre>
-      <p><strong>Example:</strong></p>
-      <pre><code>int age;
+        <p><strong>Example:</strong></p>
+        <pre><code>int age;
       </code></pre>
-      <p>This declares an integer variable named <code>age</code>, but doesn't give it an initial value. At this point, <code>age</code> is uninitialized, and its value is undefined (i.e., it contains garbage data).</p>
-      <p><strong>Key Points:</strong></p>
-      <ul>
-        <li><strong>Declaration alone:</strong> The compiler knows the type of the variable (in this case, <code>int</code>), but no value is assigned to it.</li>
-        <li><strong>Purpose:</strong> Just letting the compiler know about the variable.</li>
-      </ul>
+        <p>
+          This declares an integer variable named <code>age</code>, but doesn't
+          give it an initial value. At this point, <code>age</code> is
+          uninitialized, and its value is undefined (i.e., it contains garbage
+          data).
+        </p>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>
+            <strong>Declaration alone:</strong> The compiler knows the type of
+            the variable (in this case, <code>int</code>), but no value is
+            assigned to it.
+          </li>
+          <li>
+            <strong>Purpose:</strong> Just letting the compiler know about the
+            variable.
+          </li>
+        </ul>
 
-      <h5>2. Initializing a Variable</h5>
-      <p>Initialization means giving a variable its first value. This can happen at the time of declaration or later in the program.</p>
-      <p><strong>Syntax:</strong></p>
-      <pre><code>variable_name = value;
+        <h5>2. Initializing a Variable</h5>
+        <p>
+          Initialization means giving a variable its first value. This can
+          happen at the time of declaration or later in the program.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>variable_name = value;
       </code></pre>
-      <p>Or, when declaring and initializing together:</p>
-      <pre><code>type variable_name = value;
+        <p>Or, when declaring and initializing together:</p>
+        <pre><code>type variable_name = value;
       </code></pre>
-      <p><strong>Example:</strong></p>
-      <pre><code>int age = 21; // Declaration + Initialization
+        <p><strong>Example:</strong></p>
+        <pre><code>int age = 21; // Declaration + Initialization
       </code></pre>
-      <p>Here, <code>age</code> is declared as an <code>int</code> and is also initialized with a value of 21 at the same time.</p>
-      <p>Alternatively, you could declare the variable first and initialize it later:</p>
-      <pre><code>int score;   // Declaration
+        <p>
+          Here, <code>age</code> is declared as an <code>int</code> and is also
+          initialized with a value of 21 at the same time.
+        </p>
+        <p>
+          Alternatively, you could declare the variable first and initialize it
+          later:
+        </p>
+        <pre><code>int score;   // Declaration
 score = 95;  // Initialization
       </code></pre>
-      <p><strong>Key Points:</strong></p>
-      <ul>
-        <li>Initialization gives a variable its first value.</li>
-        <li>Declaring and initializing together is common and simplifies code.</li>
-        <li>If you don’t initialize a variable, its value is garbage (unless it's a static or global variable).</li>
-      </ul>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>Initialization gives a variable its first value.</li>
+          <li>
+            Declaring and initializing together is common and simplifies code.
+          </li>
+          <li>
+            If you don’t initialize a variable, its value is garbage (unless
+            it's a static or global variable).
+          </li>
+        </ul>
 
-      <h5>3. Constants</h5>
-      <p>Constants are variables whose value cannot change after they are set. In C, constants are used when you need a fixed value throughout the program, such as the value of $π$ or the size of a buffer.</p>
-      <p>There are two primary ways to define constants in C:</p>
-      
-      <h6>(a) Using the const Keyword</h6>
-      <p>The <code>const</code> keyword allows you to declare a constant variable. When a variable is declared as <code>const</code>, its value cannot be changed after it is initialized. If you try to modify it, the compiler will generate an error.</p>
-      <p><strong>Syntax:</strong></p>
-      <pre><code>const type variable_name = value;
-      </code></pre>
-      <p><strong>Example:</strong></p>
-      <pre><code>const float PI = 3.14159;
-      </code></pre>
-      <p>Here, <code>PI</code> is a constant with the value 3.14159. If you try to later assign a new value to <code>PI</code>, the compiler will generate an error:</p>
-      <pre><code>PI = 3.14; // Error: PI is read-only.
-      </code></pre>
-      <p><strong>Key Points:</strong></p>
-      <ul>
-        <li>The <code>const</code> keyword: Used for defining constants with a specific type. The type is still checked by the compiler.</li>
-        <li><strong>Scope:</strong> A <code>const</code> constant can be scoped just like any other variable (local or global).</li>
-      </ul>
+        <h5>3. Constants</h5>
+        <p>
+          Constants are variables whose value cannot change after they are set.
+          In C, constants are used when you need a fixed value throughout the
+          program, such as the value of $π$ or the size of a buffer.
+        </p>
+        <p>There are two primary ways to define constants in C:</p>
 
-      <h6>(b) Using the #define Preprocessor Directive</h6>
-      <p>The <code>#define</code> directive is used to create a constant that is replaced by the preprocessor before the code is compiled. It's more like a textual replacement than a variable with a specific type.</p>
-      <p><strong>Syntax:</strong></p>
-      <pre><code>#define CONSTANT_NAME value
+        <h6>(a) Using the const Keyword</h6>
+        <p>
+          The <code>const</code> keyword allows you to declare a constant
+          variable. When a variable is declared as <code>const</code>, its value
+          cannot be changed after it is initialized. If you try to modify it,
+          the compiler will generate an error.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>const type variable_name = value;
       </code></pre>
-      <p><strong>Example:</strong></p>
-      <pre><code>#define PI 3.14159
+        <p><strong>Example:</strong></p>
+        <pre><code>const float PI = 3.14159;
       </code></pre>
-      <p>Here, the preprocessor will replace all occurrences of <code>PI</code> with 3.14159 before the code is actually compiled.</p>
-      <p><strong>Key Points:</strong></p>
-      <ul>
-        <li><code>#define</code> is not type-safe because it just replaces text, not a variable. It doesn't have a data type (e.g., float, int).</li>
-        <li><strong>Global scope:</strong> The constant is available throughout the file after the <code>#define</code> statement.</li>
-        <li><strong>Preprocessor substitution:</strong> The value is directly substituted into the code, so there’s no runtime storage for PI (i.e., no memory is allocated).</li>
-      </ul>
-      
-      <h5>Key Differences Between const and #define for Constants</h5>
-      <table>
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th><code>const</code></th>
-            <th><code>#define</code></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Type Safety</td>
-            <td>Yes, type is checked by the compiler.</td>
-            <td>No, it’s a simple text substitution.</td>
-          </tr>
-          <tr>
-            <td>Scope</td>
-            <td>Local or global (like any variable).</td>
-            <td>Global (after the <code>#define</code> line).</td>
-          </tr>
-          <tr>
-            <td>Memory Usage</td>
-            <td>Allocates memory for the constant.</td>
-            <td>No memory allocation (preprocessor replacement).</td>
-          </tr>
-          <tr>
-            <td>Error Checking</td>
-            <td>The compiler checks for illegal assignments.</td>
-            <td>No error checking, just replacement.</td>
-          </tr>
-          <tr>
-            <td>Best Use Case</td>
-            <td>When you need type safety and variable-like behavior.</td>
-            <td>When you want simple, type-agnostic constants.</td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <h5>Example Comparison</h5>
-      <pre><code>#include &lt;stdio.h&gt;
+        <p>
+          Here, <code>PI</code> is a constant with the value 3.14159. If you try
+          to later assign a new value to <code>PI</code>, the compiler will
+          generate an error:
+        </p>
+        <pre><code>PI = 3.14; // Error: PI is read-only.
+      </code></pre>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>
+            The <code>const</code> keyword: Used for defining constants with a
+            specific type. The type is still checked by the compiler.
+          </li>
+          <li>
+            <strong>Scope:</strong> A <code>const</code> constant can be scoped
+            just like any other variable (local or global).
+          </li>
+        </ul>
+
+        <h6>(b) Using the #define Preprocessor Directive</h6>
+        <p>
+          The <code>#define</code> directive is used to create a constant that
+          is replaced by the preprocessor before the code is compiled. It's more
+          like a textual replacement than a variable with a specific type.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <pre><code>#define CONSTANT_NAME value
+      </code></pre>
+        <p><strong>Example:</strong></p>
+        <pre><code>#define PI 3.14159
+      </code></pre>
+        <p>
+          Here, the preprocessor will replace all occurrences of
+          <code>PI</code> with 3.14159 before the code is actually compiled.
+        </p>
+        <p><strong>Key Points:</strong></p>
+        <ul>
+          <li>
+            <code>#define</code> is not type-safe because it just replaces text,
+            not a variable. It doesn't have a data type (e.g., float, int).
+          </li>
+          <li>
+            <strong>Global scope:</strong> The constant is available throughout
+            the file after the <code>#define</code> statement.
+          </li>
+          <li>
+            <strong>Preprocessor substitution:</strong> The value is directly
+            substituted into the code, so there’s no runtime storage for PI
+            (i.e., no memory is allocated).
+          </li>
+        </ul>
+
+        <h5>Key Differences Between const and #define for Constants</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th><code>const</code></th>
+              <th><code>#define</code></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Type Safety</td>
+              <td>Yes, type is checked by the compiler.</td>
+              <td>No, it’s a simple text substitution.</td>
+            </tr>
+            <tr>
+              <td>Scope</td>
+              <td>Local or global (like any variable).</td>
+              <td>Global (after the <code>#define</code> line).</td>
+            </tr>
+            <tr>
+              <td>Memory Usage</td>
+              <td>Allocates memory for the constant.</td>
+              <td>No memory allocation (preprocessor replacement).</td>
+            </tr>
+            <tr>
+              <td>Error Checking</td>
+              <td>The compiler checks for illegal assignments.</td>
+              <td>No error checking, just replacement.</td>
+            </tr>
+            <tr>
+              <td>Best Use Case</td>
+              <td>When you need type safety and variable-like behavior.</td>
+              <td>When you want simple, type-agnostic constants.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h5>Example Comparison</h5>
+        <pre><code>#include &lt;stdio.h&gt;
 
 #define PI 3.14159          // Using #define
 const float PI_CONST = 3.14159;  // Using const
@@ -275,40 +478,84 @@ int main() {
     return 0;
 }
       </code></pre>
-      <p>With <code>#define</code>: The value of <code>PI</code> is substituted into the code before compilation. It has no type or memory allocated.</p>
-      <p>With <code>const</code>: <code>PI_CONST</code> is a typed constant (type is checked by the compiler) and uses memory to store the value.</p>
-      <p><strong>In Summary:</strong></p>
-      <ul>
-        <li><strong>Declaration:</strong> Tells the compiler the type and name of a variable (but no value).</li>
-        <li><strong>Initialization:</strong> Assigns a first value to a declared variable.</li>
-        <li><strong>Constants:</strong>
-          <ul>
-            <li><code>const</code>: A constant variable with a type, value can't be changed after initialization.</li>
-            <li><code>#define</code>: A preprocessor directive for defining a constant, no type is associated with it, and it just replaces the constant with its value before compilation.</li>
-          </ul>
-        </li>
-      </ul>
-      <p>Both <code>const</code> and <code>#define</code> are used to define constants, but <code>const</code> is better for type safety, while <code>#define</code> is useful for simple, type-independent constants.</p>
+        <p>
+          With <code>#define</code>: The value of <code>PI</code> is substituted
+          into the code before compilation. It has no type or memory allocated.
+        </p>
+        <p>
+          With <code>const</code>: <code>PI_CONST</code> is a typed constant
+          (type is checked by the compiler) and uses memory to store the value.
+        </p>
+        <p><strong>In Summary:</strong></p>
+        <ul>
+          <li>
+            <strong>Declaration:</strong> Tells the compiler the type and name
+            of a variable (but no value).
+          </li>
+          <li>
+            <strong>Initialization:</strong> Assigns a first value to a declared
+            variable.
+          </li>
+          <li>
+            <strong>Constants:</strong>
+            <ul>
+              <li>
+                <code>const</code>: A constant variable with a type, value can't
+                be changed after initialization.
+              </li>
+              <li>
+                <code>#define</code>: A preprocessor directive for defining a
+                constant, no type is associated with it, and it just replaces
+                the constant with its value before compilation.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          Both <code>const</code> and <code>#define</code> are used to define
+          constants, but <code>const</code> is better for type safety, while
+          <code>#define</code> is useful for simple, type-independent constants.
+        </p>
 
-      <h3>Topic 9: Introduction to Operators & Expressions</h3>
-      <p><strong>What is an expression?</strong> A combination of variables, constants, and operators that evaluates to a single value.</p>
-      <p><strong>Basic Arithmetic Operators:</strong></p>
-      <p><code>+</code> (Addition), <code>-</code> (Subtraction), <code>*</code> (Multiplication), <code>/</code> (Division), <code>%</code> (Modulus - remainder).</p>
-      <p><strong>Example:</strong> <code>int result = (10 + 5) * 2;</code> // result is 30</p>
-      
-      <h2>Part 4: Wrap-up & Look Ahead (10 mins)</h2>
-      <p><strong>Summary:</strong> Today we covered the journey from problem to executable program, why C is a powerful and foundational language, and the basic vocabulary of C (data types, variables, expressions).</p>
-      <p><strong>Key Takeaways:</strong></p>
-      <ul>
-        <li>C is a compiled, middle-level, structured language.</li>
-        <li>Every C program must have a <code>main()</code> function.</li>
-        <li>Variables must be declared with a specific data type before use.</li>
-      </ul>
-      <p><strong>Next Lecture Preview:</strong> We will dive deeper into control structures (if, else, switch) to make our programs make decisions.</p>
-    </div>
-  </main>
+        <h3>Topic 9: Introduction to Operators & Expressions</h3>
+        <p>
+          <strong>What is an expression?</strong> A combination of variables,
+          constants, and operators that evaluates to a single value.
+        </p>
+        <p><strong>Basic Arithmetic Operators:</strong></p>
+        <p>
+          <code>+</code> (Addition), <code>-</code> (Subtraction),
+          <code>*</code> (Multiplication), <code>/</code> (Division),
+          <code>%</code> (Modulus - remainder).
+        </p>
+        <p>
+          <strong>Example:</strong> <code>int result = (10 + 5) * 2;</code> //
+          result is 30
+        </p>
 
-  <footer class="footer text-white">
+        <h2>Part 4: Wrap-up & Look Ahead (10 mins)</h2>
+        <p>
+          <strong>Summary:</strong> Today we covered the journey from problem to
+          executable program, why C is a powerful and foundational language, and
+          the basic vocabulary of C (data types, variables, expressions).
+        </p>
+        <p><strong>Key Takeaways:</strong></p>
+        <ul>
+          <li>C is a compiled, middle-level, structured language.</li>
+          <li>Every C program must have a <code>main()</code> function.</li>
+          <li>
+            Variables must be declared with a specific data type before use.
+          </li>
+        </ul>
+        <p>
+          <strong>Next Lecture Preview:</strong> We will dive deeper into
+          control structures (if, else, switch) to make our programs make
+          decisions.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer text-white">
       <div class="container d-flex justify-between">
         <a href="https://pruthviraj-guddu.github.io/">
           <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
@@ -319,6 +566,5 @@ int main() {
         </p>
       </div>
     </footer>
-
-</body>
+  </body>
 </html>
