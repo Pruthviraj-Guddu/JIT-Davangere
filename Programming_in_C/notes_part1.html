@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming in C - Part 1</title>
-    <link rel="stylesheet" href="../style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,9 +11,14 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <header>
@@ -24,11 +28,9 @@
         <p>Introduction & Context</p>
       </div>
     </header>
-
     <main class="container">
       <div class="card">
         <h2>Part 1: Introduction & Context (20 mins)</h2>
-
         <h3>Topic 1: What is a Programming Language?</h3>
         <p>
           Computer languages are systems of communication used to instruct a
@@ -46,9 +48,7 @@
           <strong>Analogy:</strong> Human languages (English, Spanish) vs.
           Computer languages (C, Python, Java).
         </p>
-
         <h4>Levels of Languages:</h4>
-
         <h5>High-Level vs Low-Level Languages</h5>
         <p><strong>Low-Level Languages:</strong></p>
         <p>
@@ -66,9 +66,12 @@
           In Assembly, instructions map directly to machine-level operations
           (e.g., moving data between registers in the CPU).
         </p>
-        <pre><code>MOV AX, 1   ; Load the value 1 into register AX
-ADD AX, 5   ; Add 5 to the value in AX
-      </code></pre>
+        <div class="code-block">
+          <code>
+            MOV AX, 1 ; Load the value 1 into register <br />
+            AX ADD AX, 5 ; Add 5 to the value in AX
+          </code>
+        </div>
         <p>
           <strong>Pros:</strong> Faster execution, direct control over hardware.
         </p>
@@ -76,7 +79,6 @@ ADD AX, 5   ; Add 5 to the value in AX
           <strong>Cons:</strong> Difficult to write, maintain, and debug.
           Hardware-specific.
         </p>
-
         <p><strong>High-Level Languages:</strong></p>
         <p>
           <strong>Definition:</strong> These are languages that are more
@@ -85,7 +87,8 @@ ADD AX, 5   ; Add 5 to the value in AX
           different machines with minimal modifications.
         </p>
         <p><strong>Example:</strong> C, Python, Java, JavaScript.</p>
-        <pre><code>int main() {
+        <pre><code
+          >int main() {
     int a = 1;
     int b = 5;
     int sum = a + b;
@@ -113,7 +116,6 @@ ADD AX, 5   ; Add 5 to the value in AX
           both—power and efficiency of low-level with the readability and
           structure of high-level.
         </p>
-
         <h3>Topic 2: The Program Creation Process</h3>
         <p><strong>The Steps:</strong></p>
         <ul>
@@ -133,7 +135,6 @@ ADD AX, 5   ; Add 5 to the value in AX
           </li>
           <li><strong>Executing:</strong> Running the executable file.</li>
         </ul>
-
         <h2>Part 2: Overview of the C Language (30 mins)</h2>
         <h3>Topic 3: Why Learn C? (The "Why")</h3>
         <p>
@@ -161,15 +162,17 @@ ADD AX, 5   ; Add 5 to the value in AX
           </li>
           <li>It's fast and efficient.</li>
         </ul>
-
         <h3>Topic 4: The Anatomy of a Simple C Program (The "How")</h3>
-        <pre><code>#include &lt;stdio.h&gt;    // Preprocessor Directive
-
-int main() {         // Main Function - program entry point
-    printf("Hello, World!"); // Library Function
-    return 0;        // Return Statement
-}
-      </code></pre>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt; // Preprocessor Directive <br />
+            int main() { <br />
+            // Main Function - program entry point <br />
+            printf("Hello, World!"); <br />
+            //Library Function <br />
+            return 0; // Return Statement } <br />
+          </code>
+        </div>
         <p><strong>Breakdown of each line:</strong></p>
         <ul>
           <li>
@@ -191,7 +194,61 @@ int main() {         // Main Function - program entry point
             <code>return 0;</code>: Indicates the program ended successfully.
           </li>
         </ul>
-
+        <!-- Start of new "Hello World" section -->
+        <div class="card">
+          <h2>Hello World Program</h2>
+          <p>
+            The “Hello World” program is the first step towards learning any
+            programming language. It is also one of the simplest programs that
+            is used to introduce aspiring programmers to the programming
+            language. It typically outputs the text "Hello, World!" to the
+            console screen.
+          </p>
+          <h3>C Program to Print "Hello World"</h3>
+          <p>
+            To print the “Hello World”, we can use the
+            <code>printf</code> function from the <code>stdio.h</code> library
+            that prints the given string on the screen. Provide the string
+            "Hello World" to this function as shown in the below code:
+          </p>
+          <div class="code-block">
+            <code>
+              // Header file for input output functions <br />
+              #include &lt;stdio.h&gt;<br />
+              // Main function: entry point for execution <br />
+              int main()<br />
+              {<br />
+              // Writing print statement to print hello world <br />
+              printf("Hello World"); <br />
+              return 0;<br />
+              }
+            </code>
+          </div>
+          <h3>Output</h3>
+          <div class="output-block">
+            <p>Hello World</p>
+          </div>
+          <h3>Explanation:</h3>
+          <ul>
+            <li>
+              <code>#include &lt;stdio.h&gt;</code> – This line includes the
+              standard input-output library in the program.
+            </li>
+            <li>
+              <code>int main()</code> – The main function where the execution of
+              the program begins.
+            </li>
+            <li>
+              <code>printf(“Hello, World!\n”);</code> – This function call
+              prints “Hello, World!” followed by a new line.
+            </li>
+            <li>
+              <code>return 0;</code> -This statement indicates that the program
+              ended successfully.
+            </li>
+          </ul>
+        </div>
+        <!-- End of new section -->
         <h2>Part 3: The Building Blocks - Data & Expressions (60 mins)</h2>
         <h3>Topic 5: Basic Data Types - The "Containers" for Data</h3>
         <p>
@@ -213,7 +270,6 @@ int main() {         // Main Function - program entry point
             (more decimal places).
           </li>
         </ul>
-
         <h3>Topic 6: Modifying the Basic Types & Type Qualifiers</h3>
         <p>
           <strong>Modifiers:</strong> Change the size/range of a basic type.
@@ -235,7 +291,6 @@ int main() {         // Main Function - program entry point
             after initialization.
           </li>
         </ul>
-
         <h3>Topic 7: Variables - Naming and Creating Containers</h3>
         <p>
           What is a variable? A named location in memory that stores a value of
@@ -259,7 +314,6 @@ int main() {         // Main Function - program entry point
           >
           instead of <code>x</code>).
         </p>
-
         <h3>Topic 8: Declaring, Initializing, and Constants</h3>
         <p>
           <strong>Declaration:</strong> Telling the compiler about the variable
@@ -280,7 +334,6 @@ int main() {         // Main Function - program entry point
             <code>#define PI 3.14159</code>
           </li>
         </ul>
-
         <h4>Explanation</h4>
         <h5>1. Declaring a Variable</h5>
         <p>
@@ -290,10 +343,12 @@ int main() {         // Main Function - program entry point
           execution.
         </p>
         <p><strong>Syntax:</strong></p>
-        <pre><code>type variable_name;
+        <pre><code
+          >type variable_name;
       </code></pre>
         <p><strong>Example:</strong></p>
-        <pre><code>int age;
+        <pre><code
+          >int age;
       </code></pre>
         <p>
           This declares an integer variable named <code>age</code>, but doesn't
@@ -313,20 +368,22 @@ int main() {         // Main Function - program entry point
             variable.
           </li>
         </ul>
-
         <h5>2. Initializing a Variable</h5>
         <p>
           Initialization means giving a variable its first value. This can
           happen at the time of declaration or later in the program.
         </p>
         <p><strong>Syntax:</strong></p>
-        <pre><code>variable_name = value;
+        <pre><code
+          >variable_name = value;
       </code></pre>
         <p>Or, when declaring and initializing together:</p>
-        <pre><code>type variable_name = value;
+        <pre><code
+          >type variable_name = value;
       </code></pre>
         <p><strong>Example:</strong></p>
-        <pre><code>int age = 21; // Declaration + Initialization
+        <pre><code
+          >int age = 21; // Declaration + Initialization
       </code></pre>
         <p>
           Here, <code>age</code> is declared as an <code>int</code> and is also
@@ -336,7 +393,8 @@ int main() {         // Main Function - program entry point
           Alternatively, you could declare the variable first and initialize it
           later:
         </p>
-        <pre><code>int score;   // Declaration
+        <pre><code
+          >int score;   // Declaration
 score = 95;  // Initialization
       </code></pre>
         <p><strong>Key Points:</strong></p>
@@ -350,7 +408,6 @@ score = 95;  // Initialization
             it's a static or global variable).
           </li>
         </ul>
-
         <h5>3. Constants</h5>
         <p>
           Constants are variables whose value cannot change after they are set.
@@ -358,7 +415,6 @@ score = 95;  // Initialization
           program, such as the value of $π$ or the size of a buffer.
         </p>
         <p>There are two primary ways to define constants in C:</p>
-
         <h6>(a) Using the const Keyword</h6>
         <p>
           The <code>const</code> keyword allows you to declare a constant
@@ -367,17 +423,20 @@ score = 95;  // Initialization
           the compiler will generate an error.
         </p>
         <p><strong>Syntax:</strong></p>
-        <pre><code>const type variable_name = value;
+        <pre><code
+          >const type variable_name = value;
       </code></pre>
         <p><strong>Example:</strong></p>
-        <pre><code>const float PI = 3.14159;
+        <pre><code
+          >const float PI = 3.14159;
       </code></pre>
         <p>
           Here, <code>PI</code> is a constant with the value 3.14159. If you try
           to later assign a new value to <code>PI</code>, the compiler will
           generate an error:
         </p>
-        <pre><code>PI = 3.14; // Error: PI is read-only.
+        <pre><code
+          >PI = 3.14; // Error: PI is read-only.
       </code></pre>
         <p><strong>Key Points:</strong></p>
         <ul>
@@ -390,7 +449,6 @@ score = 95;  // Initialization
             just like any other variable (local or global).
           </li>
         </ul>
-
         <h6>(b) Using the #define Preprocessor Directive</h6>
         <p>
           The <code>#define</code> directive is used to create a constant that
@@ -398,10 +456,12 @@ score = 95;  // Initialization
           like a textual replacement than a variable with a specific type.
         </p>
         <p><strong>Syntax:</strong></p>
-        <pre><code>#define CONSTANT_NAME value
+        <pre><code
+          >#define CONSTANT_NAME value
       </code></pre>
         <p><strong>Example:</strong></p>
-        <pre><code>#define PI 3.14159
+        <pre><code
+          >#define PI 3.14159
       </code></pre>
         <p>
           Here, the preprocessor will replace all occurrences of
@@ -423,7 +483,6 @@ score = 95;  // Initialization
             (i.e., no memory is allocated).
           </li>
         </ul>
-
         <h5>Key Differences Between const and #define for Constants</h5>
         <table>
           <thead>
@@ -461,23 +520,31 @@ score = 95;  // Initialization
             </tr>
           </tbody>
         </table>
-
         <h5>Example Comparison</h5>
-        <pre><code>#include &lt;stdio.h&gt;
 
-#define PI 3.14159          // Using #define
-const float PI_CONST = 3.14159;  // Using const
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br />
+            // Using #define<br />
+            #define PI 3.14159<br />
+            // Using const<br />
+            const float PI_CONST = 3.14159;<br />
+            int main() {<br />
+            <p>
+              // No memory allocated, preprocessor replaces PI with 3.14159<br />
+            </p>
+            printf("Using #define: PI = %f\n", PI);<br />
+            // No memory allocated, preprocessor replaces PI with 3.14159<br />
+            printf("Using const: PI_CONST = %f\n", PI_CONST);<br />
+            // Allocates memory for PI_CONST and enforces type safety<br />
+            // Uncommenting the next line will cause a compiler error because
+            PI_CONST is a constant.<br />
+            // PI_CONST = 3.14;<br />
+            return 0;<br />
+            }
+          </code>
+        </div>
 
-int main() {
-    printf("Using #define: PI = %f\n", PI);           // No memory allocated, preprocessor replaces PI with 3.14159
-    printf("Using const: PI_CONST = %f\n", PI_CONST);  // Allocates memory for PI_CONST and enforces type safety
-
-    // Uncommenting the next line will cause a compiler error because PI_CONST is a constant.
-    // PI_CONST = 3.14;
-
-    return 0;
-}
-      </code></pre>
         <p>
           With <code>#define</code>: The value of <code>PI</code> is substituted
           into the code before compilation. It has no type or memory allocated.
@@ -516,7 +583,6 @@ int main() {
           constants, but <code>const</code> is better for type safety, while
           <code>#define</code> is useful for simple, type-independent constants.
         </p>
-
         <h3>Topic 9: Introduction to Operators & Expressions</h3>
         <p>
           <strong>What is an expression?</strong> A combination of variables,
@@ -532,7 +598,6 @@ int main() {
           <strong>Example:</strong> <code>int result = (10 + 5) * 2;</code> //
           result is 30
         </p>
-
         <h2>Part 4: Wrap-up & Look Ahead (10 mins)</h2>
         <p>
           <strong>Summary:</strong> Today we covered the journey from problem to
@@ -548,19 +613,17 @@ int main() {
           </li>
         </ul>
         <p>
-          <strong>Next Lecture Preview:</strong> We will dive deeper into
-          control structures (if, else, switch) to make our programs make
-          decisions.
+          <strong>Next Lecture Preview:</strong> We will dive deeper into data
+          types, and basic programs
         </p>
       </div>
     </main>
-
-    <footer class="footer text-white">
+    <footer>
       <div class="container d-flex justify-between">
         <a href="https://pruthviraj-guddu.github.io/">
           <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
         </a>
-
+        <br />
         <p>
           Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
         </p>
