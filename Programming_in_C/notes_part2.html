@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C - Part 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
+        <p class="nav-links"><a href="../Programming_in_C/programming_in_c.html">&larr; Back Programming in C</a></p>
+        <h1>Programming in C - Part 2</h1>
+        <p>Identifiers, Variables, and Basic Programs</p>
+      </div>
+    </header>
+    <main class="container">
+      <div class="card">
+        <h2>Part 2: Identifiers, Variables, and Basic Programs (90 mins)</h2>
+
+        <h3>Topic 1: Identifiers in C - The "Names" of Things</h3>
+        <p>
+          <strong>Definition:</strong> Identifiers are names used to identify
+          variables, functions, arrays, structures, or any other user-defined
+          items in a program. They uniquely identify program elements and allow
+          us to refer to them later.
+        </p>
+
+        <div class="code-block">
+          <code>
+            // Creating a variable with identifier 'val'<br />
+            int val = 10;<br /><br />
+
+            // Creating a function with identifier 'func'<br />
+            void func() {}<br /><br />
+
+            // Creating an array with identifier 'scores'<br />
+            int scores[5];
+          </code>
+        </div>
+
+        <h4>Rules for Naming Identifiers in C</h4>
+        <p>Identifiers must follow these strict rules:</p>
+        <ul>
+          <li>
+            Can contain: uppercase (A-Z), lowercase (a-z), digits (0-9), and
+            underscores (_)
+          </li>
+          <li>First character must be a letter or underscore (not a digit)</li>
+          <li>
+            <strong>Case-sensitive:</strong> <code>age</code>, <code>Age</code>,
+            and <code>AGE</code> are different identifiers
+          </li>
+          <li>
+            Cannot be C keywords (reserved words like <code>int</code>,
+            <code>return</code>, <code>if</code>)
+          </li>
+          <li>No spaces or special characters (@, #, $, etc.)</li>
+        </ul>
+
+        <h5>Valid vs Invalid Identifiers</h5>
+        <table>
+          <thead>
+            <tr>
+              <th>Valid Identifiers</th>
+              <th>Invalid Identifiers</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>student_name</code></td>
+              <td><code>student name</code></td>
+              <td>Space not allowed</td>
+            </tr>
+            <tr>
+              <td><code>_count</code></td>
+              <td><code>9students</code></td>
+              <td>Starts with digit</td>
+            </tr>
+            <tr>
+              <td><code>totalAmount</code></td>
+              <td><code>int</code></td>
+              <td>Keyword not allowed</td>
+            </tr>
+            <tr>
+              <td><code>MAX_SIZE</code></td>
+              <td><code>student@name</code></td>
+              <td>Special character @</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Examples of Identifiers in Action</h4>
+
+        <h5>Variable Identifier Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;// Creating an integer variable with identifier 'var'<br />
+            &nbsp;&nbsp;int var;<br /><br />
+
+            &nbsp;&nbsp;// Assigning value using the identifier<br />
+            &nbsp;&nbsp;var = 10;<br /><br />
+
+            &nbsp;&nbsp;// Referring to the variable using its identifier<br />
+            &nbsp;&nbsp;printf("%d", var);<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Output: 10</p>
+        </div>
+
+        <h5>Function Identifier Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            // Function declaration with identifier 'sum'<br />
+            int sum(int a, int b) {<br />
+            &nbsp;&nbsp;return a + b;<br />
+            }<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;// Calling function using its identifier<br />
+            &nbsp;&nbsp;printf("%d", sum(10, 20));<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Output: 30</p>
+        </div>
+
+        <h4>Naming Conventions (Best Practices)</h4>
+        <p>
+          While not enforced by the compiler, following conventions makes code
+          more readable:
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Element Type</th>
+              <th>Convention</th>
+              <th>Examples</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Variables</td>
+              <td>camelCase or snake_case</td>
+              <td><code>studentCount</code>, <code>total_amount</code></td>
+            </tr>
+            <tr>
+              <td>Constants</td>
+              <td>UPPER_SNAKE_CASE</td>
+              <td><code>MAX_SIZE</code>, <code>PI_VALUE</code></td>
+            </tr>
+            <tr>
+              <td>Functions</td>
+              <td>camelCase (verb-based)</td>
+              <td><code>calculateTotal()</code>, <code>getUserName()</code></td>
+            </tr>
+            <tr>
+              <td>Structures</td>
+              <td>PascalCase</td>
+              <td><code>StudentInfo</code>, <code>CarDetails</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Keywords vs Identifiers</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Keywords</th>
+              <th>Identifiers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Definition</strong></td>
+              <td>Reserved words with special meaning</td>
+              <td>User-defined names for program elements</td>
+            </tr>
+            <tr>
+              <td><strong>Purpose</strong></td>
+              <td>Define program structure and control flow</td>
+              <td>Name variables, functions, etc.</td>
+            </tr>
+            <tr>
+              <td><strong>Examples</strong></td>
+              <td>
+                <code>int</code>, <code>if</code>, <code>while</code>,
+                <code>return</code>
+              </td>
+              <td>
+                <code>age</code>, <code>calculateTotal</code>,
+                <code>studentName</code>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Modification</strong></td>
+              <td>Fixed by language (cannot be changed)</td>
+              <td>Created by programmer as needed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h5>Common Error: Using Keywords as Identifiers</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;// ERROR: 'const' is a keyword, cannot be used as
+            identifier<br />
+            &nbsp;&nbsp;int const = 90;<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block error">
+          <p>Compilation Error: expected identifier or '(' before '=' token</p>
+        </div>
+
+        <h3>
+          Topic 2: Variables in Depth - Declaration, Definition, and Scope
+        </h3>
+
+        <h4>Variable Declaration vs Definition</h4>
+        <p>
+          <strong>Declaration:</strong> Tells the compiler about the variable's
+          existence and type
+        </p>
+        <p>
+          <strong>Definition:</strong> Actually allocates memory for the
+          variable
+        </p>
+
+        <div class="code-block">
+          <code>
+            // Declaration (informs compiler)<br />
+            extern int globalVar;<br /><br />
+
+            // Definition (allocates memory)<br />
+            int score = 95;<br />
+            int age; // Also a definition (memory allocated)
+          </code>
+        </div>
+
+        <h4>Variable Scope - Where Variables are Accessible</h4>
+
+        <h5>1. Local Variables (Block Scope)</h5>
+        <p>
+          Declared inside a function or block, accessible only within that block
+        </p>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            void demoFunction() {<br />
+            &nbsp;&nbsp;int localVar = 10; // Local variable<br />
+            &nbsp;&nbsp;printf("Inside function: %d\n", localVar);<br />
+            }<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;demoFunction();<br />
+            &nbsp;&nbsp;// printf("%d", localVar); // ERROR: localVar not
+            accessible here<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h5>2. Global Variables (File Scope)</h5>
+        <p>Declared outside all functions, accessible throughout the file</p>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            // Global variable<br />
+            int globalCount = 0;<br /><br />
+
+            void increment() {<br />
+            &nbsp;&nbsp;globalCount++;<br />
+            &nbsp;&nbsp;printf("Count: %d\n", globalCount);<br />
+            }<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;increment();<br />
+            &nbsp;&nbsp;increment();<br />
+            &nbsp;&nbsp;printf("Final count: %d\n", globalCount);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Output:<br />Count: 1<br />Count: 2<br />Final count: 2</p>
+        </div>
+
+        <h3>Topic 3: Practical Programming Examples</h3>
+
+        <h4>Example 1: Basic Arithmetic Calculator</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int num1, num2;<br />
+            &nbsp;&nbsp;int sum, difference, product;<br />
+            &nbsp;&nbsp;float quotient;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter two integers: ");<br />
+            &nbsp;&nbsp;scanf("%d %d", &num1, &num2);<br /><br />
+
+            &nbsp;&nbsp;// Calculations<br />
+            &nbsp;&nbsp;sum = num1 + num2;<br />
+            &nbsp;&nbsp;difference = num1 - num2;<br />
+            &nbsp;&nbsp;product = num1 * num2;<br />
+            &nbsp;&nbsp;quotient = (float)num1 / num2; // Type casting for
+            decimal result<br /><br />
+
+            &nbsp;&nbsp;printf("\nResults:\n");<br />
+            &nbsp;&nbsp;printf("Sum: %d\n", sum);<br />
+            &nbsp;&nbsp;printf("Difference: %d\n", difference);<br />
+            &nbsp;&nbsp;printf("Product: %d\n", product);<br />
+            &nbsp;&nbsp;printf("Quotient: %.2f\n", quotient);<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Example 2: Temperature Converter</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;float celsius, fahrenheit;<br />
+            &nbsp;&nbsp;int choice;<br /><br />
+
+            &nbsp;&nbsp;printf("Temperature Converter\n");<br />
+            &nbsp;&nbsp;printf("1. Celsius to Fahrenheit\n");<br />
+            &nbsp;&nbsp;printf("2. Fahrenheit to Celsius\n");<br />
+            &nbsp;&nbsp;printf("Enter your choice (1 or 2): ");<br />
+            &nbsp;&nbsp;scanf("%d", &choice);<br /><br />
+
+            &nbsp;&nbsp;if (choice == 1) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Enter temperature in Celsius: ");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;scanf("%f", &celsius);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;fahrenheit = (celsius * 9/5) + 32;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%.2f°C = %.2f°F\n", celsius,
+            fahrenheit);<br />
+            &nbsp;&nbsp;} else if (choice == 2) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Enter temperature in Fahrenheit:
+            ");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;scanf("%f", &fahrenheit);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;celsius = (fahrenheit - 32) * 5/9;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%.2f°F = %.2f°C\n", fahrenheit,
+            celsius);<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid choice!\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Example 3: Student Grade Calculator</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;char studentName[50];<br />
+            &nbsp;&nbsp;float marks[5];<br />
+            &nbsp;&nbsp;float total = 0, average;<br />
+            &nbsp;&nbsp;int i;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter student name: ");<br />
+            &nbsp;&nbsp;scanf("%s", studentName);<br /><br />
+
+            &nbsp;&nbsp;printf("Enter marks for 5 subjects:\n");<br />
+            &nbsp;&nbsp;for(i = 0; i < 5; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Subject %d: ", i+1);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;scanf("%f", &marks[i]);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;total += marks[i];<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;average = total / 5;<br /><br />
+
+            &nbsp;&nbsp;printf("\n--- Student Report ---\n");<br />
+            &nbsp;&nbsp;printf("Name: %s\n", studentName);<br />
+            &nbsp;&nbsp;printf("Total Marks: %.2f/500\n", total);<br />
+            &nbsp;&nbsp;printf("Average: %.2f\n", average);<br /><br />
+
+            &nbsp;&nbsp;if(average >= 90) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: A\n");<br />
+            &nbsp;&nbsp;} else if(average >= 80) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: B\n");<br />
+            &nbsp;&nbsp;} else if(average >= 70) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: C\n");<br />
+            &nbsp;&nbsp;} else if(average >= 60) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: D\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: F\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Topic 4: Common Errors and Debugging</h3>
+
+        <h4>Error 1: Uninitialized Variables</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int uninitializedVar; // Contains garbage value<br />
+            &nbsp;&nbsp;printf("Garbage value: %d\n", uninitializedVar); //
+            Unexpected output<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Error 2: Using Wrong Format Specifiers</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int age = 25;<br />
+            &nbsp;&nbsp;// Wrong: using %f for integer<br />
+            &nbsp;&nbsp;printf("Age: %f\n", age); // Undefined behavior<br />
+            &nbsp;&nbsp;// Correct: using %d for integer<br />
+            &nbsp;&nbsp;printf("Age: %d\n", age);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Error 3: Case Sensitivity Issues</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int studentAge = 20;<br />
+            &nbsp;&nbsp;// Wrong: different case<br />
+            &nbsp;&nbsp;printf("Age: %d\n", StudentAge); // Compilation error<br />
+            &nbsp;&nbsp;// Correct: same case<br />
+            &nbsp;&nbsp;printf("Age: %d\n", studentAge);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h2>Part 5: Hands-On Practice Exercises</h2>
+
+        <h3>Exercise 1: Simple Interest Calculator</h3>
+        <p>
+          <strong>Problem:</strong> Write a program to calculate simple interest
+          using the formula: SI = (P × R × T) / 100
+        </p>
+        <p>
+          <strong>Requirements:</strong> Take principal amount, rate of
+          interest, and time as input from user
+        </p>
+
+        <h3>Exercise 2: Area Calculator</h3>
+        <p>
+          <strong>Problem:</strong> Write a program that calculates area of
+          circle, rectangle, and triangle based on user choice
+        </p>
+        <p><strong>Formulas:</strong></p>
+        <ul>
+          <li>Circle: πr²</li>
+          <li>Rectangle: length × width</li>
+          <li>Triangle: ½ × base × height</li>
+        </ul>
+
+        <h3>Exercise 3: BMI Calculator</h3>
+        <p>
+          <strong>Problem:</strong> Calculate Body Mass Index using formula: BMI
+          = weight(kg) / (height(m))²
+        </p>
+        <p><strong>Categories:</strong></p>
+        <ul>
+          <li>Underweight: BMI < 18.5</li>
+          <li>Normal: 18.5 ≤ BMI < 25</li>
+          <li>Overweight: 25 ≤ BMI < 30</li>
+          <li>Obese: BMI ≥ 30</li>
+        </ul>
+
+        <h2>Part 6: Summary and Key Takeaways</h2>
+
+        <h3>What We Covered Today:</h3>
+        <ul>
+          <li>
+            <strong>Identifiers:</strong> Rules for naming variables, functions,
+            and other program elements
+          </li>
+          <li>
+            <strong>Variable Scope:</strong> Local vs global variables and their
+            accessibility
+          </li>
+          <li>
+            <strong>Practical Programming:</strong> Real-world examples with
+            input/output operations
+          </li>
+          <li>
+            <strong>Error Handling:</strong> Common mistakes and how to avoid
+            them
+          </li>
+        </ul>
+
+        <h3>Key Rules to Remember:</h3>
+        <ul>
+          <li>
+            Identifiers must start with letter/underscore, contain only
+            letters/numbers/underscores
+          </li>
+          <li>Identifiers are case-sensitive</li>
+          <li>Always initialize variables before use</li>
+          <li>Use proper format specifiers in printf/scanf</li>
+          <li>Follow naming conventions for readable code</li>
+        </ul>
+
+        <h3>Next Session Preview:</h3>
+        <p>In our next class, we'll dive into:</p>
+        <ul>
+          <li>Operators and expressions in detail</li>
+          <li>Control flow statements (if-else, loops)</li>
+          <li>More complex program structures</li>
+        </ul>
+
+        <div class="practice-tip">
+          <h4>💡 Practice Tip</h4>
+          <p>
+            Try modifying the example programs - change variable names, add new
+            features, or combine multiple programs. The best way to learn
+            programming is by writing and experimenting with code!
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container d-flex justify-between">
+        <a href="https://pruthviraj-guddu.github.io/">
+          <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
+        </a>
+        <br />
+        <p>
+          Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

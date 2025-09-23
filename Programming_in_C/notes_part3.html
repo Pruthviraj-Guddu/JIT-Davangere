@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C - Part 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
+        <p class="nav-links"><a href="../Programming_in_C/programming_in_c.html">&larr; Back Programming in C</a></p>
+        <h1>Programming in C - Part 3</h1>
+        <p>Keywords, Control Flow, and Advanced Concepts</p>
+      </div>
+    </header>
+    <main class="container">
+      <div class="card">
+        <h2>Part 3: Keywords and Advanced Programming Concepts (120 mins)</h2>
+
+        <h3>Topic 1: Keywords in C - The Language's Reserved Words</h3>
+        <p>
+          <strong>Definition:</strong> Keywords are predefined or reserved words
+          that have special meanings to the C compiler. They are part of the
+          language syntax and cannot be used as identifiers (variable names,
+          function names, etc.).
+        </p>
+
+        <div class="important-note">
+          <h4>⚠️ Important Rule</h4>
+          <p>
+            Keywords <strong>cannot</strong> be used as identifiers. The
+            compiler will generate an error if you try to use them as variable
+            names, function names, or any other user-defined elements.
+          </p>
+        </div>
+
+        <h4>Complete List of C Keywords (32 Keywords)</h4>
+        <div class="keywords-grid">
+          <div class="keyword-category">
+            <h5>Data Type Keywords</h5>
+            <div class="keyword-list">
+              <span class="keyword">char</span>
+              <span class="keyword">int</span>
+              <span class="keyword">float</span>
+              <span class="keyword">double</span>
+              <span class="keyword">void</span>
+              <span class="keyword">short</span>
+              <span class="keyword">long</span>
+              <span class="keyword">signed</span>
+              <span class="keyword">unsigned</span>
+            </div>
+          </div>
+
+          <div class="keyword-category">
+            <h5>Control Flow Keywords</h5>
+            <div class="keyword-list">
+              <span class="keyword">if</span>
+              <span class="keyword">else</span>
+              <span class="keyword">switch</span>
+              <span class="keyword">case</span>
+              <span class="keyword">default</span>
+              <span class="keyword">for</span>
+              <span class="keyword">while</span>
+              <span class="keyword">do</span>
+              <span class="keyword">break</span>
+              <span class="keyword">continue</span>
+              <span class="keyword">goto</span>
+            </div>
+          </div>
+
+          <div class="keyword-category">
+            <h5>Storage Class Keywords</h5>
+            <div class="keyword-list">
+              <span class="keyword">auto</span>
+              <span class="keyword">register</span>
+              <span class="keyword">static</span>
+              <span class="keyword">extern</span>
+            </div>
+          </div>
+
+          <div class="keyword-category">
+            <h5>Type Qualifiers & Others</h5>
+            <div class="keyword-list">
+              <span class="keyword">const</span>
+              <span class="keyword">volatile</span>
+              <span class="keyword">return</span>
+              <span class="keyword">sizeof</span>
+              <span class="keyword">typedef</span>
+              <span class="keyword">struct</span>
+              <span class="keyword">union</span>
+              <span class="keyword">enum</span>
+            </div>
+          </div>
+        </div>
+
+        <h4>Common Error: Using Keywords as Identifiers</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;// ERROR: 'return' is a keyword, cannot be used as
+            variable name<br />
+            &nbsp;&nbsp;int return = 10;<br /><br />
+
+            &nbsp;&nbsp;printf("%d\n", return);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block error">
+          <p>
+            Compilation Error:<br />
+            ./Solution.c: In function 'main':<br />
+            ./Solution.c:4:9: error: expected identifier or '(' before
+            'return'<br />
+            ./Solution.c:5:20: error: expected expression before 'return'
+          </p>
+        </div>
+
+        <h3>Topic 2: Categorized Keywords with Examples</h3>
+
+        <h4>1. Data Type Keywords</h4>
+        <p>Used to declare variables of specific types</p>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;char letter = 'A';<br />
+            &nbsp;&nbsp;int age = 25;<br />
+            &nbsp;&nbsp;float price = 99.99;<br />
+            &nbsp;&nbsp;double preciseValue = 3.14159265359;<br />
+            &nbsp;&nbsp;short smallNumber = 100;<br />
+            &nbsp;&nbsp;long bigNumber = 1000000L;<br />
+            &nbsp;&nbsp;unsigned int positiveOnly = 40000;<br />
+            &nbsp;&nbsp;signed int canBeNegative = -50;<br /><br />
+
+            &nbsp;&nbsp;printf("Char: %c, Int: %d, Float: %.2f\n", letter, age,
+            price);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>2. Control Flow Keywords</h4>
+        <p>Used to control the flow of program execution</p>
+
+        <h5>if-else Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int number;<br />
+            &nbsp;&nbsp;printf("Enter a number: ");<br />
+            &nbsp;&nbsp;scanf("%d", &number);<br /><br />
+
+            &nbsp;&nbsp;if (number > 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Positive number\n");<br />
+            &nbsp;&nbsp;} else if (number < 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Negative number\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Zero\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h5>for loop Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int i;<br />
+            &nbsp;&nbsp;for (i = 1; i <= 5; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Iteration %d\n", i);<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>
+            Output:<br />Iteration 1<br />Iteration 2<br />Iteration 3<br />Iteration
+            4<br />Iteration 5
+          </p>
+        </div>
+
+        <h5>while loop Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int count = 1;<br />
+            &nbsp;&nbsp;while (count <= 3) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Count: %d\n", count);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;count++;<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>3. Storage Class Keywords</h4>
+        <p>Determine the scope, visibility, and lifetime of variables</p>
+
+        <h5>auto (Default)</h5>
+        <div class="code-block">
+          <code>
+            void demoFunction() {<br />
+            &nbsp;&nbsp;auto int localVar = 10; // 'auto' is optional
+            (default)<br />
+            &nbsp;&nbsp;printf("Local variable: %d\n", localVar);<br />
+            }
+          </code>
+        </div>
+
+        <h5>static Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            void counter() {<br />
+            &nbsp;&nbsp;static int count = 0; // Retains value between calls<br />
+            &nbsp;&nbsp;count++;<br />
+            &nbsp;&nbsp;printf("Count: %d\n", count);<br />
+            }<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;counter(); // Count: 1<br />
+            &nbsp;&nbsp;counter(); // Count: 2<br />
+            &nbsp;&nbsp;counter(); // Count: 3<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h5>extern Example</h5>
+        <div class="code-block">
+          <code>
+            // File1.c<br />
+            int globalVar = 100; // Global variable definition<br /><br />
+
+            // File2.c<br />
+            extern int globalVar; // Declaration (defined in another file)<br />
+            void display() {<br />
+            &nbsp;&nbsp;printf("Global variable: %d\n", globalVar);<br />
+            }
+          </code>
+        </div>
+
+        <h4>4. Type Qualifiers & Utility Keywords</h4>
+
+        <h5>const Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;const float PI = 3.14159;<br />
+            &nbsp;&nbsp;const int MAX_SIZE = 100;<br /><br />
+
+            &nbsp;&nbsp;// PI = 3.14; // ERROR: cannot modify const variable<br />
+            &nbsp;&nbsp;printf("PI value: %.2f\n", PI);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h5>sizeof Example</h5>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;printf("Size of int: %zu bytes\n", sizeof(int));<br />
+            &nbsp;&nbsp;printf("Size of float: %zu bytes\n", sizeof(float));<br />
+            &nbsp;&nbsp;printf("Size of double: %zu bytes\n",
+            sizeof(double));<br />
+            &nbsp;&nbsp;printf("Size of char: %zu bytes\n", sizeof(char));<br /><br />
+
+            &nbsp;&nbsp;int arr[10];<br />
+            &nbsp;&nbsp;printf("Size of array: %zu bytes\n", sizeof(arr));<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Topic 3: Control Flow in Depth</h3>
+
+        <h4>Switch-Case Statement</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int day;<br />
+            &nbsp;&nbsp;printf("Enter day number (1-7): ");<br />
+            &nbsp;&nbsp;scanf("%d", &day);<br /><br />
+
+            &nbsp;&nbsp;switch(day) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Monday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 2:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Tuesday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 3:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Wednesday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 4:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Thursday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 5:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Friday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 6:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Saturday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 7:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Sunday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid day!\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Nested Control Structures</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int number, i, j;<br />
+            &nbsp;&nbsp;printf("Enter a number: ");<br />
+            &nbsp;&nbsp;scanf("%d", &number);<br /><br />
+
+            &nbsp;&nbsp;if (number > 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for(i = 1; i <= number; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(j = 1; j <= i; j++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("*");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Please enter a positive
+            number.\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Topic 4: Difference Between Keywords and Identifiers</h3>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Keywords</th>
+              <th>Identifiers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Definition</strong></td>
+              <td>Reserved words with specific meaning in C syntax</td>
+              <td>User-defined names for variables, functions, etc.</td>
+            </tr>
+            <tr>
+              <td><strong>Usage</strong></td>
+              <td>Part of language grammar, cannot be changed</td>
+              <td>Created by programmer as needed</td>
+            </tr>
+            <tr>
+              <td><strong>Examples</strong></td>
+              <td>
+                <code>int</code>, <code>return</code>, <code>if</code>,
+                <code>while</code>
+              </td>
+              <td>
+                <code>age</code>, <code>calculateTotal</code>,
+                <code>studentName</code>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>As Variable Names</strong></td>
+              <td>❌ Cannot be used</td>
+              <td>✅ Can be used (if not a keyword)</td>
+            </tr>
+            <tr>
+              <td><strong>Modification</strong></td>
+              <td>Fixed by language specification</td>
+              <td>Can be defined, redefined, and reused</td>
+            </tr>
+            <tr>
+              <td><strong>Purpose</strong></td>
+              <td>Define program structure and control flow</td>
+              <td>Identify and reference program elements</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Topic 5: Advanced Programming Examples</h3>
+
+        <h4>Example 1: Number Classification Program</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int number;<br />
+            &nbsp;&nbsp;printf("Enter an integer: ");<br />
+            &nbsp;&nbsp;scanf("%d", &number);<br /><br />
+
+            &nbsp;&nbsp;// Check multiple conditions<br />
+            &nbsp;&nbsp;if (number == 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is zero.\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;if (number > 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Positive");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Negative");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;if (number % 2 == 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(" and even.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(" and odd.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Example 2: Simple Calculator using Switch</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;char operator;<br />
+            &nbsp;&nbsp;double num1, num2, result;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter an operator (+, -, *, /): ");<br />
+            &nbsp;&nbsp;scanf(" %c", &operator);<br />
+            &nbsp;&nbsp;printf("Enter two numbers: ");<br />
+            &nbsp;&nbsp;scanf("%lf %lf", &num1, &num2);<br /><br />
+
+            &nbsp;&nbsp;switch(operator) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '+':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 + num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '-':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 - num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '*':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 * num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '/':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num2 != 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 /
+            num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Error!
+            Division by zero.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Error! Invalid
+            operator.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;printf("Result: %.2lf %c %.2lf = %.2lf\n", num1,
+            operator, num2, result);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Example 3: Prime Number Checker</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int num, i, isPrime = 1; // Assume prime initially<br /><br />
+
+            &nbsp;&nbsp;printf("Enter a positive integer: ");<br />
+            &nbsp;&nbsp;scanf("%d", &num);<br /><br />
+
+            &nbsp;&nbsp;if (num <= 1) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;isPrime = 0;<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;for (i = 2; i <= num / 2; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num % i == 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isPrime = 0;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;if (isPrime) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%d is a prime number.\n", num);<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%d is not a prime number.\n",
+            num);<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h2>Part 6: Hands-On Practice Exercises</h2>
+
+        <h3>Exercise 1: Fibonacci Series Generator</h3>
+        <p>
+          <strong>Problem:</strong> Write a program to generate the first N
+          numbers of the Fibonacci series
+        </p>
+        <p>
+          <strong>Fibonacci Series:</strong> 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+        </p>
+        <p>
+          <strong>Formula:</strong> Each number is the sum of the two preceding
+          ones
+        </p>
+
+        <h3>Exercise 2: Factorial Calculator</h3>
+        <p>
+          <strong>Problem:</strong> Calculate the factorial of a number using
+          loops
+        </p>
+        <p><strong>Formula:</strong> n! = n × (n-1) × (n-2) × ... × 1</p>
+        <p><strong>Example:</strong> 5! = 5 × 4 × 3 × 2 × 1 = 120</p>
+
+        <h3>Exercise 3: Number Guessing Game</h3>
+        <p>
+          <strong>Problem:</strong> Create a game where the computer generates a
+          random number and the user has to guess it
+        </p>
+        <p><strong>Features:</strong></p>
+        <ul>
+          <li>Generate random number between 1-100</li>
+          <li>Give hints ("Too high", "Too low")</li>
+          <li>Count number of attempts</li>
+          <li>Ask to play again</li>
+        </ul>
+
+        <h2>Part 7: Common Errors and Debugging Tips</h2>
+
+        <h4>Error 1: Missing break in switch statement</h4>
+        <div class="code-block">
+          <code>
+            switch(choice) {<br />
+            &nbsp;&nbsp;case 1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("One");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;// Missing break - will fall through to case
+            2!<br />
+            &nbsp;&nbsp;case 2:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Two");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            }
+          </code>
+        </div>
+
+        <h4>Error 2: Infinite loops</h4>
+        <div class="code-block">
+          <code>
+            int i = 0;<br />
+            while (i < 5) {<br />
+            &nbsp;&nbsp;printf("%d\n", i);<br />
+            &nbsp;&nbsp;// Forgot to increment i - infinite loop!<br />
+            }
+          </code>
+        </div>
+
+        <h4>Error 3: Using = instead of == in conditions</h4>
+        <div class="code-block">
+          <code>
+            int x = 5;<br />
+            if (x = 10) { // Assignment, not comparison!<br />
+            &nbsp;&nbsp;printf("This will always execute\n");<br />
+            }
+          </code>
+        </div>
+
+        <h2>Part 8: Summary and Key Takeaways</h2>
+
+        <h3>What We Covered Today:</h3>
+        <ul>
+          <li>
+            <strong>Keywords:</strong> All 32 reserved words and their
+            categories
+          </li>
+          <li>
+            <strong>Control Flow:</strong> if-else, switch-case, loops (for,
+            while, do-while)
+          </li>
+          <li>
+            <strong>Storage Classes:</strong> auto, static, extern, register
+          </li>
+          <li>
+            <strong>Advanced Programming:</strong> Practical examples with
+            multiple control structures
+          </li>
+          <li>
+            <strong>Error Handling:</strong> Common mistakes and debugging
+            techniques
+          </li>
+        </ul>
+
+        <h3>Key Rules to Remember:</h3>
+        <ul>
+          <li>Keywords cannot be used as identifiers</li>
+          <li>
+            Always use break in switch cases (unless intentional fall-through)
+          </li>
+          <li>Use == for comparison, = for assignment</li>
+          <li>static variables retain their value between function calls</li>
+          <li>const variables cannot be modified after initialization</li>
+        </ul>
+
+        <h3>Next Session Preview:</h3>
+        <p>In our next class, we'll explore:</p>
+        <ul>
+          <li>Arrays and strings</li>
+          <li>Functions and parameter passing</li>
+          <li>Pointers and memory management</li>
+          <li>More complex data structures</li>
+        </ul>
+
+        <div class="practice-tip">
+          <h4>💡 Pro Tip: Memory Aid for Keywords</h4>
+          <p>
+            Remember this sentence: "<strong>C</strong>an <strong>I</strong>
+            <strong>F</strong>orget <strong>L</strong>ong
+            <strong>D</strong>ouble <strong>S</strong>trings?" - The first
+            letters match common data type keywords: char, int, float, long,
+            double, short.
+          </p>
+        </div>
+
+        <div class="quick-reference">
+          <h4>📋 Quick Reference: Most Used Keywords</h4>
+          <div class="reference-grid">
+            <div><code>int</code> - Integer variables</div>
+            <div><code>float</code> - Floating-point numbers</div>
+            <div><code>char</code> - Character data</div>
+            <div><code>if/else</code> - Conditional execution</div>
+            <div><code>for</code> - Counting loops</div>
+            <div><code>while</code> - Conditional loops</div>
+            <div><code>return</code> - Function return</div>
+            <div><code>void</code> - No type/return value</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container d-flex justify-between">
+        <a href="https://pruthviraj-guddu.github.io/">
+          <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
+        </a>
+        <br />
+        <p>
+          Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
