@@ -34,20 +34,14 @@
       </div>
     </header>
     <main class="container">
-      
-      <!--  -->
-
+      <!-- Hello World Program -->
       <div class="card">
         <h2>C Program to Print "Hello World"</h2>
-
-        <!-- <h3>Topic 1: Keywords in C - The Language's Reserved Words</h3> -->
         <p>
           To print the “Hello World”, we can use the
           <strong>printf</strong> function from the
           <strong>stdio.h</strong> library that prints the given string on the
-          screen. <br />
-          Provide the string "Hello World" to this function as shown in the
-          below code:
+          screen.
         </p>
 
         <!-- <div class="important-note">
@@ -63,13 +57,12 @@
         <div class="code-block">
           <code>
             // Header file for input output functions <br />
-            #include &lt;stdio.h&gt;<br />
+            #include &lt;stdio.h&gt;<br /><br />
 
             // Main function: entry point for execution<br />
             int main() {<br />
-
-            &nbsp;&nbsp; // Writing print statement to print hello world
-            &nbsp;&nbsp;printf("Hello World");<br />
+            &nbsp;&nbsp; // Writing print statement to print hello world<br />
+            &nbsp;&nbsp; printf("Hello World");<br /><br />
 
             &nbsp;&nbsp; return 0;<br />
             }
@@ -80,31 +73,337 @@
         </div>
 
         <p><strong>Explanation:</strong></p>
+
         <ul>
           <li>
-            <strong>#include &lt;stdio.h&gt;</strong> - This line includes the standard
-            input-output library in the program.
+            <strong>#include &lt;stdio.h&gt;</strong> - This line includes the
+            standard input-output library in the program.
           </li>
 
           <li>
-            <strong>main()</strong>  - The main function where the execution of the program
-            begins.
+            <strong>main()</strong> - The main function where the execution of
+            the program begins.
           </li>
           <li>
-            <stong>printf(“Hello, World!\n”);</stong> - This function call prints “Hello,
-            World!” followed by a new line.
+            <stong>printf(“Hello, World!\n”);</stong> - This function call
+            prints “Hello, World!” followed by a new line.
           </li>
           <li>
-            <strong>return 0;</strong> -This statement indicates that the program ended
-            successfully.
+            <strong>return 0;</strong> -This statement indicates that the
+            program ended successfully.
           </li>
         </ul>
       </div>
+
+      <!-- Print Your Own Name Program -->
+      <div class="card">
+        <h2>C Program To Print Your Own Name</h2>
+
+        <p>
+          Printing your own name means displaying your name on the computer
+          screen. In this article, we will learn how to print your own name
+          using a C program.
+        </p>
+
+        <h3>Examples</h3>
+        <ul>
+          <li>
+            <strong>Input:</strong> name = "Pruthviraj"<br /><strong
+              >Output:</strong
+            >
+            Pruthviraj
+          </li>
+          <li>
+            <strong>Input:</strong> name = "Guddu"<br /><strong>Output:</strong>
+            Guddu
+          </li>
+        </ul>
+
+        <h3>Print Your Own Name Using printf()</h3>
+        <p>
+          The simplest way to print something is to use the
+          <strong>printf()</strong> function. You can provide your name in the
+          form of string to printf() and it will print it on the output screen.
+        </p>
+
+        <h4>Program</h4>
+        <div class="code-block">
+          <code>
+            // C Program to Print Your Own Name using printf<br />
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp; // Printing your name "Pruthviraj Guddu"<br />
+            &nbsp;&nbsp; printf("Pruthviraj Guddu");<br /><br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Pruthviraj Guddu</p>
+        </div>
+
+        <h3>Other Different Ways to Print Your Own Name in C</h3>
+        <ul>
+          <li>Take Your Name as Input and Then Print It</li>
+          <li>Using <code>puts()</code></li>
+          <li>Using <code>fputs()</code></li>
+          <li>Using <code>fprintf()</code></li>
+          <li>Using <code>write()</code> System Call</li>
+        </ul>
+
+        <!-- Example: Taking Input -->
+        <h4>Program using scanf()</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp; char name[100];<br /><br />
+            &nbsp;&nbsp; printf("Enter Your Name: ");<br />
+            &nbsp;&nbsp; scanf("%s", name);<br /><br />
+            &nbsp;&nbsp; printf("Your Name: %s\\n", name);<br /><br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Enter Your Name: Pruthviraj<br />Your Name: Pruthviraj</p>
+        </div>
+
+        <!-- Example: Using puts() -->
+        <h4>Program using puts()</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp; puts("Guddu");<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Guddu</p>
+        </div>
+
+        <!-- Example: Using fputs() -->
+        <h4>Program using fputs()</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp; fputs("Spiderman", stdout);<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Spiderman</p>
+        </div>
+
+        <!-- Example: Using fprintf() -->
+        <h4>Program using fprintf()</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp; fprintf(stdout, "Batman");<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Batman</p>
+        </div>
+
+        <!-- Example: Using write() -->
+        <h4>Program using write() System Call</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;unistd.h&gt;<br />
+            #include &lt;string.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp; char name[] = "Pruthviraj";<br />
+            &nbsp;&nbsp; write(STDOUT_FILENO, name, strlen(name));<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Pruthviraj</p>
+        </div>
+      </div>
       <!--  -->
-     
+      <!-- Print Integer Program -->
+      <div class="card">
+        <h2>Print an Integer Value in C</h2>
+        <p>
+          Printing an Integer in C is one of the most basic tasks. Input and
+          output of the elements are essential for taking input from the user
+          and then giving the output to the user. Here we are going to take an
+          integer as input from the user with the help of the
+          <strong>scanf()</strong> function and print that integer with the help
+          of the <strong>printf()</strong>
+          function in C language.
+        </p>
 
+        <h3>1. Printing Integer Values in C</h3>
+        <p>
+          Store the integer value in the variable of type <code>int</code> and
+          print this value using the <strong>printf()</strong> method.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <div class="code-block">
+          <code>printf("%d", variableOfIntType);</code>
+        </div>
 
+        <h4>Program</h4>
+        <div class="code-block">
+          <code>
+            // C Program to Print Integer value<br />
+            #include &lt;stdio.h&gt;<br /><br />
+
+            // Driver code<br />
+            int main() {<br />
+            &nbsp;&nbsp; // Declaring integer<br />
+            &nbsp;&nbsp; int x = 5;<br /><br />
+
+            &nbsp;&nbsp; // Printing values<br />
+            &nbsp;&nbsp; printf("Printing Integer value %d", x);<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Printing Integer value 5</p>
+        </div>
+
+        <h3>2. Reading Integer Values in C</h3>
+        <p>
+          The user enters an integer value when asked. This value is taken from
+          the user with the help of the <strong>scanf()</strong> method.
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <div class="code-block">
+          <code>scanf("%d", &amp;variableOfIntType);</code>
+        </div>
+
+        <h4>Program</h4>
+        <div class="code-block">
+          <code>
+            // C program to take an integer as input and print it<br />
+            #include &lt;stdio.h&gt;<br /><br />
+
+            // Driver code<br />
+            int main() {<br />
+            &nbsp;&nbsp; // Declare the variables<br />
+            &nbsp;&nbsp; int num;<br /><br />
+
+            &nbsp;&nbsp; // Input the integer<br />
+            &nbsp;&nbsp; printf("Enter the integer: ");<br />
+            &nbsp;&nbsp; scanf("%d", &amp;num);<br /><br />
+
+            &nbsp;&nbsp; // Display the integer<br />
+            &nbsp;&nbsp; printf("Entered integer is: %d", num);<br /><br />
+
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>
+            Enter the integer: 10 <br />
+            Entered integer is: 10
+          </p>
+        </div>
+      </div>
+
+      <!--  -->
+      <!-- Add Two Integers Program -->
+      <div class="card">
+        <h2>C Program to Add Two Integers</h2>
+        <p>
+          Given two integers, the task is to add these integer numbers and
+          return their sum.
+        </p>
+
+        <h3>Examples</h3>
+        <ul>
+          <li>
+            <strong>Input:</strong> a = 5, b = 3<br /><strong>Output:</strong>
+            8<br />
+            <em>Explanation:</em> The sum of 5 and 3 is 8.
+          </li>
+          <li>
+            <strong>Input:</strong> a = -2, b = 7<br /><strong>Output:</strong>
+            5<br />
+            <em>Explanation:</em> The sum of -2 and 7 is 5.
+          </li>
+        </ul>
+
+        <p>
+          In C, we have multiple methods to add two numbers, such as using the
+          <strong>addition operator (+)</strong>, the
+          <strong>increment operator (++ )</strong>, or
+          <strong>bitwise operators</strong>.
+        </p>
+
+        <h3>1. Adding Two Numbers using + Operator</h3>
+        <p>
+          Adding two numbers is a simple task in C language that can be
+          accomplished using the '+' operator that takes two operands and
+          returns their sum as the result.
+        </p>
+
+        <h4>Program</h4>
+        <div class="code-block">
+          <code>
+            // C program to add two numbers<br />
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp; int a, b, sum = 0;<br /><br />
+
+            &nbsp;&nbsp; // Read two numbers from the user<br />
+            &nbsp;&nbsp; printf("Enter two integers: ");<br />
+            &nbsp;&nbsp; scanf("%d %d", &amp;a, &amp;b);<br /><br />
+
+            &nbsp;&nbsp; // Calculate the addition of a and b using '+'
+            operator<br />
+            &nbsp;&nbsp; sum = a + b;<br /><br />
+
+            &nbsp;&nbsp; printf("Sum: %d", sum);<br /><br />
+
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>
+            Enter two integers: 5 3 <br />
+            Sum: 8
+          </p>
+        </div>
+
+        <h4>Complexity</h4>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(1)</li>
+          <li><strong>Auxiliary Space:</strong> O(1)</li>
+        </ul>
+
+        <h4>Explanation</h4>
+        <p>
+          In the above program, the user is first asked to enter two numbers.
+          The input is taken using the <strong>scanf()</strong> function and
+          stored in the variables <code>a</code> and <code>b</code>. Then, the
+          variables <code>a</code> and <code>b</code> are added using the
+          arithmetic addition operator <code>+</code>, and the result is stored
+          in the variable <code>sum</code>.
+        </p>
+      </div>
+
+      <!--  -->
     </main>
+
     <footer>
       <div class="container d-flex justify-between">
         <a href="https://pruthviraj-guddu.github.io/">
