@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C - Part 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
+        <p class="nav-links">
+          <a href="../Programming_in_C/programming_in_c.html"
+            >&larr; Back Programming in C</a
+          >
+        </p>
+        <h1>C Program - Basic</h1>
+        <p>These are practice programs</p>
+      </div>
+    </header>
+    <main class="container">
+      <!-- lab program 1 Program -->
+      <!-- Distance Between Two Points Program -->
+      <div class="card">
+        <h2>Program 1: Calculate Straight-Line Distance Between Two Points</h2>
+        <p>
+          A robot needs to find how far it must travel between two points on a
+          2D plane. The straight-line distance (Euclidean distance) can be
+          calculated using the formula:
+        </p>
+
+        <div class="code-block">
+          <code> distance = √((x₂ - x₁)² + (y₂ - y₁)²) </code>
+        </div>
+
+        <h4>C Program</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br />
+            #include &lt;math.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp; double x1, y1, x2, y2, distance;<br /><br />
+
+            &nbsp;&nbsp; // Input coordinates of point 1<br />
+            &nbsp;&nbsp; printf("Enter coordinates of point 1 (x1 y1): ");<br />
+            &nbsp;&nbsp; scanf("%lf %lf", &amp;x1, &amp;y1);<br /><br />
+
+            &nbsp;&nbsp; // Input coordinates of point 2<br />
+            &nbsp;&nbsp; printf("Enter coordinates of point 2 (x2 y2): ");<br />
+            &nbsp;&nbsp; scanf("%lf %lf", &amp;x2, &amp;y2);<br /><br />
+
+            &nbsp;&nbsp; // Calculate distance<br />
+            &nbsp;&nbsp; distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2
+            - y1));<br /><br />
+
+            &nbsp;&nbsp; // Display result<br />
+            &nbsp;&nbsp; printf("The straight-line distance between the points
+            is: %.4lf\\n", distance);<br /><br />
+
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>
+            Enter coordinates of point 1 (x1 y1): 2 3<br />
+            Enter coordinates of point 2 (x2 y2): 7 8<br />
+            The straight-line distance between the points is: 7.0711
+          </p>
+        </div>
+
+        <h4>Explanation</h4>
+        <ul>
+          <li>
+            <strong>scanf("%lf %lf", &amp;x1, &amp;y1)</strong> - reads the
+            coordinates of the first point.
+          </li>
+          <li>
+            <strong>scanf("%lf %lf", &amp;x2, &amp;y2)</strong> - reads the
+            coordinates of the second point.
+          </li>
+          <li>
+            <strong>sqrt((x2 - x1)² + (y2 - y1)²)</strong> - applies the
+            Euclidean distance formula.
+          </li>
+          <li>
+            The result is printed with 4 decimal places using
+            <code>%.4lf</code>.
+          </li>
+        </ul>
+      </div>
+
+      <!--  -->
+
+      <!-- Student Grade Program -->
+      <div class="card">
+        <h2>Program 2: Calculate Grade Based on Marks</h2>
+        <p>
+          Develop a C program that takes a student's marks as input and displays
+          their grade based on the following criteria:
+        </p>
+
+        <ul>
+          <li><strong>90 and above:</strong> Grade A</li>
+          <li><strong>75 to 89:</strong> Grade B</li>
+          <li><strong>60 to 74:</strong> Grade C</li>
+          <li><strong>50 to 59:</strong> Grade D</li>
+          <li><strong>Below 50:</strong> Grade F</li>
+        </ul>
+
+        <p>
+          A suitable <strong>if-else ladder</strong> is used to implement this
+          grading logic efficiently.
+        </p>
+
+        <h4>C Program</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp; int marks;<br />
+            &nbsp;&nbsp; char grade;<br /><br />
+
+            &nbsp;&nbsp; printf("Enter the student's marks (0-100): ");<br />
+            &nbsp;&nbsp; scanf("%d", &amp;marks);<br /><br />
+
+            &nbsp;&nbsp; if (marks &lt; 0 || marks &gt; 100) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; printf("Invalid marks entered.\\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; return 1; // Exit for invalid input<br />
+            &nbsp;&nbsp; }<br /><br />
+
+            &nbsp;&nbsp; if (marks &gt;= 90) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; grade = 'A';<br />
+            &nbsp;&nbsp; } else if (marks &gt;= 75) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; grade = 'B';<br />
+            &nbsp;&nbsp; } else if (marks &gt;= 60) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; grade = 'C';<br />
+            &nbsp;&nbsp; } else if (marks &gt;= 50) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; grade = 'D';<br />
+            &nbsp;&nbsp; } else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; grade = 'F';<br />
+            &nbsp;&nbsp; }<br /><br />
+
+            &nbsp;&nbsp; printf("Grade: %c\\n", grade);<br />
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>
+            Enter the student's marks (0-100): 82 <br />
+            Grade: B
+          </p>
+        </div>
+
+        <h4>Explanation</h4>
+        <ul>
+          <li>
+            <strong>scanf("%d", &amp;marks)</strong> - reads the student's
+            marks.
+          </li>
+          <li>A validation check ensures marks are within the range 0-100.</li>
+          <li>
+            An <strong>if-else ladder</strong> assigns the grade based on the
+            given ranges.
+          </li>
+          <li>The grade is displayed using <code>printf()</code>.</li>
+        </ul>
+      </div>
+
+      <!-- -->
+      <!--  -->
+      <!-- KYC Verification Program -->
+      <div class="card">
+        <h2>Program 3: KYC Verification System</h2>
+        <p>
+          Develop a C program that takes a unique identification input like
+          <strong>PAN Number</strong>, <strong>AADHAR Number</strong>,
+          <strong>APAAR ID</strong>, <strong>Driving License</strong>, or
+          <strong>Passport</strong> and checks it against a set of stored KYC
+          records. Based on the input, the program displays whether the
+          individual is verified or not.
+        </p>
+
+        <h4>Program Requirements</h4>
+        <ul>
+          <li>
+            Stores a few KYC records with different ID types (all integers).
+          </li>
+          <li>User selects the ID type, then enters the ID number.</li>
+          <li>The program searches the corresponding stored records.</li>
+          <li>
+            A <strong>switch</strong> statement handles multiple ID types.
+          </li>
+          <li>Displays whether the individual is verified or not.</li>
+        </ul>
+
+        <h4>C Program</h4>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br />
+            #define MAX_RECORDS 5<br /><br />
+
+            // Function to check if an ID exists in the given array<br />
+            int isVerified(int idList[], int size, int id) {<br />
+            &nbsp;&nbsp; for (int i = 0; i &lt; size; i++) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; if (idList[i] == id)<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 1; // Found<br />
+            &nbsp;&nbsp; }<br />
+            &nbsp;&nbsp; return 0; // Not found<br />
+            }<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp; // Stored KYC IDs for each type (sample data)<br />
+            &nbsp;&nbsp; int panNumbers[MAX_RECORDS] = {123456789, 987654321,
+            112233445, 556677889, 998877665};<br />
+            &nbsp;&nbsp; int aadharNumbers[MAX_RECORDS] = {111122223333,
+            222233334444, 333344445555, 444455556666, 555566667777};<br />
+            &nbsp;&nbsp; int apaarIds[MAX_RECORDS] = {10101, 20202, 30303,
+            40404, 50505};<br />
+            &nbsp;&nbsp; int drivingLicenses[MAX_RECORDS] = {789456123,
+            456123789, 123789456, 987123654, 654987321};<br />
+            &nbsp;&nbsp; int passports[MAX_RECORDS] = {555555, 666666, 777777,
+            888888, 999999};<br /><br />
+
+            &nbsp;&nbsp; int choice;<br />
+            &nbsp;&nbsp; long long inputId; // To handle large IDs like
+            Aadhar<br /><br />
+
+            &nbsp;&nbsp; printf("Select ID type to verify:\\n");<br />
+            &nbsp;&nbsp; printf("1. PAN Number\\n");<br />
+            &nbsp;&nbsp; printf("2. AADHAR Number\\n");<br />
+            &nbsp;&nbsp; printf("3. APAAR ID\\n");<br />
+            &nbsp;&nbsp; printf("4. Driving License\\n");<br />
+            &nbsp;&nbsp; printf("5. Passport\\n");<br />
+            &nbsp;&nbsp; printf("Enter your choice (1-5): ");<br />
+            &nbsp;&nbsp; scanf("%d", &amp;choice);<br /><br />
+
+            &nbsp;&nbsp; printf("Enter the ID number: ");<br />
+            &nbsp;&nbsp; scanf("%lld", &amp;inputId);<br /><br />
+
+            &nbsp;&nbsp; int verified = 0;<br /><br />
+
+            &nbsp;&nbsp; switch (choice) {<br />
+            &nbsp;&nbsp; case 1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; verified = isVerified(panNumbers,
+            MAX_RECORDS, (int)inputId);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; break;<br /><br />
+
+            &nbsp;&nbsp; case 2: { // Aadhar uses long long<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; long long aadharNumbersLL[MAX_RECORDS] =
+            {111122223333, 222233334444, 333344445555, 444455556666,
+            555566667777};<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; verified = 0;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; MAX_RECORDS; i++)
+            {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (aadharNumbersLL[i] ==
+            inputId) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; verified = 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; }<br />
+            &nbsp;&nbsp; }<br />
+            &nbsp;&nbsp; break;<br /><br />
+
+            &nbsp;&nbsp; case 3:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; verified = isVerified(apaarIds,
+            MAX_RECORDS, (int)inputId);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; break;<br /><br />
+
+            &nbsp;&nbsp; case 4:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; verified = isVerified(drivingLicenses,
+            MAX_RECORDS, (int)inputId);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; break;<br /><br />
+
+            &nbsp;&nbsp; case 5:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; verified = isVerified(passports,
+            MAX_RECORDS, (int)inputId);<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; break;<br /><br />
+
+            &nbsp;&nbsp; default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; printf("Invalid choice.\\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; return 1;<br />
+            &nbsp;&nbsp; }<br /><br />
+
+            &nbsp;&nbsp; if (verified)<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; printf("Individual Verified.\\n");<br />
+            &nbsp;&nbsp; else<br />
+            &nbsp;&nbsp;&nbsp;&nbsp; printf("Individual NOT Verified.\\n");<br /><br />
+
+            &nbsp;&nbsp; return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>
+            Select ID type to verify:<br />
+            1. PAN Number<br />
+            2. AADHAR Number<br />
+            3. APAAR ID<br />
+            4. Driving License<br />
+            5. Passport<br /><br />
+            Enter your choice (1-5): 2<br />
+            Enter the ID number: 333344445555<br />
+            Individual Verified.
+          </p>
+        </div>
+
+        <h4>Explanation</h4>
+        <ul>
+          <li>User chooses the ID type (1-5).</li>
+          <li>
+            The corresponding stored records array is searched for a match.
+          </li>
+          <li>
+            <strong>switch</strong> statement routes the logic to the correct ID
+            type.
+          </li>
+          <li>
+            <code>isVerified()</code> function checks arrays for a match,
+            returning 1 (found) or 0 (not found).
+          </li>
+          <li>
+            Program displays whether the individual is
+            <strong>Verified</strong> or <strong>NOT Verified</strong>.
+          </li>
+        </ul>
+      </div>
+
+      <!--  -->
+
+      <!--  -->
+    </main>
+
+    <footer>
+      <div class="container d-flex justify-between">
+        <a href="https://pruthviraj-guddu.github.io/">
+          <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
+        </a>
+        <br />
+        <p>
+          Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
