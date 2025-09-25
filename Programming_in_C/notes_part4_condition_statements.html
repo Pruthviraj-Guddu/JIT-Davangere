@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programming in C - Part 3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
+        <p class="nav-links"><a href="../Programming_in_C/programming_in_c.html">&larr; Back Programming in C</a></p>
+        <h1>Programming in C - Part 4</h1>
+        <p>condition statements</p>
+      </div>
+    </header>
+  <main class="container">
+
+  <!-- If Statement -->
+  <div class="card">
+    <h2>If Statement</h2>
+    <p>
+      The <strong>if</strong> statement is used to execute a block of code only when a given condition is true.
+    </p>
+
+    <div class="code-block">
+      <code>
+        #include &lt;stdio.h&gt;<br /><br />
+
+        int main() {<br />
+        &nbsp;&nbsp;int age = 20;<br /><br />
+
+        &nbsp;&nbsp;if (age &gt;= 18) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("You are an adult.\\n");<br />
+        &nbsp;&nbsp;}<br /><br />
+
+        &nbsp;&nbsp;return 0;<br />
+        }
+      </code>
+    </div>
+
+    <div class="output-block">
+      <p>You are an adult.</p>
+    </div>
+  </div>
+
+  <!-- If Else Statement -->
+  <div class="card">
+    <h2>If-Else Statement</h2>
+    <p>
+      The <strong>if-else</strong> statement allows you to choose between two blocks of code depending on whether the condition is true or false.
+    </p>
+
+    <div class="code-block">
+      <code>
+        #include &lt;stdio.h&gt;<br /><br />
+
+        int main() {<br />
+        &nbsp;&nbsp;int number = 7;<br /><br />
+
+        &nbsp;&nbsp;if (number % 2 == 0) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\\n");<br />
+        &nbsp;&nbsp;} else {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\\n");<br />
+        &nbsp;&nbsp;}<br /><br />
+
+        &nbsp;&nbsp;return 0;<br />
+        }
+      </code>
+    </div>
+
+    <div class="output-block">
+      <p>The number is odd.</p>
+    </div>
+  </div>
+
+  <!-- If-Else Ladder -->
+  <div class="card">
+    <h2>If-Else Ladder</h2>
+    <p>
+      An <strong>if-else ladder</strong> is used when you need to check multiple conditions one after another.
+    </p>
+
+    <div class="code-block">
+      <code>
+        #include &lt;stdio.h&gt;<br /><br />
+
+        int main() {<br />
+        &nbsp;&nbsp;int marks = 75;<br /><br />
+
+        &nbsp;&nbsp;if (marks &gt;= 90) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: A\\n");<br />
+        &nbsp;&nbsp;} else if (marks &gt;= 75) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: B\\n");<br />
+        &nbsp;&nbsp;} else if (marks &gt;= 50) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: C\\n");<br />
+        &nbsp;&nbsp;} else {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;printf("Fail\\n");<br />
+        &nbsp;&nbsp;}<br /><br />
+
+        &nbsp;&nbsp;return 0;<br />
+        }
+      </code>
+    </div>
+
+    <div class="output-block">
+      <p>Grade: B</p>
+    </div>
+  </div>
+
+  <!-- Switch Statement -->
+  <div class="card">
+    <h2>Switch Statement</h2>
+    <p>
+      The <strong>switch</strong> statement is used when you have multiple choices for a single variable.
+    </p>
+
+    <div class="code-block">
+      <code>
+        #include &lt;stdio.h&gt;<br /><br />
+
+        int main() {<br />
+        &nbsp;&nbsp;int day = 3;<br /><br />
+
+        &nbsp;&nbsp;switch (day) {<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;case 1:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Monday\\n");<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;case 2:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Tuesday\\n");<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;case 3:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Wednesday\\n");<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid day\\n");<br />
+        &nbsp;&nbsp;}<br /><br />
+
+        &nbsp;&nbsp;return 0;<br />
+        }
+      </code>
+    </div>
+
+    <div class="output-block">
+      <p>Wednesday</p>
+    </div>
+  </div>
+
+</main>
+
+    <footer>
+      <div class="container d-flex justify-between">
+        <a href="https://pruthviraj-guddu.github.io/">
+          <p style="color: rgb(0, 0, 0)">© Pruthviraj Mundargi</p>
+        </a>
+        <br />
+        <p>
+          Made with <i class="fa fa-heart" aria-hidden="true"></i> in Davangere
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
