@@ -402,6 +402,145 @@
       </div>
 
       <!--  -->
+
+                <!-- Program 2: Age Check -->
+      <div class="card">
+        <h2>C Program to Check Voting Eligibility</h2>
+        <p>
+          This program takes the user's age as input and checks if they are
+          eligible to vote. If the entered age is 18 or above, it displays
+          a message saying the person can vote.
+        </p>
+
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int age;<br /><br />
+
+            &nbsp;&nbsp;// Ask user to enter age<br />
+            &nbsp;&nbsp;printf("Enter your age: ");<br />
+            &nbsp;&nbsp;scanf("%d", &age);<br /><br />
+
+            &nbsp;&nbsp;// If condition to check age<br />
+            &nbsp;&nbsp;if (age &gt;= 18) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You can vote.\\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>Enter your age: 20<br />You can vote.</p>
+        </div>
+
+        <p><strong>Explanation:</strong></p>
+        <ul>
+          <li>
+            The program reads an integer input (age) from the user.
+          </li>
+          <li>
+            It then checks if the age is greater than or equal to 18.
+          </li>
+          <li>
+            If true, the program prints <strong>You can vote.</strong>
+          </li>
+          <li>
+            Otherwise, nothing is printed and the program ends.
+          </li>
+        </ul>
+
+        <div class="important-note">
+          <h4>⚠️ Common Mistakes</h4>
+          <ul>
+            <li>
+              Forgetting to use <strong>&amp;age</strong> in
+              <code>scanf("%d", &amp;age);</code> will cause errors.
+            </li>
+            <li>
+              Missing braces <code>{ }</code> after <strong>if</strong> when
+              writing multiple statements.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Program 3: Even or Odd -->
+      <div class="card">
+        <h2>C Program to Check if a Number is Even or Odd</h2>
+        <p>
+          This program reads a number from the user and checks whether it is
+          even or odd using the modulo (<strong>%</strong>) operator.
+        </p>
+
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int number;<br /><br />
+
+            &nbsp;&nbsp;// Ask user to enter a number<br />
+            &nbsp;&nbsp;printf("Enter a number: ");<br />
+            &nbsp;&nbsp;scanf("%d", &number);<br /><br />
+
+            &nbsp;&nbsp;// Check if number is even or odd<br />
+            &nbsp;&nbsp;if (number % 2 == 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>Enter a number: 7<br />The number is odd.</p>
+        </div>
+
+        <p><strong>Explanation:</strong></p>
+        <ul>
+          <li>
+            The program takes an integer input from the user.
+          </li>
+          <li>
+            The condition <strong>number % 2 == 0</strong> checks if the number
+            is divisible by 2.
+          </li>
+          <li>
+            If true, the program prints <strong>The number is even.</strong>
+          </li>
+          <li>
+            Otherwise, it prints <strong>The number is odd.</strong>
+          </li>
+        </ul>
+
+        <div class="important-note">
+          <h4>⚠️ Common Mistakes</h4>
+          <ul>
+            <li>
+              Forgetting <strong>&amp;number</strong> in
+              <code>scanf("%d", &amp;number);</code> will not store the input.
+            </li>
+            <li>
+              Writing <code>if (number % 2 = 0)</code> instead of
+              <code>==</code> — single <code>=</code> is assignment, not
+              comparison.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!--  -->
+
+
+
     </main>
 
     <footer>
