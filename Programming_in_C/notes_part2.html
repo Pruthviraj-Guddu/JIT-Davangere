@@ -26,13 +26,14 @@
         <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
         <p class="nav-links"><a href="../Programming_in_C/programming_in_c.html">&larr; Back Programming in C</a></p>
         <h1>Programming in C - Part 2</h1>
-        <p>Identifiers, Variables, and Basic Programs</p>
+        <p>Identifiers, Variables, Operators, and Basic Programs</p>
       </div>
     </header>
     <main class="container">
       <div class="card">
         <h2>Part 2: Identifiers, Variables, and Basic Programs (90 mins)</h2>
 
+        <!-- Identifiers Section -->
         <h3>Topic 1: Identifiers in C - The "Names" of Things</h3>
         <p>
           <strong>Definition:</strong> Identifiers are names used to identify
@@ -556,22 +557,137 @@
           <li>Follow naming conventions for readable code</li>
         </ul>
 
-        <h3>Next Session Preview:</h3>
-        <p>In our next class, we'll dive into:</p>
-        <ul>
-          <li>Operators and expressions in detail</li>
-          <li>Control flow statements (if-else, loops)</li>
-          <li>More complex program structures</li>
-        </ul>
+        <!-- NEW Operators Section -->
+        <h3>Topic 3: Operators in C</h3>
+        <p>
+          Operators are symbols that tell the compiler to perform specific mathematical or logical operations on variables and values.
+        </p>
+
+        <h4>1. Arithmetic Operators</h4>
+        <p>Used for basic mathematical operations: <code>+ - * / %</code></p>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp;int a = 10, b = 3;<br />
+            &nbsp;&nbsp;printf("a + b = %d\n", a + b);<br />
+            &nbsp;&nbsp;printf("a - b = %d\n", a - b);<br />
+            &nbsp;&nbsp;printf("a * b = %d\n", a * b);<br />
+            &nbsp;&nbsp;printf("a / b = %d\n", a / b); // integer division<br />
+            &nbsp;&nbsp;printf("a %% b = %d\n", a % b); // remainder<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+        <div class="output-block">
+          <p>
+            a + b = 13<br />
+            a - b = 7<br />
+            a * b = 30<br />
+            a / b = 3<br />
+            a % b = 1
+          </p>
+        </div>
+
+        <h4>2. Relational and Logical Operators</h4>
+        <p>
+          Relational: <code>&lt;, &lt;=, &gt;, &gt;=, ==, !=</code><br />
+          Logical: <code>&& (AND), || (OR), ! (NOT)</code>
+        </p>
+        <div class="code-block">
+          <code>
+            int x = 5, y = 10;<br />
+            printf("x &lt; y = %d\n", x &lt; y);<br />
+            printf("x == y = %d\n", x == y);<br />
+            printf("(x &lt; y) && (y &gt; 0) = %d\n", (x &lt; y) && (y &gt; 0));<br />
+          </code>
+        </div>
+        <div class="output-block">
+          <p>
+            x &lt; y = 1<br />
+            x == y = 0<br />
+            (x &lt; y) && (y &gt; 0) = 1
+          </p>
+        </div>
+
+        <h4>3. Assignment Operators</h4>
+        <p>Used to assign values: <code>=, +=, -=, *=, /=, %=</code></p>
+        <div class="code-block">
+          <code>
+            int a = 10;<br />
+            a += 5; // a = a + 5 (now 15)<br />
+            a *= 2; // a = a * 2 (now 30)<br />
+          </code>
+        </div>
+
+        <h4>4. Increment / Decrement Operators</h4>
+        <p>
+          <code>++</code> increases value by 1, <code>--</code> decreases by 1.
+          They can be prefix (<code>++x</code>) or postfix (<code>x++</code>).
+        </p>
+        <div class="code-block">
+          <code>
+            int x = 5;<br />
+            printf("%d\n", ++x); // 6 (prefix: increment then use)<br />
+            printf("%d\n", x++); // 6 (postfix: use then increment)<br />
+            printf("%d\n", x); // 7<br />
+          </code>
+        </div>
+
+        <h4>5. Bitwise Operators</h4>
+        <p>
+          Work at the binary level: <code>&amp; (AND), | (OR), ^ (XOR), ~ (NOT), &lt;&lt; (Left Shift), &gt;&gt; (Right Shift)</code>
+        </p>
+        <div class="code-block">
+          <code>
+            int a = 5, b = 3;<br />
+            printf("a &amp; b = %d\n", a &amp; b); // 0101 &amp; 0011 = 0001<br />
+            printf("a | b = %d\n", a | b); // 0101 | 0011 = 0111<br />
+            printf("a ^ b = %d\n", a ^ b); // 0101 ^ 0011 = 0110<br />
+            printf("~a = %d\n", ~a);<br />
+            printf("a &lt;&lt; 1 = %d\n", a &lt;&lt; 1); // shift left<br />
+            printf("b &gt;&gt; 1 = %d\n", b &gt;&gt; 1); // shift right<br />
+          </code>
+        </div>
+
+        <h4>6. Ternary Operator</h4>
+        <p>
+          Shorthand for if-else: <code>condition ? expression1 : expression2</code>
+        </p>
+        <div class="code-block">
+          <code>
+            int age = 20;<br />
+            printf("%s\n", (age &gt;= 18) ? "Adult" : "Minor");<br />
+          </code>
+        </div>
+        <div class="output-block">
+          <p>Adult</p>
+        </div>
 
         <div class="practice-tip">
           <h4>💡 Practice Tip</h4>
           <p>
-            Try modifying the example programs - change variable names, add new
-            features, or combine multiple programs. The best way to learn
-            programming is by writing and experimenting with code!
+            Try combining operators. For example, check if a number is even
+            using both modulo and ternary operator: <br />
+            <code>printf("%s", (num % 2 == 0) ? "Even" : "Odd");</code>
           </p>
         </div>
+
+        <!-- Practical Examples -->
+        <h3>Topic 4: Practical Programming Examples</h3>
+        <!-- [Keep your calculator, temperature converter, grade calculator examples here] -->
+
+        <!-- Common Errors -->
+        <h3>Topic 5: Common Errors and Debugging</h3>
+        <!-- [Keep your error examples here] -->
+
+        <!-- Hands-On Practice -->
+        <h2>Part 6: Hands-On Practice Exercises</h2>
+        <!-- [Keep your exercises here] -->
+
+        <!-- Summary -->
+        <h2>Part 7: Summary and Key Takeaways</h2>
+        <!-- [Keep your summary here] -->
       </div>
     </main>
     <footer>
