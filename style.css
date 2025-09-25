@@ -247,3 +247,133 @@ footer .container a {
     padding: 1rem;
   }
 }
+
+
+/* Syntax Block Styling */
+.syntax-block {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px 0;
+  font-family: 'Fira Code', monospace;
+  border-left: 4px solid #007bff;
+}
+
+/* Flowchart Styling */
+.flowchart {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.flowchart-step {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px auto;
+  display: inline-block;
+  min-width: 150px;
+}
+
+.flowchart-condition {
+  background: #28a745;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 5px auto;
+  display: inline-block;
+  min-width: 80px;
+}
+
+.flowchart-arrow {
+  margin: 5px 0;
+  font-size: 1.2em;
+}
+
+.flowchart-branch {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 10px 0;
+}
+
+.flowchart-path {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Comparison Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: left;
+}
+
+.comparison-table th {
+  background: #007bff;
+  color: white;
+}
+
+.comparison-table tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+/* Summary Items */
+.summary-points {
+  display: grid;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.summary-item {
+  background: #e8f4fd;
+  border: 1px solid #b6d7fe;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.summary-item h4 {
+  margin-top: 0;
+  color: #0056b3;
+}
+
+/* Warning Note */
+.warning-note {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+}
+
+.warning-note h4 {
+  margin-top: 0;
+  color: #721c24;
+}
+
+/* Navigation Links */
+/* .nav-links {
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+} */
