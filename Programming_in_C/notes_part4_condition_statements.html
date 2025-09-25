@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Programming in C - Part 3</title>
+    <meta
+      name="description"
+      content="Comprehensive guide to conditional statements in C programming - if, if-else, if-else ladder, and switch statements with detailed syntax and examples"
+    />
+    <meta
+      name="keywords"
+      content="C programming, conditional statements, if statement, if-else, switch case, control flow"
+    />
+    <meta name="author" content="Pruthviraj Mundargi" />
+    <title>Programming in C - Part 4: Conditional Statements</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,144 +33,688 @@
     <header>
       <div class="container">
         <p class="nav-links"><a href="../index.html">&larr; Back to Home</a></p>
-        <p class="nav-links"><a href="../Programming_in_C/programming_in_c.html">&larr; Back Programming in C</a></p>
+        <p class="nav-links">
+          <a href="../Programming_in_C/programming_in_c.html"
+            >&larr; Back Programming in C</a
+          >
+        </p>
         <h1>Programming in C - Part 4</h1>
-        <p>condition statements</p>
+        <p>Conditional Statements: Making Decisions in Code</p>
       </div>
     </header>
-  <main class="container">
 
-  <!-- If Statement -->
-  <div class="card">
-    <h2>If Statement</h2>
-    <p>
-      The <strong>if</strong> statement is used to execute a block of code only when a given condition is true.
-    </p>
+    <main class="container">
+      <!-- Introduction -->
+      <div class="card">
+        <h2>Introduction to Conditional Statements</h2>
+        <p>
+          Conditional statements allow programs to make decisions and execute
+          different blocks of code based on certain conditions. They are
+          fundamental to creating dynamic and responsive programs.
+        </p>
 
-    <div class="code-block">
-      <code>
-        #include &lt;stdio.h&gt;<br /><br />
+        <div class="important-note">
+          <h4>💡 Key Concept</h4>
+          <p>
+            Conditional statements evaluate expressions that return
+            <strong>true (non-zero)</strong> or <strong>false (zero)</strong>.
+            Based on this evaluation, different code paths are executed.
+          </p>
+        </div>
+      </div>
 
-        int main() {<br />
-        &nbsp;&nbsp;int age = 20;<br /><br />
+      <!-- If Statement -->
+      <div class="card">
+        <h2>1. The If Statement</h2>
 
-        &nbsp;&nbsp;if (age &gt;= 18) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("You are an adult.\\n");<br />
-        &nbsp;&nbsp;}<br /><br />
+        <h3>Syntax</h3>
+        <div class="syntax-block">
+          <code>
+            if (condition) {<br />
+            &nbsp;&nbsp;// Code to execute if condition is true<br />
+            &nbsp;&nbsp;statement1;<br />
+            &nbsp;&nbsp;statement2;<br />
+            &nbsp;&nbsp;// ... more statements<br />
+            }
+          </code>
+        </div>
 
-        &nbsp;&nbsp;return 0;<br />
-        }
-      </code>
-    </div>
+        <h3>Detailed Explanation</h3>
+        <p>
+          The <strong>if statement</strong> is the simplest form of conditional
+          execution. It evaluates a condition, and if the condition is true
+          (non-zero), the code block within the curly braces is executed.
+        </p>
 
-    <div class="output-block">
-      <p>You are an adult.</p>
-    </div>
-  </div>
+        <h4>Key Points:</h4>
+        <ul>
+          <li>
+            <strong>Condition:</strong> Any expression that evaluates to true
+            (non-zero) or false (zero)
+          </li>
+          <li>
+            <strong>Execution:</strong> Code block executes only if condition is
+            true
+          </li>
+          <li>
+            <strong>Single Statement:</strong> If only one statement follows,
+            curly braces are optional (but recommended for clarity)
+          </li>
+        </ul>
 
-  <!-- If Else Statement -->
-  <div class="card">
-    <h2>If-Else Statement</h2>
-    <p>
-      The <strong>if-else</strong> statement allows you to choose between two blocks of code depending on whether the condition is true or false.
-    </p>
+        <h3>Example 1: Basic If Statement</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
 
-    <div class="code-block">
-      <code>
-        #include &lt;stdio.h&gt;<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp;int age = 20;<br /><br />
 
-        int main() {<br />
-        &nbsp;&nbsp;int number = 7;<br /><br />
+            &nbsp;&nbsp;if (age >= 18) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You are an adult.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You can vote.\n");<br />
+            &nbsp;&nbsp;}<br /><br />
 
-        &nbsp;&nbsp;if (number % 2 == 0) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\\n");<br />
-        &nbsp;&nbsp;} else {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\\n");<br />
-        &nbsp;&nbsp;}<br /><br />
+            &nbsp;&nbsp;printf("Program continues...\n");<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
 
-        &nbsp;&nbsp;return 0;<br />
-        }
-      </code>
-    </div>
+        <div class="output-block">
+          <p>
+            Output:<br />You are an adult.<br />You can vote.<br />Program
+            continues...
+          </p>
+        </div>
 
-    <div class="output-block">
-      <p>The number is odd.</p>
-    </div>
-  </div>
+        <h3>Example 2: If without Braces (Single Statement)</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
 
-  <!-- If-Else Ladder -->
-  <div class="card">
-    <h2>If-Else Ladder</h2>
-    <p>
-      An <strong>if-else ladder</strong> is used when you need to check multiple conditions one after another.
-    </p>
+            int main() {<br />
+            &nbsp;&nbsp;int number = 10;<br /><br />
 
-    <div class="code-block">
-      <code>
-        #include &lt;stdio.h&gt;<br /><br />
+            &nbsp;&nbsp;// Single statement - braces optional<br />
+            &nbsp;&nbsp;if (number > 0)<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Positive number\n");<br /><br />
 
-        int main() {<br />
-        &nbsp;&nbsp;int marks = 75;<br /><br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
 
-        &nbsp;&nbsp;if (marks &gt;= 90) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: A\\n");<br />
-        &nbsp;&nbsp;} else if (marks &gt;= 75) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: B\\n");<br />
-        &nbsp;&nbsp;} else if (marks &gt;= 50) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: C\\n");<br />
-        &nbsp;&nbsp;} else {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;printf("Fail\\n");<br />
-        &nbsp;&nbsp;}<br /><br />
+        <h3>Flowchart Representation</h3>
+        <div class="flowchart">
+          <div class="flowchart-step">Start</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Evaluate Condition</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-branch">
+            <div class="flowchart-path">
+              <div class="flowchart-condition">True?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Execute If Block</div>
+            </div>
+            <div class="flowchart-path">
+              <div class="flowchart-condition">False?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Skip If Block</div>
+            </div>
+          </div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Continue Program</div>
+        </div>
+      </div>
 
-        &nbsp;&nbsp;return 0;<br />
-        }
-      </code>
-    </div>
+      <!-- If-Else Statement -->
+      <div class="card">
+        <h2>2. The If-Else Statement</h2>
 
-    <div class="output-block">
-      <p>Grade: B</p>
-    </div>
-  </div>
+        <h3>Syntax</h3>
+        <div class="syntax-block">
+          <code>
+            if (condition) {<br />
+            &nbsp;&nbsp;// Code to execute if condition is true<br />
+            &nbsp;&nbsp;statement1;<br />
+            } else {<br />
+            &nbsp;&nbsp;// Code to execute if condition is false<br />
+            &nbsp;&nbsp;statement2;<br />
+            }
+          </code>
+        </div>
 
-  <!-- Switch Statement -->
-  <div class="card">
-    <h2>Switch Statement</h2>
-    <p>
-      The <strong>switch</strong> statement is used when you have multiple choices for a single variable.
-    </p>
+        <h3>Detailed Explanation</h3>
+        <p>
+          The <strong>if-else statement</strong> provides two alternative paths:
+          one executes when the condition is true, and the other executes when
+          the condition is false.
+        </p>
 
-    <div class="code-block">
-      <code>
-        #include &lt;stdio.h&gt;<br /><br />
+        <h4>Key Points:</h4>
+        <ul>
+          <li>
+            <strong>Mutually Exclusive:</strong> Only one block (if or else)
+            will execute
+          </li>
+          <li>
+            <strong>Complete Coverage:</strong> Handles both true and false
+            cases
+          </li>
+          <li>
+            <strong>Else Block:</strong> Executes when if condition is false
+          </li>
+        </ul>
 
-        int main() {<br />
-        &nbsp;&nbsp;int day = 3;<br /><br />
+        <h3>Example 1: Even-Odd Checker</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
 
-        &nbsp;&nbsp;switch (day) {<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;case 1:<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Monday\\n");<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;case 2:<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Tuesday\\n");<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;case 3:<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Wednesday\\n");<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid day\\n");<br />
-        &nbsp;&nbsp;}<br /><br />
+            int main() {<br />
+            &nbsp;&nbsp;int number = 7;<br /><br />
 
-        &nbsp;&nbsp;return 0;<br />
-        }
-      </code>
-    </div>
+            &nbsp;&nbsp;if (number % 2 == 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\n");<br />
+            &nbsp;&nbsp;}<br /><br />
 
-    <div class="output-block">
-      <p>Wednesday</p>
-    </div>
-  </div>
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
 
-</main>
+        <div class="output-block">
+          <p>Output: The number is odd.</p>
+        </div>
+
+        <h3>Example 2: Voting Eligibility with Detailed Messages</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int age;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter your age: ");<br />
+            &nbsp;&nbsp;scanf("%d", &age);<br /><br />
+
+            &nbsp;&nbsp;if (age >= 18) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You are eligible to vote.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Please register if you haven't
+            already.\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;int years_left = 18 - age;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You are not eligible to vote
+            yet.\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Come back in %d years.\n",
+            years_left);<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Flowchart Representation</h3>
+        <div class="flowchart">
+          <div class="flowchart-step">Start</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Evaluate Condition</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-branch">
+            <div class="flowchart-path">
+              <div class="flowchart-condition">True?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Execute If Block</div>
+            </div>
+            <div class="flowchart-path">
+              <div class="flowchart-condition">False?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Execute Else Block</div>
+            </div>
+          </div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Continue Program</div>
+        </div>
+      </div>
+
+      <!-- If-Else Ladder -->
+      <div class="card">
+        <h2>3. The If-Else Ladder</h2>
+
+        <h3>Syntax</h3>
+        <div class="syntax-block">
+          <code>
+            if (condition1) {<br />
+            &nbsp;&nbsp;// Code for condition1 true<br />
+            } else if (condition2) {<br />
+            &nbsp;&nbsp;// Code for condition2 true<br />
+            } else if (condition3) {<br />
+            &nbsp;&nbsp;// Code for condition3 true<br />
+            } else {<br />
+            &nbsp;&nbsp;// Code if all conditions are false<br />
+            }
+          </code>
+        </div>
+
+        <h3>Detailed Explanation</h3>
+        <p>
+          The <strong>if-else ladder</strong> allows testing multiple conditions
+          sequentially. It checks conditions from top to bottom and executes the
+          block corresponding to the first true condition.
+        </p>
+
+        <h4>Key Points:</h4>
+        <ul>
+          <li>
+            <strong>Sequential Checking:</strong> Conditions are checked in
+            order
+          </li>
+          <li>
+            <strong>First Match Wins:</strong> Only the first true condition's
+            block executes
+          </li>
+          <li>
+            <strong>Efficient:</strong> Stops checking once a true condition is
+            found
+          </li>
+          <li>
+            <strong>Default Case:</strong> Else block handles cases where no
+            condition matches
+          </li>
+        </ul>
+
+        <h3>Example 1: Grade Calculator</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int marks = 75;<br /><br />
+
+            &nbsp;&nbsp;if (marks >= 90) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: A\n");<br />
+            &nbsp;&nbsp;} else if (marks >= 75) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: B\n");<br />
+            &nbsp;&nbsp;} else if (marks >= 50) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: C\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Grade: F (Fail)\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>Output: Grade: B</p>
+        </div>
+
+        <h3>Example 2: Temperature Category</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;float temperature;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter temperature in Celsius: ");<br />
+            &nbsp;&nbsp;scanf("%f", &temperature);<br /><br />
+
+            &nbsp;&nbsp;if (temperature > 35) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Hot weather\n");<br />
+            &nbsp;&nbsp;} else if (temperature > 25) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Pleasant weather\n");<br />
+            &nbsp;&nbsp;} else if (temperature > 15) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Cool weather\n");<br />
+            &nbsp;&nbsp;} else if (temperature > 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Cold weather\n");<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Freezing weather\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Flowchart Representation</h3>
+        <div class="flowchart">
+          <div class="flowchart-step">Start</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Check Condition 1</div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-branch">
+            <div class="flowchart-path">
+              <div class="flowchart-condition">True?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Execute Block 1</div>
+            </div>
+            <div class="flowchart-path">
+              <div class="flowchart-condition">False?</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-step">Check Condition 2</div>
+              <div class="flowchart-arrow">↓</div>
+              <div class="flowchart-branch">
+                <div class="flowchart-path">
+                  <div class="flowchart-condition">True?</div>
+                  <div class="flowchart-arrow">↓</div>
+                  <div class="flowchart-step">Execute Block 2</div>
+                </div>
+                <div class="flowchart-path">
+                  <div class="flowchart-condition">False?</div>
+                  <div class="flowchart-arrow">↓</div>
+                  <div class="flowchart-step">Check Condition 3...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flowchart-arrow">↓</div>
+          <div class="flowchart-step">Continue Program</div>
+        </div>
+      </div>
+
+      <!-- Switch Statement -->
+      <div class="card">
+        <h2>4. The Switch Statement</h2>
+
+        <h3>Syntax</h3>
+        <div class="syntax-block">
+          <code>
+            switch (expression) {<br />
+            &nbsp;&nbsp;case constant1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;// Code for constant1<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;case constant2:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;// Code for constant2<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;// ... more cases<br />
+            &nbsp;&nbsp;default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;// Code if no case matches<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Detailed Explanation</h3>
+        <p>
+          The <strong>switch statement</strong> provides an efficient way to
+          dispatch execution to different parts of code based on the value of an
+          expression. It's ideal when you have multiple choices for a single
+          variable.
+        </p>
+
+        <h4>Key Points:</h4>
+        <ul>
+          <li>
+            <strong>Expression:</strong> Must evaluate to an integer or
+            character
+          </li>
+          <li>
+            <strong>Case Labels:</strong> Must be constant expressions (no
+            variables)
+          </li>
+          <li>
+            <strong>Break Statement:</strong> Prevents "fall-through" to next
+            case
+          </li>
+          <li>
+            <strong>Default Case:</strong> Optional, executes when no case
+            matches
+          </li>
+          <li>
+            <strong>Efficiency:</strong> Faster than multiple if-else statements
+            for many conditions
+          </li>
+        </ul>
+
+        <h3>Example 1: Day of Week</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int day = 3;<br /><br />
+
+            &nbsp;&nbsp;switch (day) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 1:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Monday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 2:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Tuesday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 3:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Wednesday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 4:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Thursday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 5:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Friday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 6:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Saturday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case 7:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Sunday\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Invalid day
+            number\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>Output: Wednesday</p>
+        </div>
+
+        <h3>Example 2: Calculator with Switch</h3>
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;char operator;<br />
+            &nbsp;&nbsp;double num1, num2, result;<br /><br />
+
+            &nbsp;&nbsp;printf("Enter operator (+, -, *, /): ");<br />
+            &nbsp;&nbsp;scanf(" %c", &operator);<br />
+            &nbsp;&nbsp;printf("Enter two numbers: ");<br />
+            &nbsp;&nbsp;scanf("%lf %lf", &num1, &num2);<br /><br />
+
+            &nbsp;&nbsp;switch (operator) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '+':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 + num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '-':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 - num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '*':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 * num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;case '/':<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (num2 != 0) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = num1 /
+            num2;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Error:
+            Division by zero!\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;default:<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("Error: Invalid
+            operator!\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 1;<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;printf("Result: %.2lf %c %.2lf = %.2lf\n", num1,
+            operator, num2, result);<br />
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <h3>Important: The Break Statement</h3>
+        <div class="warning-note">
+          <h4>⚠️ Warning: Forgetting Break</h4>
+          <p>
+            If you forget the <code>break</code> statement, execution will "fall
+            through" to the next case, which is usually not desired!
+          </p>
+        </div>
+
+        <div class="code-block">
+          <code>
+            // INCORRECT: Missing break statements<br />
+            switch (day) {<br />
+            &nbsp;&nbsp;case 1: printf("Monday");<br />
+            &nbsp;&nbsp;case 2: printf("Tuesday"); // Will also print if
+            day==1!<br />
+            &nbsp;&nbsp;case 3: printf("Wednesday"); // Will also print if
+            day==1 or 2!<br />
+            }
+          </code>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="card">
+        <h2>When to Use Which Conditional Statement?</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Statement</th>
+              <th>Best Use Case</th>
+              <th>Advantages</th>
+              <th>Limitations</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>if</strong></td>
+              <td>Single condition check</td>
+              <td>Simple, straightforward</td>
+              <td>Only handles true case</td>
+            </tr>
+            <tr>
+              <td><strong>if-else</strong></td>
+              <td>Two mutually exclusive paths</td>
+              <td>Handles both true and false cases</td>
+              <td>Only two choices</td>
+            </tr>
+            <tr>
+              <td><strong>if-else ladder</strong></td>
+              <td>Multiple conditions to check in order</td>
+              <td>Flexible, can handle ranges</td>
+              <td>Can be inefficient with many conditions</td>
+            </tr>
+            <tr>
+              <td><strong>switch</strong></td>
+              <td>Single variable with multiple constant values</td>
+              <td>Fast, clean, readable for many choices</td>
+              <td>Only works with integers/chars, constant cases</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Practice Exercises -->
+      <div class="card">
+        <h2>Practice Exercises</h2>
+
+        <h3>Exercise 1: Leap Year Checker</h3>
+        <p>
+          <strong>Problem:</strong> Write a program that checks if a year is a
+          leap year.
+        </p>
+        <strong>Rules:</strong> A year is a leap year if:
+        <ul>
+          <li>It is divisible by 4, but not by 100, OR</li>
+          <li>It is divisible by 400</li>
+        </ul>
+
+        <h3>Exercise 2: Simple Menu System</h3>
+        <p>
+          <strong>Problem:</strong> Create a menu system that allows users to:
+        </p>
+        <ul>
+          <li>1. Check if number is positive/negative</li>
+          <li>2. Check if number is even/odd</li>
+          <li>3. Exit the program</li>
+        </ul>
+        <p>Use switch statement for menu selection.</p>
+
+        <h3>Exercise 3: Triangle Type Identifier</h3>
+        <p>
+          <strong>Problem:</strong> Given three sides of a triangle, determine
+          if it is:
+        </p>
+        <ul>
+          <li>Equilateral (all sides equal)</li>
+          <li>Isosceles (two sides equal)</li>
+          <li>Scalene (no sides equal)</li>
+          <li>Not a triangle (sum of any two sides ≤ third side)</li>
+        </ul>
+      </div>
+
+      <!-- Summary -->
+      <div class="card">
+        <h2>Summary</h2>
+
+        <div class="summary-points">
+          <div class="summary-item">
+            <h4>✅ If Statement</h4>
+            <p>
+              Use for single condition checks. Executes code only when condition
+              is true.
+            </p>
+          </div>
+
+          <div class="summary-item">
+            <h4>✅ If-Else Statement</h4>
+            <p>
+              Use when you need two mutually exclusive paths. Handles both true
+              and false cases.
+            </p>
+          </div>
+
+          <div class="summary-item">
+            <h4>✅ If-Else Ladder</h4>
+            <p>
+              Use for multiple conditions that need to be checked in sequence.
+              First true condition wins.
+            </p>
+          </div>
+
+          <div class="summary-item">
+            <h4>✅ Switch Statement</h4>
+            <p>
+              Use when comparing a single variable against multiple constant
+              values. Fast and clean.
+            </p>
+          </div>
+        </div>
+
+        <div class="practice-tip">
+          <h4>💡 Best Practice Tip</h4>
+          <p>
+            Always use curly braces <code>{}</code> with if statements, even for
+            single statements. This prevents errors when adding more statements
+            later and makes code more readable.
+          </p>
+        </div>
+      </div>
+    </main>
 
     <footer>
       <div class="container d-flex justify-between">
