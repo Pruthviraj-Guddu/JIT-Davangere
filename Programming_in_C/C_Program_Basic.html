@@ -34,6 +34,7 @@
       </div>
     </header>
     <main class="container">
+      <!-- how to run -->
       <div class="card">
         <h2>How to Execute a C Program in Linux</h2>
         <p>
@@ -46,6 +47,23 @@
             <div class="code-block">
               <code>gedit test1.c</code>
             </div>
+            <p>
+              now it opens a text area where you can type your code. type the
+              code here.
+            </p>
+
+            <p>
+              observe the small * in the file name (its on the top left)
+              <br />that star says the file is not saved
+            </p>
+            <p>
+              now you have to save the code.<br />
+              press ctrl+s
+            </p>
+            <p>on saving, the star goes off, it meas the file is saved</p>
+
+            <p>now you have to close this text editor. to do that</p>
+            <p>press ctrl+q to quit</p>
           </li>
           <li>
             Compile the program using the GCC compiler:
@@ -76,10 +94,9 @@
           <h4>⚠️ Common Mistakes</h4>
           <ul>
             <li>
-              no space between <code>test1 .c</code> , use <code>test1.c</code> instead.
+              no space between <code>test1 .c</code> , use
+              <code>test1.c</code> instead.
             </li>
-            
-            
 
             <li>
               Forgetting the <code>./</code> before <code>a.out</code> when
@@ -97,43 +114,77 @@
         </div>
       </div>
 
-      <!-- How to Execute in Linux -->
+      <!--  -->
+
+      <!-- keyboard short-cuts-->
       <div class="card">
-        <h2>How to Execute a C Program in Linux</h2>
+        <h2>Keyboard Shortcuts</h2>
         <p>
-          You can write, compile, and run your C programs directly from the
-          Linux terminal. Follow these steps:
+          Try using the keyboard as much as possible to improve speed and
+          efficiency.
         </p>
+        <p>
+          Use the <strong>left side</strong> of the keyboard with your left hand
+          and the <strong>right side</strong> with your right hand for better
+          flow.
+        </p>
+
         <ol>
           <li>
-            Open a text editor (e.g., <code>gedit</code>) and create a file:
+            Select all text or code
             <div class="code-block">
-              <code>gedit test1.c</code>
+              <code>Ctrl + A</code>
             </div>
           </li>
           <li>
-            Compile the program using the GCC compiler:
+            Copy selected text
             <div class="code-block">
-              <code>cc test1.c</code>
+              <code>Ctrl + C</code>
             </div>
           </li>
           <li>
-            Run the compiled output:
+            Paste copied text
             <div class="code-block">
-              <code>./a.out</code>
+              <code>Ctrl + V</code>
             </div>
+          </li>
+          <li>
+            Save file in editor
+            <div class="code-block">
+              <code>Ctrl + S</code>
+            </div>
+          </li>
+          <li>
+            Quit/Exit editor
+            <div class="code-block">
+              <code>Ctrl + Q</code>
+            </div>
+          </li>
+          <li>
+            Shift key usage:
+            <p>
+              Hold <code>Shift</code> to type uppercase letters or access the
+              top symbols on keys.
+            </p>
           </li>
         </ol>
 
-        <div class="output-block">
-          <p>
-            Example:<br />
-            <code>
-              gedit test1.c<br />
-              cc test1.c<br />
-              ./a.out
-            </code>
-          </p>
+        <div class="important-note">
+          <h4>⚠️ Common Mistakes</h4>
+          <ul>
+            <li>
+              Forgetting to hold <strong>Shift</strong> while typing uppercase
+              letters or symbols.
+            </li>
+            <li>
+              Using <strong>Caps Lock</strong> instead of Shift — may lead to
+              unexpected ALL CAPS text.
+            </li>
+            <li>
+              Closing the editor without saving changes (<code>Ctrl + S</code>
+              is your friend!).
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -264,7 +315,7 @@
             &nbsp;&nbsp; char name[100];<br /><br />
             &nbsp;&nbsp; printf("Enter Your Name: ");<br />
             &nbsp;&nbsp; scanf("%s", name);<br /><br />
-            &nbsp;&nbsp; printf("Your Name: %s\\n", name);<br /><br />
+            &nbsp;&nbsp; printf("Your Name: %s \n", name);<br /><br />
             &nbsp;&nbsp; return 0;<br />
             }
           </code>
@@ -286,53 +337,6 @@
         </div>
         <div class="output-block">
           <p>Guddu</p>
-        </div>
-
-        <!-- Example: Using fputs() -->
-        <h4>Program using fputs()</h4>
-        <div class="code-block">
-          <code>
-            #include &lt;stdio.h&gt;<br /><br />
-            int main() {<br />
-            &nbsp;&nbsp; fputs("Spiderman", stdout);<br />
-            &nbsp;&nbsp; return 0;<br />
-            }
-          </code>
-        </div>
-        <div class="output-block">
-          <p>Spiderman</p>
-        </div>
-
-        <!-- Example: Using fprintf() -->
-        <h4>Program using fprintf()</h4>
-        <div class="code-block">
-          <code>
-            #include &lt;stdio.h&gt;<br /><br />
-            int main() {<br />
-            &nbsp;&nbsp; fprintf(stdout, "Batman");<br />
-            &nbsp;&nbsp; return 0;<br />
-            }
-          </code>
-        </div>
-        <div class="output-block">
-          <p>Batman</p>
-        </div>
-
-        <!-- Example: Using write() -->
-        <h4>Program using write() System Call</h4>
-        <div class="code-block">
-          <code>
-            #include &lt;unistd.h&gt;<br />
-            #include &lt;string.h&gt;<br /><br />
-            int main() {<br />
-            &nbsp;&nbsp; char name[] = "Pruthviraj";<br />
-            &nbsp;&nbsp; write(STDOUT_FILENO, name, strlen(name));<br />
-            &nbsp;&nbsp; return 0;<br />
-            }
-          </code>
-        </div>
-        <div class="output-block">
-          <p>Pruthviraj</p>
         </div>
       </div>
       <!--  -->
@@ -528,7 +532,7 @@
 
             &nbsp;&nbsp;// If condition to check age<br />
             &nbsp;&nbsp;if (age &gt;= 18) {<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;printf("You can vote.\\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("You can vote.\n");<br />
             &nbsp;&nbsp;}<br /><br />
 
             &nbsp;&nbsp;return 0;<br />
@@ -584,9 +588,9 @@
 
             &nbsp;&nbsp;// Check if number is even or odd<br />
             &nbsp;&nbsp;if (number % 2 == 0) {<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is even.\n");<br />
             &nbsp;&nbsp;} else {<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\\n");<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("The number is odd.\n");<br />
             &nbsp;&nbsp;}<br /><br />
 
             &nbsp;&nbsp;return 0;<br />
@@ -628,6 +632,78 @@
       </div>
 
       <!--  -->
+
+      <!-- Program 4: Largest of Two Numbers -->
+      <div class="card">
+        <h2>C Program to Find the Largest of Two Numbers</h2>
+        <p>
+          This program takes two numbers as input from the user and compares
+          them to determine which one is larger.
+        </p>
+
+        <div class="code-block">
+          <code>
+            #include &lt;stdio.h&gt;<br /><br />
+
+            int main() {<br />
+            &nbsp;&nbsp;int num1, num2;<br /><br />
+            &nbsp;&nbsp;printf("Enter two numbers: ");<br />
+            &nbsp;&nbsp;scanf("%d %d", &amp;num1, &amp;num2);<br /><br />
+
+            &nbsp;&nbsp;if (num1 &gt; num2) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%d is the largest.\n", num1);<br />
+            &nbsp;&nbsp;} else if (num2 &gt; num1) {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("%d is the largest.\n", num2);<br />
+            &nbsp;&nbsp;} else {<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;printf("Both numbers are equal.\n");<br />
+            &nbsp;&nbsp;}<br /><br />
+
+            &nbsp;&nbsp;return 0;<br />
+            }
+          </code>
+        </div>
+
+        <div class="output-block">
+          <p>
+            Enter two numbers: 12 25<br />
+            25 is the largest.
+          </p>
+        </div>
+
+        <p><strong>Explanation:</strong></p>
+        <ul>
+          <li>
+            The program takes two integer inputs from the user using
+            <code>scanf()</code>.
+          </li>
+          <li>
+            If <code>num1 &gt; num2</code>, it prints that <code>num1</code> is
+            larger.
+          </li>
+          <li>
+            If <code>num2 &gt; num1</code>, it prints that <code>num2</code> is
+            larger.
+          </li>
+          <li>If neither condition is true, both numbers are equal.</li>
+        </ul>
+
+        <div class="important-note">
+          <h4>⚠️ Common Mistakes</h4>
+          <ul>
+            <li>
+              Forgetting <strong>&amp;num1</strong> and
+              <strong>&amp;num2</strong> in
+              <code>scanf("%d %d", &amp;num1, &amp;num2);</code>.
+            </li>
+
+            <li>
+              Using <code>=</code> instead of <code>==</code> when checking
+              equality.
+            </li>
+            <li>Not handling the case when both numbers are equal.</li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <footer>
