@@ -56,14 +56,14 @@ header h1 {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 h2,
 h3,
 h4 {
   color: var(--secondary-color);
   font-weight: 600;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 h2 {
@@ -377,3 +377,19 @@ footer .container a {
 .nav-links a:hover {
   text-decoration: underline;
 } */
+
+
+    .advantages, .disadvantages {
+      /* margin-top: 10px; */
+      padding: 2px;
+      border-left: 4px solid;
+      border-radius: 5px;
+    }
+    .advantages {
+      border-color: #27ae60;
+      background: #ecf9f1;
+    }
+    .disadvantages {
+      border-color: #c0392b;
+      background: #fdecea;
+    }
