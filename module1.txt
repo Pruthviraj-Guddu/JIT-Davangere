@@ -1,0 +1,1845 @@
+Module-1: Introduction to C
+Module 1:
+Introduction to C: Introduction to computers, input and output devices,
+designing efficient programs. Introduction to C, Structure of C program, Files
+used in a C program, Compilers, Compiling and executing C programs, variables,
+constants, Input/output statements in C,
+What is Computer?
+« Computer is an electronic device, which takes input from the user in the form of
+data and instructions.
+* Once the computer receives the data, it waits for the user’s instructions to
+process the data.
+* On receiving the instructions from the user, the computer processes the data and
+generates the output and displays it to the user.
+« The data that is given as an input to the computer can be text, numerals, audio,
+video and image etc
+In simple terms computer can be defined as,
+“An electronic device which accepts the data, performs the required
+mathematical and logical operations at high speed and outputs the result”.
+Tasks of the Computer:
+* Input: Sending the data and command to the computer is known as input.
+» Processing: Work done by the computer with the help of processing
+hardware and software to produce results is known as processing.
+ Output: The result displayed by the computer is called as output.
+« Storage: A place to save results inside or outside the computer is known as
+storage.
+Characteristics of computers:
+ Speed: Computers can perform millions of operations per second. The speed
+of computers is usually given in nanoseconds/picoseconds where lns= 1 x
+107-9 seconds and 1ps= 1 x 107-12 seconds
+vtucode.in Page 1 
+Module-1: Introduction to C
+Accuracy: A computer can always give accurate results, provided the
+correct input and instructions as input. If the input is wrong, then output
+will be erroneous. This is called “garbage-in, garbage-out”
+Automation: Computers performs the task without any human
+intervention.
+Diligence: Unlike humans, computers never get tired of repetitive task.
+Versatile: Computers can perform multiple tasks of different nature at the
+same time.
+Memory: Computers have internal or primary memory and External or
+Secondary memory to store data and programs.
+No IQ: Computers do not have any decision making abilities of their own.
+They need guidance to perform various tasks.
+Economical: Computers are considered as short tem investment for
+achieving long term gains. They save time, money and energy.
+What is difference between data and information?
+Data is a raw fact.
+Information is a processed data.
+For example, the date of birth is the data and calculating the age using date of birth
+is information.
+Types of stored program Computers
+Address bus- Carries
+addresses =)
+Data bus- Carries data and
+instructions
+Processor
+Fig: Von Neumann Architecture with shared memory for instructions
+and data
+vtucode.in Page 2
+Module-1: Introduction to C
+* A computer with Von Neumann Architecture stores data and instructions in the
+same memory.
+« There is a serial machine in which data and instructions are selected one at a time.
+» Data and instructions are transferred to and from memory through shared data
+bus.
+« Since there is a single bus to carry data and instructions, process of execution
+becomes slower.
+Instruction address Data address
+Instruction —' ! Data
+l Processor |
+Instructions Read/Write data
+memor "' Memory
+Fig: Von Neumann Architecture with separate memory for instructions and data
+» Due to the disadvantage of previous architecture, Harvard University proposed a
+stored program concept in which there was a separate memory to store data and
+instructions.
+» Instructions are selected serially from the instruction memory and executed in the
+Processor.
+- When an instruction needs data, it is selected from the data memory and hence the
+execution becomes faster.
+History of Computers:
+First Generation (1942-1955): Vacuum Tubes
+« These computers were manufactured using thousands of vacuum tubes.
+* The Electromagnetic relay was used as primary memory and punch cards were
+used to store data and instructions.
+vtucode.in Page 3
+Module-1: Introduction to C
+* Programming was done in machine or assembly level language.
+Advantage:
+Fastest calculating devices of their time.
+Disadvantage: Vacuum tubes
+Generated lot of heat, Consumed lot of electricity, Bulky in size, required constant
+maintenance, Limited commercial use and very expensive.
+Second Generation (1955-1964): Transistors
+* These computers were manufactured using transistors which ]
+were reliable, cheaper, smaller and cooler than vacuum tubes. ,
+ Magnetic core memory was used as primary memory and
+magnetic tapes and disks were used to store data and instructions. Transistors
+» Programming was done in high level programming language.
+Advantage: Consumed less electricity, Generated less heat, Faster cheaper and more
+reliable, could be programmed using high and assembly level language, had faster
+primary memory and larger secondary memory.
+Disadvantage: Transistors were assembled manually which made commercial
+production difficult and expensive
+Third Generation (1964-1975): Integrated circuits
+ These computers were manufactured using transistors
+integrated chips(IC’s) which consists of several components
+such as transistors, capacitors and resistors Integrated Circuits
+on single chip to avoid wired connections between components.
+vtucode.in Page 4
+Module-1: Introduction to C
+« Large Magnetic core memory was used as primary memory and magnetic tapes and
+disks were used to store data and instructions.
+* Programming was done in high level programming language.
+Advantage: Faster and could perform one million transactions per second, Smaller,
+cheaper and more reliable, Faster and larger primary and secondary memory, widely
+used for scientific and business applications
+Disadvantage: Difficult to maintain and got heated very quickly.
+Fourth Generation (1975-1989): Microprocessors
+« These computers were manufactured using transistors integrated chips(IC’s) with
+LSI’s and later with VLSI.
+* Semiconductors memory was used as primary memory and magnetic tapes and
+floppy disks were used as portable storage devices.
+* Programming was done in high level programming language such as C and C++.
+Advantage: Smaller, cheaper, faster and more reliable, Consumer less electricity,
+generated less heat, Used as General purpose computers, GUI's made work with
+computer easier, Widespread of computers to office and homes
+Disadvantage: Not intelligent systems.
+Fifth Generation (1989-Present): Artificial Intelligence
+* These computers were manufactured using transistors integrated chips(IC’s) with
+ULSI’'s(Ultra Large scale Integration) technology.
+* Semiconductors memory was used as primary memory and magnetic tapes and
+floppy disks were used as portable storage devices.
+* Programming was done in high level programming language such as Java, Python,
+vtucode.in Page 5
+Module-1: Introduction to C
+CH.
+Advantage:
+Smaller, cheaper, faster, powerful and more reliable, Consumer less power, generated
+less heat, high-end features available.
+Comparison table
+First
+generation
+Second
+generation
+Third
+generation
+Fourth
+generation
+Fifth
+generation
+1042-1955 Vacuum tubes Cicctromaguetic relay
+1955.1964 Transistors |lagnetic Core Memory
+1964-1975 IC’s Large Magnetic
+Core Memory
+1975-1989 Microprocessor Semiconductor
+memory
+1989- Semiconductor Al Present memory
+Punch cards
+Magnetic
+tapes and
+disks
+Magnetic
+tapes and
+disks
+Magnetic
+tapes and
+floppy disks
+Magnetic
+tapes and
+floppy disks
+Classification of Computers: 
+Module-1: Introduction to C
+1) Supercomputers:
+« It is the fastest, most powerful, and most expensive computer.
+« It was first developed in 1980s to process large amounts of data and solve complex
+scientific problems.
+* They use parallel processing technology and can perform trillion calculations in a
+second.
+* A single supercomputer can support thousands of users at same time.
+*« They are used for weather forecasting, nuclear energy research, aircraft design,
+automotive design, online banking etc.
+« Examples of supercomputers are: CRAY-1, CRAY-2, ETA A-10.
+2) Mainframe Computers:
+* They are large scale computers but smaller than supercomputers.
+» These are very expensive and need a very large clean room with air conditioning,
+making them very costly to deploy.
+ Mainframes can also support multiple processors.
+Dumb terminals:
+It consists of only monitor and keyboard and uses mainframe’s system CPU and
+storage device.
+Intelligent terminals:
+It have their own processor and perform processing operations but do not have their
+own storage space.
+ Mainframe computers are typically used as servers on WWW.
+vitucode.in Page 7
+Module-1: Introduction to C
+ They are also used in organizations such as banks, airline companies, universities
+where large number of people access the data frequently.
+« Examples of Mainframe computers are: IBM S/390, Control Data CYBER 176, and
+Amdahl 580.
+3) Minicomputers:
+1. They are smaller, cheaper, and slower than mainframes.
+2. They are also called Midrange computers.
+3. The capabilities of these fall between mainframe and personal computers.
+4. They are widely used in business, education, hospitals, government organizations,
+etc.
+5. Some minicomputers are designed in such a way that it can be either used by single
+user or multiple users.
+6. Single-user minicomputers are used for performing complex design tasks.
+7. The first Minicomputer was introduced by Digital Equipment Corporation in mid1960’s.
+4. Microcomputers:
+e They are commonly known as PC’s.
+¢ The first microcomputer was designed by IBM in 1981 and was named as IBM-PC.
+Desktop PCs:
+e Itis the most popular model of PC’s.
+Laptops:
+e They are small microcomputers that easily fit inside a briefcase.
+vtucode.in Page 8
+Module-1: Introduction to C
+e The memory and storage capacity of a laptop is almost equivalent to a desktop
+computer.
+e They also have hard disk drives.
+e For input, laptops have built-in keyboard and touch pad.
+Workstations:
+A workstation is nothing but a computer like a personal computer, but with more
+powerful microprocessor and large, high resolution monitor for better quality of pictures
+along with large amount of memory.
+Advantages: High Resolution, Accelerated graphics cards- they are used in video
+editing and animations, Powerful machines and used for architectural or engineering
+design.
+Disadvantages: Workstations are costly, Not Portable.
+Network computers:
+* Network computers have less processing power, memory, and storage than a desktop
+computer.
+* These are specially designed to be used as terminals in a networked environment.
+* For example, some network computers are specifically designed to access data stored
+on a network (including the Internet and intranet).
+*« Some network computers do not have any storage space and merely rely on the
+network's server for data storage and processing tasks. The concept of network
+computers had become popular in the mid-1990s
+* Network computers that are specifically designed to access only the Internet or
+intranet are often known as Internet PCs or Internet boxes.
+vtucode.in Page9
+Module-1: Introduction to C
+* Some network computers used in homes do not even have a monitor. Such
+computers may be connected to a television, which serves as the output device.
+» The most common example of a home-based network computer is Web TV, which
+enables the user to connect a television to the Internet.
+« The Web TV is equipped with a special set-top box that is used to connect to the
+Internet.
+ The set-top box also provides controls to enable the user to navigate the Internet,
+send and receive e-mails, and to perform other tasks on the network while watching
+television.
+» The other reason for the popularity of network computers is that they are cheaper to
+purchase and maintain than PCs.
+Smart phones:
+* A smart phone is an electronic hand held device that has the functionality of a mobile
+phone and PDA.
+» This is achieved by adding mobile phone features to an existing PDA.
+Advantages:
+« Various software applications such as E-Mail, SMS, voice recognition, camera, etc..
+« It can be connected to internet for web browsing.
+* Can be used to listen to music or radio.
+« PC Compatibility.
+Disadvantages: Generally larger than standard handsets, More expensive, High
+replacement cost.
+vtucode.in Page 10
+Module-1: Introduction to C
+Tablet Computers:
+* A tablet PC is a personal computer and looks like a standard slate.
+» The display system can be rotated by 180 degree.
+- It has all the features of a laptop and allows the user to write on the screen using
+digital pen. This pen is called stylus. This pen is also used to tap on the icon so as to
+select an item.
+Advantages:
+» Notes can be written using our handwriting style.
+* Paper work can be eliminated.
+* They are very slim and light weight compared to laptops and hence they are portable.
+Disadvantages: * They are costlier and delicate. « High replacement cost
+Applications of Computers:
+1. Word Processing: Word Processing software enables user to read and write
+documents.
+2. Internet: The internet is a network that connects the computers all over the world.
+3. Digital video or Audio Composition: Computers make Audio and Video editing very
+simple.
+4. Desktop publishing: This software enables to create page layouts for entire books.
+S. E-Business: It is a process of conducting business via Internet.
+» Business-to-Consumer or B2C: The term business-to-consumer (B2C) refers to the
+process of selling products and services directly between a business and consumers who
+are the end-users of its products or services.
+vtucode.in Page 11
+Module-1: Introduction to C
+* Business-to-Business or B2B: Business-to-business (B2B) is a transaction or
+business conducted between one business and another, such as a wholesaler and
+retailer.
+* Consumer-to-Consumer or C2C: It's a business model that fosters commerce
+between private individuals, usually in an online environment.
+» Electronic banking: Also known as Cyber banking or online banking which supports
+various banking activities conducted from home, business instead of physical bank
+location.
+6) Bioinformatics: Bioinformatics is an interdisciplinary field of science that develops
+methods and software tools for understanding biological data, especially when the data
+sets are large and complex.
+7) Health care: In health care, it is used to store health records, surgical procedures for
+better diagnosis and treatment.
+8) Geographic Information System and Remote Sensing: It is a computer based tool
+for mapping and analyzing Earth’s features.
+9) Meteorology: It is the study of atmosphere.
+e Weather Forecasting: It includes application of science and technology to predict
+the state of atmosphere for a future time and given location.
+e Aviation meteorology: It studies the impact of weather on air traffic
+management.
+e Agricultural meteorology: It deals with the study of effects of weather and
+climate on plant distribution, crop yield, water use efficiency, plant and animal
+development.
+¢ Nuclear meteorology: It deals with the study of distribution of radioactive
+aerosols and gases in the atmosphere.
+¢ Maritime meteorology: It deals with the study of air and wave forecasts for ships
+operating at sea.
+vtucode.in Page 12
+Module-1: Introduction to C
+10) Multimedia and Animation: which combines still images, moving images,
+text, sound.
+11) Legal System: Computers are used by lawyers to shorten the time required to
+conduct legal precedent and case research.
+12) Retail Business: Computers are used here to enter orders, calculate costs, and
+print receipts.
+13) Sports: Computers are used here to compile statistics, identify weak and
+strong players, sell tickets etc.
+14) Travel and Tourism: Computer are used to prepare tickets, monitor the train
+or airplane route, and guide the plane to a safe landing.
+19) Simulation: Supercomputers that can process enormous amount of data are
+widely used in simulation tests.
+16) Astronomy: Spacecrafts are usually monitored using computers that not only
+keep a continuous record of the voyage and of the speed, directions, fuel and
+temperature, but also suggest corrective actions when vehicle make a mistake.
+17) Education: Teachers use computers to develop instructional material.
+18) Industry and Engineering: Computers are found in all kind of industry like
+thermal power plants, oil refineries, chemical industry, Computer-aided designing,
+Computer aided manufacturing.
+19) Decision support systems: Computers help managers to analyze their
+organization data to understand the present scenario of the business.
+20) Expert systems: Expert systems are used to automate the decision-making
+process in a specific area, such as analyzing the credit histories for loan approval,
+diagnosing a patient’s condition for prescribing an appropriate treatment.
+vtucode.in Page 13
+Module-1: Introduction to C
+Basic Organization of Computers
+Pata and - .
+Anthmetic
+and Logical
+Linit
+Block Diagram of a Computer
+What does a computer do?
+A computer is an electronic device which performs S major operations.
+» Accepting data or instructions.
+» Storing data
+* Processing data
+* Displaying results
+* Controlling and coordinating all operations inside a computer.
+Input:
+« The process of entering the data and instructions into the computer system is called
+Input.
+- The data and instructions can be entered by using different input devices such as
+keyboard, mouse, scanner, and trackball.
+vtucode.in Page 14
+Module-1: Introduction to C
+« Note that computers understand binary language, which consists of only two symbols
+(O and 1), so it is the responsibility of the input devices to convert the input data into
+binary codes.
+Storage:
+» Storage is the process of saving data and instructions permanently in the computer
+so that they can be used for processing.
+* A computer has 2 types of storage area:
+1. Primary storage
+2. Secondary storage
+1. Primary storage:
+ Primary storage, also known as the main memory, is the storage area that is directly
+accessible by the CPU at very high speeds.
+« It is used to store the data and parts of programs, the intermediate results of
+processing, and the recently generated results of jobs that are currently being worked on
+by the computer.
+ Primary storage space is very expensive and therefore limited in capacity.
+« Another drawback of main memory is that it is volatile in nature; that is, as soon as
+the computer is switched off, the information stored gets erased.
+« Hence, it cannot be used as a permanent storage of useful data and programs for
+future use. An example of primary storage is random access memory (RAM).
+2. Secondary storage:
+ Secondary storage is also known as auxiliary memory, this memory is just the
+opposite of primary memory. It overcomes all the drawbacks of the primary storage area.
+vtucode.in Page 15
+Module-1: Introduction to C
+« It is cheaper, non-volatile, and used to permanently store data and programs of those
+jobs that are not being currently executed by the CPU.
+* Secondary memory supplements the limited storage capacity of the primary memory.
+An example is the magnetic disk used to store data, such as C and D drives, for future
+use.
+Output:
+* OQOutput is the process of giving the result of data processing to the outside world
+(external to the computer system).
+* The results are given through output devices such as monitor, and printer.
+« Since the computer accepts data only in binary form and the result of processing is
+also in binary form, the result cannot be directly given to the user.
+« The output devices, therefore, convert the results available in binary codes into a
+human-readable language before displaying it to the user.
+Control :
+* The control unit (CU) is the central nervous system of the entire computer system. It
+manages and controls all the components of the computer system.
+« It is the CU that decides the manner in which instructions will be executed and
+operations performed. It takes care of the step-by-step processing of all operations that
+are performed in the computer.
+* Note that the CPU is a combination of the arithmetic logic unit (ALU) and the CU. The
+CPU is better known as the brain of the computer system because the entire processing
+of data is done in the ALU, and the CU activates and monitors the operations of other
+units (such as input, output, and storage) of the computer system.
+vtucode.in Page 16
+Module-1: Introduction to C
+Processing:
+* The process of performing operations on the data as per the instructions specified by
+the user (program) is called processing.
+ Data and instructions are taken from the primary memory and transferred to the
+ALU, which performs all sorts of calculations.
+» The intermediate results of processing may be stored in the main memory, as they
+might be required again.
+» When the processing completes, the final result is then transferred to the main
+memory.
+ Hence, the data may move from main memory to the ALU multiple times before the
+processing is over.
+Inside the Computers
+CPU:
+» The CPU is the brain of the computer. It performs all calculations and controls the
+devices connected to the computer system.
+« The faster the CPU, the quicker programs can process the instructions.
+RAM:
+« A fast CPU is of no use if the computer does not have sufficient RAM.
+« RAM is the computer's memory which stores information used by applications that
+are currently being executed by the CPU.
+ More memory means more applications can be executed at the same time without
+degrading the system's performance.
+Hard disk drive (HDD) :
+vtucode.in Page 17
+Module-1: Introduction to C
+* The HDD of the computer is the secondary memory of the computer system where
+information is stored permanently.
+» All types of data, documents, and programs are stored on the hard disk.
+» The larger the hard disk, the more the amount of data that can be stored on the
+drive.
+» Though the size of the HDD does not affect the speed of execution of the program, it
+does affect the speed at which the user can access his/ her files.
+Video card:
+» The video card is a board that plugs into the motherboard of the computer and
+generates images for display.
+« Many video cards these days have their own RAM and processor to enhance the
+speed of the graphics display.
+« Many computers come with an in-built video chip.
+* In such a computer, a separate video card is used only if the computer has to be
+used for high-end multimedia work or to play video games.
+Sound card:
+ As with video cards, sound cards are expansion boards that are used to enable a
+computer to manipulate sound.
+* For example, sound cards allow the users to plug in speakers and a microphone.
+Some sound cards also provide the jacks for hooking your computer up to a common
+stereo.
+« These days, many computers come with a built-in sound chip, which makes it
+unnecessary to buy a separate card unless a higher quality of sound is needed.
+Modem:
+vtucode.in Page 18
+Module-1: Introduction to C
+* A modem (modulator-demodulator) is a device that enables the computer to use a
+telephone line to communicate and connect to the Internet.
+Network card:
+* A network card is used to connect the computer either to other computers or to the
+Internet (in case you are using a fast Internet connection such as cable or DSL).
+Fans:
+» There are one or more fans inside the computer to keep the air moving and the
+computer cool.
+Cables:
+» There are multiple wires inside the computer that are flat, ribbon-like cables.
+« They are used to provide power and communication to the various parts inside the
+computer.
+Input and Output Devices
+Input devices:
+Input Devices
+Pointing Handheld
+devices Devices
+Audio/Visual
+Keyboard eyboar :
+Devices Optical Devices
+Barcode
+readers
+A s Scanners Irackball Touch screen
+OCR
+Track pad Joystick
+OMR
+Keyboard:
+¢ A keyboard is the main input devices to the computer.
+vtucode.in Page 19
+Module-1: Introduction to C
+e A keyboard looks like a typewriter.
+e A numeric keypad is located to the right of the keyboard. Numeric keys have the
+same placement as a 10-key calculator, which allow the operator to enter numbers
+rapidly.
+e Keyboard also contains other types of keys such as typewriter keys, function keys,
+cursor control keys, page-up and page-down keys, home and end keys, caps lock, shift
+etc.
+Functicfn keys
+| Il— lll"l’";u“ ‘:;HF&'W'H'IFIIF!G"HIIH]
+g e g T g O d T a
+-0 DOo0o000n00eN EOOODOnDnnOnee ] 4 ] (] 4 £ 4 (] (1 ] = (N0 O0ODODOD0D0DEEE I
+|
+Typewriter keys Cursor Numeric
+control keys keypad
+Advantages:
+ The Keyboard is easy to use and inexpensive.
+Disadvantages:
+* The keyboard cannot be used to draw figures.
+* The process of moving the cursor to another position is very slow. Mouse and other
+pointing devices are more apt for this purpose.
+Pointing devices:
+A pointing input device enables the users to easily control the movement of the
+pointer to select items on a display screen, to select commands from commands menu,
+to draw graphics, etc.
+» Some examples of pointing devices include mouse, trackball, light pen, joystick, and
+touchpad.
+vtucode.in Page 20
+Module-1: Introduction to C
+Mouse:
+« The mouse is an input device that was invented by Douglas Engelbart in 1963.
+» It is the key input device used in a graphical user interface (GUI).
+* Mouse is a hand held device that allows a user to control the computer without
+typing instructions from the keyboard.
+» Point: Placing the pointer over the word or the object on the screen by moving
+the mouse on the desk is termed as pointing.
+« Drag: Dragging means pointing to a desired location while pressing the left
+button.
+» Click: Pressing either the left or the right button of the mouse is known as
+clicking. Clicking a mouse button initiates some action; for example, when you
+click the right button by pointing the mouse on a word, a menu pops up on the
+screen. When you move the pointer over the icon of an application, say Internet
+Explorer, and double-click on it, then it opens that application for you.
+» Scroll: The scroll wheel, which is placed in between the left and right buttons of
+the mouse, is used to vertically scroll through long documents.
+The mouse is specially used to create graphics such as lines, curves, and freehand
+shapes on the screen. It is connected to a serial or a universal serial bus (USB) port on
+the system unit. Some of the popular mouse types are as follows:
+1. Mechanical mouse
+2. Optical mouse
+3. Cordless mouse
+1. Mechanical mouse
+vtucode.in Page 21
+Module-1: Introduction to C
+* This type of mouse has a rubber or metal ball at its bottom and an electronic circuit
+containing sensors.
+» When the mouse is moved over a flat surface, the sensors detect the direction of
+movement of the ball.
+» The electronic circuit translates the movement into signals and feeds it as input to
+the computer.
+2. Optical mouse: The optical mouse is more advanced than the mechanical mouse. It
+contains a ball inside. The movement of the mouse is detected using laser technology, by
+using optical sensors.
+3. Cordless mouse: A cordless or wireless mouse is not connected to the computer. The
+movement of the mouse is detected using radio waves or infrared light waves.
+Advantages:
+» Low Priced
+» Easy to use and can be used to quickly place the cursor.
+Disadvantages:
+* Needs extra desk space to be placed and moved easily.
+» The ball in the mechanical mouse must be cleaned to remove dust from it
+Trackball:
+« A trackball is a pointing device that is used to control the position of the cursor on
+the screen.
+« It is usually used in notebook computers, where it is placed on the keyboard
+Advantages:
+* Provides better resolutions.
+* Occupies less space.
+» Easier to use as compared to mouse as its use involves less hand and arm
+movements.
+Disadvantages: The trackball chamber is often covered with dust and must be cleaned
+regularly.
+Touchpad:
+vtucode.in Page 22
+Module-1: Introduction to C
+* A touchpad (or trackpad) is a small, flat, rectangular stationary pointing device with a
+sensitive surface of 1.5-2 square inches.
+ The user has to slide his or her fingertips across the surface of the pad to point to a
+specific object on the screen.
+« The surface translates the motion and position of the user's fingers to a relative
+position on the screen.
+Advantages:
+* Occupies less space.
+ FEasy to use.
+* Built in keyboard so need to carry an extra device.
+Handheld devices:
+« A handheld devices is a pocket-sized computing device with a display screen and
+touch input and/or a miniature keyboard.
+* Some examples are:
+1. Smartphone's
+2. PDA’s
+Joystick:
+« Joystick is a cursor control device widely used in computer games and CAD /CAM
+applications.
+« It consists of a hand-held lever that pivots on one end and transmits its coordinates
+to a computer.
+* It has one or more push-buttons, called switches, whose position can also be read by
+the computer.
+Stylus:
+« A stylus is a pen-shaped input device used to enter information or write on the
+touch screen of a phone.
+« Stylus is a small stick that can also be used to draw lines on a surface as input to a
+computer, choose an option from a menu, move the cursor to another location on the
+screen, take notes and create short messages.
+* The stylus usually slides into a slot built into the smart phone for that purpose.
+Touch screen:
+vtucode.in Page 23
+Module-1: Introduction to C
+* A touch screen is a display screen which can identify the occurrence and position of
+a touch inside the display region.
+« The user can touch the screen either by his finger or by using a stylus.
+« These displays can be connected to computers, laptops, PDAs, cell phones etc.
+Optical devices:
+* Optical devices, also known as data-scanning devices, use light as a source of input
+for detecting or recognizing different objects such as characters, marks, codes, and
+1mages.
+« These devices convert these objects into digital data and send it to the computer for
+further processing.
+« Some optical devices that are discussed include barcode readers, image scanners,
+optical character recognition (OCR) devices, optical mark readers (OMR), and magnetic
+ink character recognition (MICR) devices.
+Barcode readers:
+* A barcode reader (or price scanner or point-of-sale scanner) is a hand-held input
+device which is used to capture and read information stored in a barcode.
+» A barcode reader consists of a scanner, a decoder, and a cable used to connect the
+reader with a computer.
+ The barcode reader merely captures and translates the barcode into numbers
+and/or letters.
+ To make use of the information captured it must be connected to a computer for
+further processing.
+« For this purpose, the barcode reader is connected to a computer through a serial
+port, keyboard port, or an interface device called a wedge.
+Advantages: Cheap, Portable, Used to read data stored in bar codes, Handy and easy to
+use
+Image scanner:
+« It is a device that captures images, printed text, handwriting from different sources
+and converts it into a digital image for computer editing and display.
+vtucode.in Page 24
+Module-1: Introduction to C
+* Scanners come in hand-held, feed-in, and flatbed types.
+* In the flat bed scanner, the object to be scanned is placed on a glass pane and a
+sensor and light moves along the pane, reflecting off the image placed on the glass.
+A hand image scanner has to be manually moved across an object or image to be
+scanned.
+ The scanner produces light from green LEDs which highlight and scan the image
+onto a computer for further processing.
+* Film scanners are usually used in photography and slides.
+* The slide or negative film is first inserted in strips of six or less frames into the film
+scanner, and then moved across a lens and censor to capture the image.
+Advantages:
+« Any printed or handwritten document can be scanned and stored in a computer for
+further processing.
+« The scanned and stored document will never deteriorate in quality with time.
+« The document can be displayed and printed whenever required. * There is no fear of
+loss of documents.
+* The user can scan important documents and store them permanently in the
+computer.
+Disadvantages
+* Scanners are usually costlier than other input devices.
+- The documents that are scanned and stored as images have a higher size as
+compared to other equivalent text files.
+« Text documents are scanned and stored as images. Therefore, they occupy more
+space and are also not editable because computers cannot interpret individual
+characters and numbers in the image.
+Optical Character Recognition (OCR):
+* OCR s the process of converting printed materials into text or word processing files
+that can be easily edited and stored.
+» The steps involved in OCR include:
+1. Scanning of the text character-by-character
+vtucode.in Page 25
+Module-1: Introduction to C
+2. Analyzing the scanned-in image to translate the character image into
+character codes (ex ASCII)
+OCR | o [E] = Printed
+Documents | —>
+Computer
+readable Text
+files of size 2-
+3KB per page
+Scans the documents and makes
+a bitmap of size 50-150KB per
+page
+Advantages:
+ Printed documents can be converted into text files
+* Advanced OCR can recognize handwritten text and convert them into computer
+readable text files
+Disadvantages:
+* OCR cannot recognize all types of fonts
+ Documents that are poorly types or have strikeover cannot be recognized
+* Very old documents when passed through OCR may not have an exact copy of the
+text file.
+OPTICAL MARK RECOGNITION
+» OMR is the process of electronically extracting data from marked fields, such as
+checkboxes and fill-infields, on printed forms.
+» The optical mark reader is fed with an OMR sheet to detect the presence of a mark
+by measuring reflected light levels.
+» The OM reader interprets this pattern marks and spaces and stores the interpreted
+data in computer for storage, analysis and reporting.
+* The error rate for OMR technology is less than 1%.
+« It is used for applications in which large numbers of hand-filled forms have to be
+quickly processed with great accuracy, such as surveys, reply cards, questionnaires,
+ballots or sheets for multiple choice questions.
+Advantages:
+» Optical mark readers works with a very fast speed. They can read up to 9,000 forms
+per hour
+» They are accurate machines with error rates of just 1%
+vtucode.in Page 26
+Module-1: Introduction to C
+Disadvantages:
+« Difficult to gather large amount of information.
+« Some data may be missing in the scanned documents.
+- It is a sensitive device that rejects the OMR sheet if it is folded, torn or crushed.
+MAGNETIC INK CHARACTER READER (MICR)
+« MICR is used to verify the legitimacy or originality of paper documents, especially
+checks.
+« MICR consists of magnetic ink printed characters which can be recognized by high
+speed magnetic recognition devices .
+ The printed characters provides important information (like check number, bank
+routing number, checking account number and in some cases the amount of the check)
+for processing to the receiving party.
+« MICR is widely used to enhance security, speed up the
+« sorting of documents and minimize the exposure to check fraud.
+Audiovisual Input devices:
+* Audio devices.
+* Video Input devices
+Audio devices
+ Audio devices are used to either capture or create sound. They enable computers to
+accept music, speech or sound affects for recording and/or editing.
+« Microphone and CD player are examples of two widely used audio input devices.
+* Microphone feeds audio input to the computer. The computer must have a sound
+card to convert analog signals generated through microphone into digital data so that it
+can be stored in the computer.
+» When the user wants to hear the pre-recorded audio input, the sound card converts
+the digital data into analog signals and sends it to the speakers.
+Advantages: Audio devices can be used by people who have visual problems; It is best
+used in situations where users want to avoid i/p through keyboard or mouse
+vitucode.in Page 27
+Module-1: Introduction to C
+Disadvantages: Audio input devices are not suitable in noisy places; With audio input
+devices it is difficult to clearly distinguish between two similar sounding words like “sea”
+and “see”
+Video Input Devices
+« Video input devices are used to capture video from the outside world into the
+computer.
+« Digital camera is used to capture images or videos. It digitizes the image or video and
+stores them on a memory card.
+« The data can then be transferred to the computer using a cable which connects
+computer to the digital camera.
+« Web cameras also capture videos which can be transferred via internet in real time.
+Advantages:
+« Video input devices are very useful for applications like video conferencing
+« Video input devices can be used to record memorable moments in one’s life
+* Video input devices can be used to check security
+Disadvantages:
+« Videos and images captured using video input devices have a very big file size and
+there must be compressed before being stored on the computer.
+OUTPUT DEVICES
+* Any device that outputs/gives information from a computer is called an output
+device.
+* Output devices are electromechanical devices which accept digital data from the
+computer and convert them into human understandable language.
+Output Devices
+Softcopy Hard copy
+devices Devices
+Monitor Printer
+Projector Plotter
+Speaker
+vitucode.in Page 28
+Module-1: Introduction to C
+SOFT COPY DEVICES
+* Soft copy output devices are those output devices which produce an electronic
+version of an output.
+« For example, a file which is stored on hard disk, CD, pen drive, etc is displayed on
+the computer screen (monitor).
+Features of a soft copy output include:
+* The output can be viewed only when the computer is on.
+* The user can easily edit the soft copy output
+» Soft copy cannot be used by people who do not have a computer
+ Searching data in a soft copy is easy and fast.
+» Electronic distribution of a soft copy is cheaper. It can be done easily and quickly
+Monitors:
+» The monitor is a soft copy output device used to display video and graphics
+information generated by the computer through the video card.
+* Monitors have 3 variants: Cathode Ray tube(CRT), Liquid Crystal Display(LCD), and
+Plasma.
+i? [
+LC LED
+CATHODE RAY TUBE MONITORS
+ CRT monitors work by firing charged electrons at a phosphorus film.
+*» When electron hit the phosphor coated screen, it glows thereby enabling the user to
+see the output.
+ In a cathode ray tube, the "cathode" is a heated filament which is placed in a
+vacuum created inside a glass "tube."
+« The "ray" is a stream of electrons which comes out from a heated cathode into the
+vacuum.
+ The focusing anode focuses the stream of electrons to form a tight beam which is
+then accelerated by an accelerating anode.
+» This tight, high-speed beam of electrons flies through the vacuum in the tube and
+hits the flat screen at the other end of the tube.
+vtucode.in Page 29
+Module-1: Introduction to C
+« This screen is coated with phosphor, which glows when struck by the beam, thereby
+displaying the picture which the user sees on the monitor.
+Vartical Phosphar
+Deflection Coated
+Focusing Anode Plates Screen
+Electron
+Horizonlal Beam
+Gun Deflection
+Plates
+Cathode Ray Tube
+Working of CRT monitor
+Advantages:
+« It provides images of good quality.
+» These are cheapest when compared to LCD and plasma monitors.
+ The images are clear even when we try to view in different angle.
+Disadvantages:
+» They occupy a large space on the desk.
+« They are bigger in size and weight and therefore difficult to move from one place to
+another when compared with other types of monitor.
+* Power consumption is higher than the other monitors.
+LIQUID CRYSTAL DISPLAY MONITORS
+« LCD monitor is a thin, flat electronic visual display that uses the light modulating
+properties of liquid crystals which do not emit light directly.
+« LCD screens are used in a wide range of applications ranging from computer
+monitors, television, instrument panels, aircraft cockpit displays, signage, to consumer
+devices like such as video players, gaming devices, clocks, watches, calculators, and
+telephones.
+vtucode.in Page 30
+Module-1: Introduction to C
+« Liquid crystal display technology is based on blocking light.
+» The LCD consists of two pieces of polarizing filters (or substrates) that contain a
+liquid crystal material between them.
+* A backlight creates light which is made to pass through the first substrate.
+« Simultaneously, the electrical currents cause the liquid crystal molecules to align to
+allow varying levels of light to pass through to the second substrate and create the
+colors and images are seen on the screen.
+« Most LCD displays use active matrix technology in which a thin film transistor(TFT)
+arranges tiny transistors and capacitors in a matrix of the display.
+« Passive matrix technology is the other type of LCD, which uses a grid of conductive
+metal to charge each pixel.
+Liquid Crystal Laver';?' ¥,
+Working of LCD monitor.
+Advantages:
+= They are very compact and light weight, consume less power.
+« There is little or no flicker of images.
+ They are more reliable than CRTs and can be made in almost any size or shape.
+Disadvantages:
+* They are more expensive than CRTs.
+» Images are not very clear when tried to view from an angle.
+PLASMA MONITORS
+vtucode.in Page 31
+Module-1: Introduction to C
+* Plasma monitors are thin and flat monitors widely used in TVs and computers. The
+plasma display contains two glass plates that have tiny cells filled with xenon and neon
+gas.
+ The display electrode is covered by a magnesium oxide protective layer and is
+arranged in horizontal rows along the screen while the address electrodes are arranged
+in vertical columns thereby forming grid like structure.
+« To ionize the gas in a particular cell, the electrodes that intersect at that cell are
+charged at least thousands of times in a small fraction of a second
+* An electric current begins to flow through the gas in the cell.
+» The current creates a rapid flow of charged particles thereby stimulating the gas
+atoms to release ultraviolet photons.
+* When these UV photons hit a phosphor atom in the cell, one of the phosphor's
+electrons jumps to a higher energy level and the atom heats up. When the electron falls
+back to its normal level, it releases energy in the form of a visible light photon.
+Advantages: The technology allows producing a very wide screen using extremely thin
+materials, very bright images are formed which look good from every single and are not
+heavy and hence portable.
+Disadvantages: Expensive, high power consumption.
+Display electrode
+MgO layer
+Pixel
+Phosphors
+Address electrode
+Address protective layer
+vtucode.in Page 32
+Module-1: Introduction to C
+PROJECTOR
+* A projector is a device which takes an image from a video source and projects it onto
+a screen or other surface.
+» These days, projectors are used for a wide range of applications varying from home
+theater systems to organizations for projecting information and presentations onto
+screens large enough for rooms filled with people to see.
+= LCD Projector make use of their own light to display the image on the wall and are
+based on LCD technology. Requires darkened room as image may be blurred.
+* Digital light processing (DLP) projector use number of mirrors to reflect the light. The
+room may be darkened or not as it displays clear image in both the situations.
+SPEAKERS
+* Today all business and home users demand sound capabilities and thus different
+types of speakers to enable users to enjoy music, movie, or a game and the voice will be
+spread through the entire room.
+« With good quality speakers, the voice will also be audible even to people sitting in
+another or room or even to neighbors.
+« However, in case the user wants to enjoy loud music without disturbing the people
+around him, he can use a headphone.
+« Another device called headset was developed to allow the users to talk and listen at
+the same time, using the same device.
+HARD COPY OUTPUT DEVICES
+Hard copy output devices produce a physical form of output. For example, the content of
+a file printed on a paper is a form of hard copy output.
+Printers:
+Printer is a device that outputs text and graphics information obtained from the
+computer and prints it on to a paper. Printers are available in the market in a variety of
+size, speed, sophistication, and cost. The qualities of printer which are of interest to
+users include:
+Color: Colored printouts are needed for presentations or maps and other pages where
+color is part of the information. They are more expensive.
+vtucode.in Page 33
+Module-1: Introduction to C
+Memory: Most printers have a small amount of memory that can be expanded by the
+user. Having more memory makes enhances the speed of printing
+Resolution: The resolution of a printer means the sharpness of text and images on
+paper. It is usually expressed in dots per inch (dpi). Even the least inexpensive printer
+provides sufficient resolution for most purposes at 600 dpi.
+Speed: Speed means number of pages that are printed in one minute. While high speed
+printers are a little expensive, the inexpensive printers on the other hand can print only
+about 3 to 6 sheets per minute. Color printing is even slower.
+Impact Non Impact
+Printers printers
+Dot Matnix
+Daisy wheel
+Impact Printer:
+» They create characters by striking an inked ribbon against the paper.
+« Ex., dot-matrix printers, daisywheel printers, and most types of line printer.
+Advantages:
+ These allow the user to produce carbon copies and are cheap.
+Disadvantages:
+ Impact printers are slow.
+* They offer poor printing quality and can be extremely noisy.
+* They can print only using the standard format.
+DOT MATRIX PRINTER:
+vtucode.in Page 34
+Module-1: Introduction to C
+* A dot matrix printer prints characters and images of all types as a pattern of dots.
+* It has a print head (or hammer) that consists of pins representing the character or
+image.
+ The print head runs back and forth, or in an up and down motion, on the page and
+prints by striking an ink-soaked cloth ribbon against the paper, much like the print
+mechanism on a typewriter.
+7 Pin 9 Pin
+Advantages:
+* It can produce carbon copies; offers lowest printing cost per page;
+» Widely used for bulk printing where quality of the print is not of much importance;
+is cheap;
+« When the ink is about to finish, the printout gradually fades rather than suddenly
+stopping partway through a job
+It can use continuous paper rather than individual sheets, making them useful for
+data logging.
+Disadvantages:
+» It creates a lot of noise when the pins strike the ribbon to the paper.
+» It can only print lower-resolution graphics, with limited quality
+» It is very slow and has poor print quality
+DAISY WHEEL PRINTER
+ Daisy wheel printers use an impact printing technology to generate high-quality
+output comparable to typewriters but three times faster.
+vtucode.in Page 35
+Module-1: Introduction to C
+* The print head of a daisy wheel printer is a circular wheel, about 3 inches in
+diameter with arms or spokes. The characters are embossed at the outer end of the
+arms.
+« To print a character, the wheel is rotated in such a way that the character to be
+printed is positioned just in front of the printer ribbon.
+« The spoke containing the required character is then hit by a hammer thereby
+striking the ribbon to leave an impression on the paper placed behind the ribbon.
+Movement of all these parts is controlled by microprocessor in the printer.
+ The key benefit of using a daisy wheel printer is that the print quality is high as the
+exact shape of the character hits the ribbon to leave and impression on paper.
+HAMMER
+= U ! TOTAL OF 86 L 1 1T LI L | CHARACTER
+------- - + B ARMS
+LINE PRINTER:
+Line printer is a high speed impact printer in which one typed line is printed at a time.
+The speed of a line printer usually varies from 600 to 1200 lines-per-minute or
+approximately 10 to 20 pages per minute. They are widely used in datacenters and in
+industrial environments. Band printer is a commonly used variant of line printers.
+Band Printer: A band printer (loop printer) is an impact printer . The set of characters
+are permanently embossed on the band and this set cannot be changed unless the band
+is replaced. The band itself revolves around hammers that push the paper against the
+ribbon, allowing the desired character to be produced on the paper. However, band
+printers cannot be used for any graphics printing as the characters are predetermined
+and cannot be changed unless the band is changed.
+vtucode.in Page 36
+Module-1: Introduction to C
+print hammers
+ribbon
+Band printer
+Non Impact Printer:
+« Non-impact printers are much quieter than impact printers as their printing heads
+do not strike the paper.
+« They offer better print quality, faster printing and the ability to create prints that
+contain sophisticated graphics.
+ Non-impact printers use either solid or liquid cartridge-based ink which is either
+sprayed, dripped or electro statically drawn onto the page. The main types of non-impact
+printer are: inkjet, printer, laser printer and thermal printer.
+Advantages:
+» These produce prints of good quality and hence render sophisticated graphics.
+» They are noiseless, fast and can print text in different fonts.
+Disadvantages:
+* They are expensive
+INKJET PRINTERS:
+« In inkjet printers , the print head has several tiny nozzles, also called jets.
+ As the paper moves past the print head, the nozzles spray ink onto it, forming the
+characters and images.
+ The dots are extremely small (usually between 50 and 60 microns in diameter) and
+are positioned very precisely, with resolutions of up to 1440x720 dots per inch (dpi).
+* There is usually one black ink cartridge and one so-called color cartridge containing
+ink in primary pigments (cyan, magenta, and yellow).
+vtucode.in Page 37
+Module-1: Introduction to C
+« While inkjet printers are cheaper than laser printers, they are more expensive to
+maintain.
+» The cartridges of inkjet printers have to be changed more frequently and the special
+coated paper required to produce high-quality output is very expensive.
+ So the cost per page of inkjet printers becomes ten times more expensive than laser
+printers.
+* Therefore, inkjet printers are not well-suited for high-volume print jobs.
+LASER PRINTER
+« It is a non-impact printer that works at a very high speed and produces high quality
+text and graphics. It uses the photocopier technology.
+- When a document is sent to the printer, the following steps takes place:
+1. A laser beam "draws" the document on a drum (which is coated with a photoconductive material) using electrical charges.
+2. After the drum is charged, it is rolled in toner (a dry powder type of ink).
+3. The toner sticks to the charged image on the drum.
+4. The toner is transferred onto a piece of paper and fused to the paper with heat
+and pressure.
+5. After the document is printed, the electrical charge is removed from the drum
+and the excess toner is collected.
+- While color laser printers are also available in the market but users prefer only
+monochrome printers because a color laser printer is up to 10 times more expensive
+than a monochrome laser printer.
+vtucode.in Page 38
+Module-1: Introduction to C
+PLOTTERS
+* A plotter is used to print vector graphics with a high print quality. They are widely
+used to draw maps, in scientific applications and in applications like CAD, CAM and
+CAE
+* A drum plotter is used to draw graphics on a paper that is wrapped around a drum.
+It works by rotating the drum back and forth to produce vertical motion. The pen which
+is mounted on a carriage is moved across the width of the paper. Hence, the vertical
+movement of the paper and the horizontal movement of the pen create the required
+design under the control of the computer.
+Drum plotter Flatbed plotter
+* In a flatbed plotter, the paper is spread on the flat rectangular surface of the plotter
+and the pen is moved over it. Flatbed plotters are less expensive and used in many
+smaller computing systems. In this type of plotter, the paper is not moved rather
+plotting is done by moving an arm that moves a pen over paper.
+vtucode.in Page 39
+Module-1: Introduction to C
+PROGRAMMING PARADIGMS
+* A programming paradigm is a fundamental style of programming that defines how
+the structure and basic elements of a computer program will be built.
+« The style of writing programs and the set of capabilities and limitations that a
+particular programming language has depends on the programming paradigm it
+supports.
+- These paradigms, in sequence of their application, can be classified as follows:
+1. Monolithic programming — emphasizes on finding a solution
+2. Procedural programming—Ilays stress on algorithms
+3. Structured programming—focuses on modules
+4. Object-oriented programming—emphasizes on classes and objects
+Monolithic programming:
+* Monolithic programs have justone program . s "\
+module as such programming languages do not
+support the concept of subroutines. ADB 10 . Global daia
+« Therefore, all the actions required to complete a BDRB 20
+particular task are embedded within the same SUM DR?
+application itself. ' :
+ This not only makes the size of the program MOV AX A
+large but also makes it difficult to debug and : Sequential ® 3 ADDAX.B -7 maintain. code with
+* Programs written using monolithic programming MOV SUM, AX IMP
+languages consist of global data and sequential IMP STOP instruction
+code.
+« The global data can be accessed and modified = — | s
+from any part of the program. Examples are STOP: EXIT
+Assembly Language and BASIC. \ /
+vtucode.in Page 40
+Module-1: Introduction to C
+Procedural programming:
+In procedural languages, a program is divided into
+subroutines that can access global data.
+To avoid repetition of code, each subroutine Global data
+performs a well-defined task.
+Subrouline
+A subroutine that needs the service provided by
+another subroutine can call that subroutine.
+Therefore, with jump’,‘ goto’, and ‘call’ instructions,
+the sequence of execution of instructions can be
+Program altered.
+FORTRAN and COBOL are two popular procedural . -
+programming languages.
+Advantages
+e The only goal is to write correct programs
+* Programs are easier to write as compared to monolithic programming
+Disadvantages
+* No concept of reusability
+* Requires more time and effort to write programs
+* Programs are difficult to maintain
+* Global data is shared and therefore may get altered (mistakenly)
+Structured programming:
+* Structured programming employs a top-down approach in which the overall
+program structure is broken down into separate modules.
+« This allows the code to be loaded into memory more efficiently and also be
+reused in other programs.
+* Modules are coded separately and once a module is written and tested
+individually, it is then integrated with other modules to form the overall program.
+vtucode.in Page 41
+Module-1: Introduction to C
+* Structured programming is based on modularization which groups related
+statements together into modules.
+Advantages
+e With modules, many programmers can work on a
+single, large program, with each working on a
+different module.
+* A structured program takes less time to be written
+than other programs.
+* Modules or procedures written for one program
+can be reused in other programs as well.
+Disadvantages: Not data-centered, Global data is
+shared and therefore may get inadvertently
+modified, Main focus is on functions
+Object-oriented programming (oop)
+» The object-oriented paradigm is task-based
+and data-based. In this paradigm, all the
+relevant data and tasks are grouped together
+in entities known as objects. It treats data as
+a critical element in the program development
+and restricts its flow freely around the system.
+« The striking features of OOP include the
+following:
+1. Programs are data centered.
+2. Programs are divided in terms of objects and
+not procedures.
+3. Functions that operate on data are tied
+together with the data.
+Modules that have
+Globaldata | 1ocal deta end
+code
+gl
+ijccl 2
+Object 4
+Objects of a program
+inleract by sending
+messages o each other
+4. Data is hidden and not accessible by external functions.
+5. New data and functions can be easily added as and when required.
+6. Follows a bottom-up approach for problem solving.
+vtucode.in Page 42
+Module-1: Introduction to C
+Design and Implementation of Efficient Programs
+. The design and development of correct, efficient Requirements analysis J
+and maintainable programs depend on the approach T
+adopted by the programmer to perform various BN |
+. I
+activities that need to be performed during the i
+Implementation
+development process. ] -~
+. The entire programs and software development Testing J
+process is divided into a number of phases. . T
+Software \
+. This phase is the Software Development Life deployment,
+Training and
+cycle. support
+—
+Maintena nce
+1. Requirement analysis:
+ In this phase, user expectations are gathered to know why the software/program
+has to be built.
+* Then all the gathered requirements are analyzed to frame an objective.
+» The last activity in this phase is to document all the requirements to avoid any
+further doubts.
+« The functionality, capability, performance, and availability of hardware and
+software components are analyzed in this phase.
+2. Design:
+« In this phase, a plan of actions is made before the actual development process
+could start.
+« This plan will be followed throughout the development process.
+» The core structure of the software/program is broken down into modules.
+« The solution of the program is then specified for each module in the form of
+algorithms, flowcharts, or pseudo codes.
+3. Implementation:
+ Designed algorithms are converted into program code using any of the high level
+languages.
+» The choice of language depends on the type of program like whether it is a system
+or an application program.
+* Program codes are tested by the programmer to ensure their correctness.
+vtucode.in Page 43
+Module-1: Introduction to C
+* While constructing the code, the development team checks whether the software is
+compatible with the available hardware and other software components that were
+mentioned in the Requirements Specification Document created in the first phase.
+4. Testing:
+« All the modules are tested together to ensure that the overall system works well as
+a whole product.
+« Although individual pieces of codes are already tested by the programmers in the
+implementation phase, there is always a chance for bugs to creep in the program
+when the individual modules are integrated to form the overall program structure.
+* Software is tested using a large number of varied inputs also known as test data
+to ensure that the software is working as expected by the users’ requirements that
+were identified in the requirements analysis phase.
+5. Software Deployment, Training and Support:
+« After testing, the software is deployed in the production environment.
+* Software Training and Support is a crucial phase which makes the end users
+familiar with how to use the software.
+* Moreover, people are often resistant to change and avoid venturing into an
+unfamiliar area, so as a part of the deployment phase, it has become very crucial to
+have training classes for the users of the software.
+6. Maintenance:
+» Maintenance and enhancements are ongoing activities which are done to cope
+with newly discovered problems or new requirements.
+* Such activities may take a long time to complete as the requirement may call for
+addition of new code that does not fit the original design or an extra piece of code
+required to fix an unforeseen problem.
+» As a general rule, if the cost of the maintenance phase exceeds 25% of the priorphases cost then it clearly indicates that the overall quality of at least one prior phase
+1S poor.
+« In such cases, it is better to re-build the software (or some modules) before
+maintenance cost is out of control.
+Algorithms
+» An algorithm provides a blueprint to writing a program to solve a particular
+problem.
+« It is considered to be an effective procedure for solving a problem in a finite
+number of steps.
+vtucode.in Page 44
+Module-1: Introduction to C
+« A well-defined algorithm always provides an answer, and is guaranteed to
+terminate.
+* Algorithms are mainly used to achieve software re-use.
+* A good algorithm must have the following characteristics
+* Be precise
+ Be unambiguous
+« Not even a single instruction must be repeated infinitely
+» After the algorithm gets terminated, the desired result must be obtained
+Control Structures used in Algorithms
+Sequence: Sequence means that each step Step 1: Input the first number as A
+order. Step 3: SETSUM=A + B
+Step 4: PRINT SUM
+Step 5: END
+Decision: Decision statements are used when the outcome of the process depends on
+someconditon. For example, if x=y, then print “EQUAL”. Hence, the general form of the if
+construct can be given as if condition then process.
+Step 1: Input the first number as A
+Step 2: Input the secand number as B
+step 3: IFA=B
+Then PRINT "EQUAL"
+ELSE
+PRINT "NOT EQUAL"
+Step &: END
+Repetition: Repetition, which involves executing one or more steps for a number of times,
+can be implemented using constructs such as while, do-while, and for loops. These
+loops execute one or more steps until some condition is true.
+Step 1: [INITIALIZE] SETI =0, N=10
+Step Z2: Rep=at Step while T<=N
+Step 3: PRINTI
+Step 4: SET 1+ 1
+Step 5: END
+Note: Please refer to the examples solved in lecture.
+vtucode.in Page 45
+Module-1: Introduction to C
+Flowchart:
+ Flowchart is a graphical or symbolic representation of a process.
+« It is basically used to design and document virtually complex processes to help
+the viewers to visualize the logic of the process, so that they can gain a better
+understanding of the process and find flaws, bottlenecks, and other less obvious
+features within it.
+« When designing a flowchart, each step in the process is depicted by a different
+symbol and is associated with a short description. The symbols in the flowchart
+are linked together with arrows to show the flow of logic in the process.
+Symbol Name Represents
+© Oval Start and End
+/ / Parallelogram Input/Output
+Rectangle Statements or expressions
+Rhombus Decision making or
+condition checking
+Looping
+< > Hexagon
+Circle Connector
+Double ended Rectangle Functions
+Note: Please refer to the examples solved in lecture.
+Pseudocode:
+» Pseudocode is a compact and informal high-level description of an algorithm that uses
+the structural conventions of a programming language.
+vtucode.in Page 46
+Module-1: Introduction to C
+« It is basically meant for human reading rather than machine reading, so it
+omits the details that are not essential for humans. Such details include variable
+declarations, system-specific code, and sub-routines.
+ Pseudocodes are an outline of a program that can be easily converted into
+programming statements.
+ They consist of short English phrases that explain specific tasks within a
+program’s algorithm. They should not include keywords in any specific computer
+language. The sole purpose of pseudocodes is toenhance human
+understandability of the solution.
+Note: Please refer to the examples solved in lecture.
+TYPES OF ERRORS
+* While writing programs, very often we get errors in our program.
+» These errors if not removed will either give erroneous output or will not let the
+compiler to compile the program.
+Types of
+errors
+Run-time Compile=
+errors time errors Linker errors Logical errors
+taxerror
+1. Run-time errors:
+* Run-time Errors occur when the program is being run executed.
+* Such errors occur when the program performs some illegal operation like
+1. Dividing a number by zero
+2. Opening a file that already exists
+vtucode.in Page 47
+Module-1: Introduction to C
+3. Lack of free memory space
+4. Finding square or logarithm of negative numbers
+* Run-time errors may terminate program execution, so the code must be written
+in such a way that it handles all sorts of unexpected errors rather terminating it
+unexpectedly.
+ This ability to continue operation of a program despite of run-time errors is
+called robustness.
+2. Compile time errors:
+» Compile-time Errors occur at the time of compilation of the program.
+* Such errors can be further classified as follows:
+Syntax Errors: Syntax error is generated when rules of C programming language
+are violated. For example, if we write int a: then a syntax error will occur since the
+correct statement should be int a;
+Semantic Errors: Semantic errors are those errors which may comply with rules
+of the programming language but are not meaningful to the compiler. For
+example, if we write, a * b = c; it does not seem correct. Rather, if written like
+c=a*b would have been more meaningful.
+3. Logical errors:
+* Logical Errors are errors in the program code that result in unexpected and
+undesirable output which is obviously not correct.
+* Such errors are not detected by the compiler, and programmers must check
+their code line by line or use a debugger to locate and rectify the errors.
+ Logical errors occur due to incorrect statements. For example, if you meant to
+perform c= a + b; and by mistake you typed ¢ = a * b; then though this statement
+is syntactically correct it is logically wrong.
+4, Linker errors:
+« Linker Errors occur when the linker is not able to find the function definition
+for a given prototype.
+* For example, if you write clrscr(); but do not include conio.h then a linker error
+will be shown.
+vtucode.in Page 48
+Module-1: Introduction to C
+Testing Approaches
+» Testing is an activity that is performed to verify correct behavior of a program.
+« It is specifically carried out with an intent to find errors.
+ Unit testing is applied only on a single unit or module to ensure whether it
+exhibits the expected behavior.
+* Integration Tests are a logical extension of unit tests. In this test, two units
+that have already been tested are combined into a component and the interface
+between them is tested. This process is repeated until all the modules are tested
+together. The main focus of integration testing is to identify errors that occur
+when the units are combined.
+« System testing checks the entire system. For example, if our program code
+consists of three modules then each of the module is tested individually using unit
+tests and then system test is applied to test this entire system as one system.
+Debugging Approaches
+* Debugging is an activity that includes execution testing and code correction.
+« It is done to locate errors in the program code.
+* Once located, errors are then isolated and fixed to produce an error-free code.
+« Different approaches applied for debugging a code includes:
+Brute-Force Method: In this technique, a printout of CPU registers and relevant
+memory locations is taken, studied, and documented.
+It is the least efficient way of debugging a program and is generally done when all
+the other methods fail.
+Backtracking Method works by locating the first symptom of error and then trace
+backward across the entire source code until the real cause of error is detected.
+However, the main drawback of this approach is that with increase in number of
+source code lines, the possible backward paths become too large to manage.
+Because Elimination lists all possible causes of an error is developed.
+Then relevant tests are carried out to eliminate each of them.
+vtucode.in Page 49
+Module-1: Introduction to C
+If some tests indicate that a particular cause maybe responsible for an error then
+the data are refined to isolate the error.
+Introduction to C
+* C was developed in the early 1970s by Dennis Ritchie at Bell Laboratories.
+* C was initially developed for writing system software
+* Today, C has become a popular language and various software programs are
+written using this language.
+* Many other commonly used programming languages such as C++ and Java
+are also based on C.
+Characteristics of C
+» C is a high level programming language which enables the programmer to
+concentrate on the problem and not to worry about the machine code
+ Small size: C has only 32 keywords. This makes it relatively easy to learn
+ C makes extensive use of function calls
+» C is well suited for structured programming. In this programming approach,
+where it allows the user to think a problem in terms of modules where collection of
+all these modules make up a complete program.
+- Unlike PASCAL it supports loose typing (as a character can be treated as an
+integer and vice versa)
+» Stable language.
+* Quick language: Since C programs make use of operators and data types, they
+are fast and efficient.
+» Facilitates low level (bitwise) programming
+* Supports pointers to refer computer memory, array, structures and functions.
+« Cis a core language as many other programming languages are based on C
+« Cis a portable language which means C program written on one computer can
+run on another computer with little or no modification.
+vtucode.in Page 50
+Module-1: Introduction to C
+- C is an extensible language as it enables the user to add his own functions to
+the C library.
+Uses of C
+» C language is primarily used for system programming. The portability,
+efficiency, the ability to access specific hardware addresses and low runtime
+demand on system resources makes it a good choice for implementing operating
+systems and embedded system applications.
+* C has been so widely accepted by professionals that compilers, libraries, and
+interpreters of other programming languages are often implemented in C.
+« For portability and convenience reasons, C is sometimes used as an
+intermediate language by implementations of other languages. Example of
+compilers which use C this way are BitC, Gambit, the Glasgow Haskell Compiler,
+Squeak, and Vala.
+« Cis widely used to implement end-user applications
+Structure of a C program
+. A C program contains one Preprocessor Directave
+or more functions
+Global declaraton
+. The statements in a C
+program are written in a logical Main(Q)
+sequence to perform a specific {I 1 decl i
+task. Statements
+_ 3 . | Execution (?f a. prf)gram P ——
+begins at the main() function {
+TLocaldeclaratons . You can choose any name Statements
+for the functions. 5
+. Every program must Function INQO
+contain one function that has { —— -
+) i L.oc eclarations
+its name as main(). Statements
+3
+vtucode.in Page 51
+Module-1: Introduction to C
+Where, #include refers to the preprocessor statement used for the standard
+input/output functions and it starts with the hash (#) symbol.
+main( ):- Refers to the function from where the execution of the program begins.
+\a Audible or visible alert \? Question mark
+Backspace: move cursor
+b one place backward \ BRckatnn
+\t Tab v\’ Single quote
+\n Newline h Double quote
+\v Vertical tab \0 Octal constant
+to move the cursor to the \f start of the page. next logical \x e constan
+Carriage return
+\r moves the cursor to the
+start of the current line.
+Files used in C program
+Filesina C
+program
+Source Header Object Executable
+File File File File
+Source code file
+* A source code is a list of commands that has to be assembled or compiled into
+an executable computer program.
+* The source code file contains the source code of the program. The file extension
+of any C source code file is “.c”.
+* This file contains C source code that defines the main function and maybe
+other functions.
+vtucode.in Page 52
+Module-1: Introduction to C
+« The main() is the starting point of execution when you successfully compile and
+run the program.
+« A C program in general may include even other source code files (with the file
+extension .c).
+Header file
+« When working with large projects, it is often desirable to make sub-routines
+and store them in a different file known as header file. The advantage of header
+files can be realized when
+a) The programmer wants to use the same subroutines in different programs.
+b) The programmer wants to change, or add, subroutines, and have those
+changes be reflected in all other programs.
+* Conventionally, header files names ends with a “.h” extension and its name can
+use only letters, digits, dashes, and underscores.
+« While some standard header files are available in C, but the programmer may
+also create his own user defined header files
+Standard Header file
+Examples of standard header files are:
+1. string.h: for string handling functions.
+stdlib.h: for some miscellaneous functions.
+stdio.h: for standardized input and output functions.
+math.h: for mathematical functions
+alloc.h: for dynamic memory allocation.
+O el WN
+conio.h: for clearing the screen
+Object Files:
+* Object files are generated by the compiler as a result of processing the source
+code file.
+* Object files contain compact binary code of the function definitions.
+vtucode.in Page 53
+Module-1: Introduction to C
+» Linker uses this object file to produce an executable file (.exe file) by combining
+the of object files together.
+* Object files have a “.0” extension, although some operating systems including
+Windows and MS-DOS have a “.obj” extension for the object file.
+Binary Executable File
+« The binary executable file is generated by the linker.
+ The linker links the various object files to produce a binary file that can be
+directly executed.
+« On Windows operating system, the executable files have “.exe” extension.
+COMPILING AND EXECUTING C PROGRAMS
+Source prpgz(;s Ol?j ect File — Files
+- Executable
+lelfary TiDr aIyI Files
+i
+- Files
+Preprocessing before compilation
+« The compiler translates the source code into an object code.
+» The object code contains the machine instructions for the CPU, and calls to the
+operating system API(Application Programming Interface).
+ However, even the object file is not a executable file.
+» Therefore, in next step, the object file is processed with another special
+program called a linker.
+ While there is a different compiler for every individual language, the same
+linker is used for object files regardless of the original language in which the new
+program was written.
+» The output of the linker is an executable or runnable file.
+vtucode.in Page 54
+Module-1: Introduction to C
+Source pf;;s Object
+File o Files
+. E tabl Library Library / il
+Files ' Files
+Source Fre- e proces B sor __[ Object
+Files [ Library Files ' IModular programming-the complete
+compilation and execution process
+Using Comments
+« It is a good programming practice to place some comments in the code to help
+the reader understand the code clearly.
+- Comments are just a way of explaining what a program does. It is merely an
+internal program documentation.
+ The compiler ignores the comments when forming the object file. This means
+that the comments are non-executable statements.
+C supports two types of commenting.
+- // is used to comment a single statement. This is known as a line comment. A
+line comment can be placed anywhere on the line and it does not require to be
+specifically ended as the end of the line automatically ends the line.
+« /* is used to comment multiple statements. A /* is ended with */ and all
+statements that lie within these characters are commented.
+C tokens
+ Tokens are the basic building blocks in C language.
+« It is the smallest individual unit in C program.
+A program is constructed using a combination of these tokens. 6main types of
+tokens in C are:
+vtucode.in Page 55
+Module-1: Introduction to C
+Character
+R
+set in C
+ In C, character means any letter from English alphabet, a digit or a special
+symbol used to represent information.
+* The character set of C can therefore be given as:
+1. English alphabet: Include both lower case (a-z) as well upper case(A-Z) letters.
+2. Digits: Include numerical digits from O to 9.
+3. Special characters: Include symbols such as ~, @, %, », &, *, {, }, <, >, =, _, +, -
+$/[)\:n' []‘“?’::I4. White space characters: These characters are used to print a blank space on
+the screen like \b, \t, \v, \r, \f, \n.
+S. Escape sequences.
+Keywords
+* C has a set of 32 reserved words often known as keywords.
+» All keywords are basically a sequence of characters that have a fixed meaning.
+* By convention all keywords must be written in lowercase (small) letters.
+« The keywords are for, while, do-while, auto break, case, char, continue, do,
+double, else, enum, extern, float, goto, if, int, long, register, return, short, signed,
+sizeof, static, struct, switch, typedef, union, unsigned, void, volatile
+vtucode.in Page 56
+Module-1: Introduction to C
+auto break case char
+const continue default do
+double else enum extern
+float for goto if
+int long register return
+short signed sizeof static
+struct switch typedef union
+unsigned void volatile while
+Keywords in C
+Identifiers
+« Identifiers are names given to program elements such as variables, arrays and
+functions.
+Rules for forming identifier name
+1. It cannot include any special characters or punctuation marks (like #, $, », ?,
+., etc) except the underscore"_"
+2. There cannot be two successive underscores
+3. Keywords cannot be used as identifiers
+4. The names are case sensitive. So, example, “FIRST” is different from “first” and
+“First”.
+S. It must begin with an alphabet or an underscore.
+It can be of any reasonable length. Though it should not contain more than 31
+characters.
+Example: roll number, marks, name, emp_number, basic_pay, HRA, DA,
+dept_code, a , sum, temp.
+vtucode.in Page 57
+Module-1: Introduction to C
+Basic data types in C
+SIZE IN
+Data type ];;L:g RANGE Use
+BYTES
+Character char 1 -128 to 127 To store characters
+Integer int 2 -32768 to 32767 To store integer numbers
+Floating fiaui 4 3.4E-38 to To store floating point
+point i 3.4E+38 numbers
+1.7E-308 to To store big floating point
+Double S 8 1.7E+308 numbers
+. 3.4E-4932 to Valueless void 10 1.1E+4932 -
+SIZE IN DATA TYPE RANGE BYTES
+char 1 -128 to 127
+unsigned char 1 0 to 255
+signed char 1 -128 to 127
+int 2 -32768 to 32767
+unsigned int 2 O to 65535
+signed short int 2 -32768 to 32767
+signed int 2 -32768 to 32767
+vtucode.in Page 58
+Module-1: Introduction to C
+short int 2 -32768 to 32767
+unsigned short int 2 0 to 65535
+long int 4 -2147483648 to 2147483647
+unsigned long int 4 0 to 4294967295
+signed long int 4 -2147483648 to 2147483647
+float 4 3.4E-38 to 3.4E+38
+double 8 1.7E-308 to 1.7E+308
+long double 10 3.4E-4932 to 1.1E+4932
+Variables
+A variable is defined as a meaningful name given to the data storage location in
+computer memory.
+« When using a variable, we actually refer to address of the memory where the data is
+stored. C language supports two basic kinds of variables.
+Numeric Variable
+Variables
+Character Variables
+« Numeric variables can be used to store either integer values or floating point values.
+ While an integer value is a whole numbers without a fraction part or decimal point, a
+floating point number, can have a decimal point in them.
+vtucode.in Page 59
+Module-1: Introduction to C
+ Numeric values may also be associated with modifiers like short, long, signed and
+unsigned.
+* By default, C automatically a numeric variable signed..
+* Character variables can include any letter from the alphabet or from the ASCII chart
+and numbers O — 9 that are put between single quotes.
+Declaring Variables
+* To declare a variable specify data type of the variable followed by its name.
+» Variable names should always be meaningful and must reflect the purpose of their
+usage in the program.
+» Variable declaration always ends with a semicolon. Example,
+int emp_num;
+float salary;
+char grade;
+double balance_amount;
+unsigned short int acc_no;
+Initializing Variables
+- Assigning a value to a variable is called variable initialization.
+- The syntax is variable_name=value; Initialization can be done in two ways:-
+1. We can assign an initial value to a variable within the declaration part itself called
+static initialization.
+Ex:- int a=10;, float x=100.0000;
+2. We can assign an initial value to a variable during the program execution called
+dynamic initialization.
+Ex:- printf(Enter a value to a”);
+scanf(“%d”, &a);
+vtucode.in Page 60
+Module-1: Introduction to C
+Constants
+» Constants are identifiers whose value does not change.
+» Constants are used to define fixed values like PI or the charge on an electron so that
+their value does not get changed in the program even by mistake.
+* There are mainly four types of constants in C:
+1.Integer constants
+2.Floating-point constants
+3.Character constants
+4.String constants
+To declare a constant, precede the normal variable declaration with const keyword and
+assign it a value. For example,
+* const float pi = 3.14;
+Another way to designate a constant is to use the pre-processor command define.
+» #define PI 3.14159
+- The integer constants: represents a whole number.
+Ex:- 10, -200, -3456.
+2. The floating-point constants:-represents a number that has a decimal point.
+Ex:- - 250.01, 67.73234.
+3. The character constants: represents a single character enclosed within a pair of
+single quotes.
+Exgsoaves, 76
+4. The string constants:-represents a sequence of characters enclosed within a pair of
+double quotes.
+Ex:- “Hello”, “z”.
+vtucode.in Page 61
+Module-1: Introduction to C
+Declaring Constants
+Rules that need to be applied to a #define statement which defines a constant.
+Rule 1: Constant names are usually written in capital letters to visually distinguish
+them from other variable names which are normally written in lower case characters.
+Note that this is just a convention and not a rule.
+Rule 2: No blank spaces are permitted in between the # symbol and define keyword
+Rule 3: Blank space must be used between #define and constant name and between
+constant name and constant value
+Rule 4: #define is a pre-processor compiler directive and not a statement. Therefore, it
+does not end with a semi-colon.
+Input/Output statements in C
+Streams:
+* A stream acts in two ways. It is the source of data as well as the destination of data.
+* C programs input data and output data from a stream.
+» Streams are associated with a physical device such as the monitor or with a file
+stored on the secondary memory.
+Streams in a C program fl
+Text Stream fl Binary Stream l
+« In a text stream, sequence of characters is divided into lines with each line being
+terminated with a new-line character (\n). On the other hand, a binary stream contains
+data values using their memory representation.
+* Although, we can do input/output from the keyboard/monitor or from any file but
+here we will assume that the source of data is the keyboard and destination of the data
+is the monitor.
+vtucode.in Page 62
+Module-1: Introduction to C
+Keyboard Input Text stream Data
+_..’. 2 -’
+Monitor output Text stream .= o .
+r “
+Formatting Input/output:
+* C supports two formatting functions.
+» printf is used to convert data stored in the program into a text stream for output to
+monitor.
+« scanf is used to convert the text stream coming from the keyboard to data values and
+store them in program variables.
+printf():
+ The printf() function is used to display information required to the user and also
+prints the values and variables.
+ The syntax can be given as printf(“Control string”, variable list);
+» The prototype of the control string is given by
+%[flags][width][.precision][modifier]type
+Flags are an optional argument which specifies output justification such as numerical
+sign, trailing zeros or octal, decimal, or hexadecimal prefixes.
+flag description
+- Lett-justity within the data given field width
++ Displavs the data with its numeric sign (either + or -)
+Used to provide additional specifiers like o, x, X, o,
+# ox or oX for octal and hexa decimal values
+respectively for values different than zero.
+The number is left-padded with zeroes (o) instead of
+spaces
+vtucode.in Page 63
+Module-1: Introduction to C
+Width is an optional argument which specifies minimum number of positions in the
+Precision is an optional argument which specifies the maximum number of characters
+output.
+toprat ———
+length Description
+| Whenthe argument is a shortint
+orunsigned shortint. |
+When the argument is a long int
+1 jorunsigned long int for integer
+specifiers.
+When the argument is a long
+L double (used for floating point
+ecifiers
+Example:
+' specifier Qualifymg Input
+C For single character
+d For decimal values
+F For floating point numbers
+Ee Floating pomnt numbers m exponential format
+G, G |Floating pomt numbers m the shorter of e format
+0 For Octal number.
+s For a sequence of (string of) characters
+u For Unsigned decimal value
+XX For Hexadecimal value.
+%6.3f means print floating point value of max 6 digits where 3 digits are allotted for the
+digits after the decimal point.
+printf(“\n Result: %6.3f", 123.534395);
+output: Result: 123.534
+Some examples of printf:
+printf(“\n Result: %d%c%f”,12,'a',2.3);
+Output: Result: 12a2.300000
+Output: Result: 12a2.3
+Output: Result: 12 a 2.300000
+Output: Result: 232 e8 Oxe8
+printf(“\n Result: %d%c%3.1,12,'a',2.3);
+printf(“\n Result: %d %c %f”,12,'a’,2.3);
+printf(“\n Result: %5d %x %#x”,232,232,232);
+vtucode.in Page 64
+Module-1: Introduction to C
+* printf(“\n Result: %5d %X %#X”,232,232,232);
+Output: Result: 232 E8 OXE8
+» printf("the number is \n%d\n%2d\n%3d",1,1,1);
+Output:
+the number is
+« printf("the number is %09.2f",123.456);
+Output: the number is 000123.46
+. printf(“\n%7.4f\n%7.2f\n%-7.2f\n%f\n%10.2e\n%11.4e\n%-
+10.2e¢\n%e”,98.7654, 98.7654, 98.7654, 98.7654, 98.7654, 98.7654, 98.7654,
+98.7654);
+Output:
+98.7654
+98.77
+98.77
+98.765400
+9.88e+01
+9.8765e+01
+9.88e+01
+9.876540e+01
+scanf|):
+* The scanf{() function is used to read formatted data from the keyboard.
+vtucode.in Page 65
+Module-1: Introduction to C
+* The syntax is scanf(“control string”,argl,arg2,arg3);
+* The prototype of control string is
+%[*][width][modifier]type
+Rules to use scanfj):
+* Rule 1: Rule 1: The scan function works until:
+(a) the maximum number of characters has been processed
+(b) a white space character is encountered, or
+(c) an error is detected.
+* Rule 2: Every variable that has to be processed must have a conversion
+specification associated with it. Therefore, the following scan statement will
+generate an error as num3 has no conversion specification associated with it.
+scanf("%d %d", &num]l, &num?2, &numa3) ;
+* Rule 3: There must be a variable address for each conversion specification.
+Therefore, the following scanf statement will generate an error as no variable
+address is given for the third conversion specification.
+scanf(*'%d %d %d", &numa, &num?2) ;
+Remember that the ampersand operator (&) before each variable name specifies
+the address of that variable name.
+. Rule 4: An error will be generated if the format string is ended with a white
+space character.
+. Rule 5: The data entered by the user must match the character specified in the
+control string (except white space or a conversion specification), otherwise an error
+will be generated and scan will stop its processing.
+For example, consider the following scan statement.
+scanf(*%d / %d", &numl, &num?2) ; Here, the slash in the control string is neither a
+white space character nor a part of conversion specification, so the users must enter
+data of the form 21/46.
+Rule 6: Input data values must be separated by spaces.
+Rule 7: Any unread data value will be considered as a part of the data input in the
+next call to scanf.
+Rule 8: When the field width specifier is used, it should be large enough to contain
+the input data size.
+*hkdk En d*****
+vtucode.in Page 66
